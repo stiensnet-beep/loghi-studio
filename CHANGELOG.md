@@ -3,7 +3,7 @@
 Version numbers: 0.x is beta (trial version). 1.0 comes when adding, the queue and automatic starting work and have been tested.
 
 ## Unreleased
-- Made ready to be shared: a licence (MIT), a README for others with pictures, `docs/FINDINGS.md` (what we
+- Made ready to be shared: a licence (MIT, Johan Dijkstra), a README for others with pictures, `docs/FINDINGS.md` (what we
   measured), `deploy/SERVER-MODE.md`, and `tools_public_export.py`, which makes the public copy and stops
   when a file still holds a private detail.
 - A first start no longer looks for the folders of the first user: the list of collections starts empty

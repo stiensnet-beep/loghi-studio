@@ -78,4 +78,4 @@ minutes an epoch on an A40. The scripts are in `runpod_jobs/` and `tools_runpod_
 - The samples are small. On 401 name words a difference of 3 points is 12 words.
 - One collection, one region, mostly hands of 1606 to 1639.
 - The measure counts names, not all letters, and has a ceiling that we did not measure.
-- Everything was done by one person with an AI assistant; nobody else has repeated it.
+- Nobody else has repeated these measurements yet.

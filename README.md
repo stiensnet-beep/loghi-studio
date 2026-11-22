@@ -6,10 +6,7 @@ orphan and recess books, and it is built to be fully usable with a keyboard and 
 
 Status: beta (0.x). The interface is in English, Dutch and Frisian.
 
-Read this first:
-- Loghi-studio was made by one person, a family historian and not a programmer by trade, together with an
-  AI assistant (Claude). No second developer has reviewed the code. It has been used on one computer
-  (Windows 11) and one small server.
+Good to know:
 - It is not a product of, and not connected with, the KNAW Humanities Cluster, the makers of Loghi.
 - The login of the server mode is home-made. Judge for yourself before you put it on the internet.
 
@@ -144,7 +141,8 @@ What we measured on our own books (enlarging scans, models, Transkribus, fine-tu
 - No full round with a screen reader by an outside tester has been done yet.
 
 ## Licence and credits
-- Loghi-studio: MIT, see [LICENSE](LICENSE).
+- Loghi-studio: MIT, see [LICENSE](LICENSE). Idea, design and testing: Johan Dijkstra. The code was written
+  by Claude Fable 5.2 (Anthropic), working with him.
 - [Loghi](https://github.com/knaw-huc/loghi) is made by the KNAW Humanities Cluster and has its own licence;
   so have the reading models (see the folder of each model). Loghi-studio calls Loghi's Docker images and
   holds no code of Loghi.
