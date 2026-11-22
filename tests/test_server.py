@@ -810,7 +810,15 @@ class ServerTest(unittest.TestCase):
             a.login(f"name{i}", "wrong", "10.9.9.9")
         self.assertEqual(a.login("beheer", pw, "10.9.9.9")[1], "wait")
         auth.Auth(a.file.parent).set_user("nieuw", "viewer", pw)             # made while the server runs
-        self.assertTrue(a.login("nieuw", pw, "10.0.2.2")[0])
+        token = a.login("nieuw", pw, "10.0.2.2")[0]
+        self.assertEqual(a.session(token)["role"], "viewer")
+        auth.Auth(a.file.parent).set_user("nieuw", "admin", pw)              # a changed role counts at once
+        self.assertEqual(a.session(token)["role"], "admin")
+        # strangers keep guessing at a name from ever new addresses: the address the owner logged in from gets through
+        for i in range(auth.MAX_FAILS + 2):
+            a.login("beheer", "wrong", f"10.1.0.{i}")
+        self.assertEqual(a.login("beheer", pw, "10.3.3.3")[1], "slow")       # a new address has to wait
+        self.assertTrue(a.login("beheer", pw, "10.0.1.1")[0])                # the address of the earlier login does not
 
     def test_damaged_file_gives_a_plain_answer(self):
         bad = self.root / "0002" / "page" / "000001.xml"

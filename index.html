@@ -1278,7 +1278,8 @@ async function coOther(vol, scanId, n, line) {
     $("#co-loghi-text").innerHTML = mark(a); $("#co-other-text").innerHTML = mark(b);
     $("#co-other-diff").textContent = tr("The two readers differ. Loghi: “{0}”. Other reader: “{1}”.", only(a), only(b));
     $("#co-other-take").hidden = false; CO.other = theirs;
-    if (!line.checked) say(tr("The other reader reads this line differently.") + " " + $("#co-other-diff").textContent);
+    // one message: what was just saved, where we are now, and the difference (a screen reader reads the last one only)
+    if (!line.checked) say((CO.said ? CO.said + " " : "") + tr("The other reader reads this line differently.") + " " + $("#co-other-diff").textContent);
   }
   $("#co-other").hidden = false;
 }
@@ -1316,7 +1317,8 @@ async function coOpen(vol, scanId, n, lead) {
   CO.reveal = true;
   if (img.getAttribute("src") !== src) { $("#co-clip").style.visibility = "hidden"; img.onload = () => { if (tok === CO.tok) coCrop(); }; img.src = src; }
   else if (img.naturalWidth) coCrop();
-  say((lead ? lead + " " : "") + tr("Scan {0}, line {1}.", scanId, n) + " " + state);
+  CO.said = (lead ? lead + " " : "") + tr("Scan {0}, line {1}.", scanId, n) + " " + state;
+  say(CO.said);
   return true;
 }
 /* the image of the line: the scan itself, moved and enlarged behind a window as wide as the page */

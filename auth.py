@@ -24,13 +24,15 @@ SESSION_MAX = 7 * 86400         # and after 7 days in any case
 MAX_FAILS = 5                   # wrong passwords before a pause
 FAIL_PAUSE = 15 * 60            # seconds
 NAME_GAP = 5                # seconds between attempts for a name that had that many wrong passwords
+KNOWN_DAYS = 30             # an address is trusted for a name this long after a right password
 WORDS = ("anker boek brug dijk eiken fluit gouden haven iepen kade lente molen noord oever pomp roer schip terp "
          "veld wad zeil akker bries dorp eb vloed greide hoeve klif meer sloot turf wier zomer sluis toren reiger "
          "kievit grutto zwaan otter linde wilg riet klaver boter kaas vlas hooi oogst ploeg schuur stal weide").split()
 
 
 def make_password():
-    """Four everyday words and a number: easy to say and to type, about 46 bits."""
+    """Four everyday words and a number: easy to say and to type, about 33 bits. Enough together with the limits on wrong
+    attempts in Auth.login; not meant for a place without such limits."""
     return "-".join(secrets.choice(WORDS) for _ in range(4)) + "-" + str(secrets.randbelow(900) + 100)
 
 
@@ -44,6 +46,7 @@ class Auth:
         self.lock = threading.Lock()
         self.sessions = {}          # sha256(token) -> {"user", "role", "seen", "made"}
         self.fails = {}             # "ip:<ip>" or "user:<name>" -> [count, time of the last failure]
+        self.known = {}             # (name, ip) -> time of the last right password from that address
         self.users = {}
         self._stamp = None
         self._fresh()
@@ -89,7 +92,9 @@ class Auth:
 
         An address with MAX_FAILS wrong attempts waits FAIL_PAUSE. A name with that many wrong attempts, from
         whatever address, is only slowed down (one attempt per NAME_GAP seconds): a stranger who knows a name
-        must not be able to keep its owner out."""
+        must not be able to keep its owner out. An address from which that name logged in before (in the last
+        KNOWN_DAYS days, since the server started) is not slowed down at all, so the owner gets in at home even
+        while strangers keep guessing from many addresses."""
         now = time.time()
         name = str(name or "").strip()
         keys = (f"ip:{ip}", f"user:{name.lower()}")
@@ -98,7 +103,8 @@ class Auth:
             if self._blocked(keys[0], now):
                 return None, "wait"
             n, last = self.fails.get(keys[1], (0, 0))
-            if n >= MAX_FAILS and now - last < NAME_GAP:
+            at_home = now - self.known.get((name.lower(), ip), 0) < KNOWN_DAYS * 86400
+            if n >= MAX_FAILS and now - last < NAME_GAP and not at_home:
                 return None, "slow"
             user = self.users.get(name.lower())
         # always do the work of one hash, so the answer takes as long for an unknown name
@@ -114,6 +120,9 @@ class Auth:
                 return None, "wrong"
             for k in keys:
                 self.fails.pop(k, None)
+            self.known[(name.lower(), ip)] = now
+            if len(self.known) > 2000:
+                self.known = {k: t for k, t in self.known.items() if now - t < KNOWN_DAYS * 86400}
             token = secrets.token_urlsafe(32)
             self.sessions[hashlib.sha256(token.encode()).hexdigest()] = {"user": user["name"], "role": user["role"],
                                                                          "seen": now, "made": now}
@@ -135,7 +144,7 @@ class Auth:
                 del self.sessions[key]
                 return None
             s["seen"] = now
-            return {"user": s["user"], "role": s["role"]}
+            return {"user": s["user"], "role": self.users[s["user"].lower()]["role"]}     # the role of now, not of the login
 
     def logout(self, token):
         if token:

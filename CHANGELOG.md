@@ -5,6 +5,10 @@ Version numbers: 0.x is beta (trial version). 1.0 comes when adding, the queue a
 ## Unreleased
 
 ## 0.6.0-beta (22 Nov 2026)
+- After a second look by the other model: an address from which a name logged in before is not slowed down
+  when strangers guess at that name; a changed role counts at once, not after the next login; in server mode
+  the lists of names show nothing of a collection that is hidden; an unforeseen error is written to the log
+  with the place in the code; after saving in Correct the confirmation and the next line are one message.
 - After a review by another model (Claude Opus 5.5), server mode: collections with scans for own use only do
   not exist there; searching with a regular expression is off there; many wrong passwords for a name slow that
   name down for everyone but no longer lock it out (an address with five wrong attempts still waits 15
@@ -17,8 +21,8 @@ Version numbers: 0.x is beta (trial version). 1.0 comes when adding, the queue a
 - The README no longer claims a light theme or a contrast of 12:1 without the button High contrast, and names
   Pillow (needed for reading a book enlarged and for the tests).
 - Made ready to be shared: a licence (MIT, Johan Dijkstra), a README for others with pictures, `docs/FINDINGS.md` (what we
-  measured), `deploy/SERVER-MODE.md`, and `tools_public_export.py`, which makes the public copy and stops
-  when a file still holds a private detail.
+  measured), `deploy/SERVER-MODE.md`, and a tool in the working repository that makes the public copy and
+  stops when a file still holds a private detail.
 - A first start no longer looks for the folders of the first user: the list of collections starts empty
   and the tab Collections opens.
 - On a first visit the page follows the language of the browser (Dutch, Frisian, otherwise English).
@@ -38,8 +42,9 @@ Version numbers: 0.x is beta (trial version). 1.0 comes when adding, the queue a
 - Search: when the collection has an **index of names made by people**, the deeds that name the person
   are listed above the text hits, with date, folio, the people of the deed and a button to the scan.
   Those names were read by people, so a person is found where Loghi read the name wrong.
-- The lines checked by people are kept in git as a copy (`settings/corrections/`): the server on the own
-  computer commits and pushes that folder by itself, ten minutes after the last check.
+- The lines checked by people can be kept in git as a copy (`settings/corrections/`): the server on the own
+  computer then commits and pushes that folder, ten minutes after the last check. Since the entry above
+  this is something you switch on.
 - View: the text beside the scan can be made wider or narrower: drag the bar between scan and text, use
   the buttons Text wider and Text narrower, or the arrow keys on the bar. The width is remembered.
 - View: **select a piece** of the scan. Drag a box over the scan (button Select a piece, the key S, or

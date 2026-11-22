@@ -23,12 +23,14 @@ refused. The login is home-made (see `auth.py`); judge for yourself whether that
 
 5. In `compose.yml`, change `loghistudio.example.org` to your own host name (`LOGHI_HOSTS`; more names
    separated by commas). Requests for another host name are refused.
-6. Start it: `docker compose up -d --build`. The image is built from the files in the folder above.
-7. Make an account. The password is printed once:
+6. Make an account first; without one the server stops as soon as it starts. The image is built from the
+   files in the folder above, and the password is printed once:
 
+       docker compose build
        docker compose run --rm loghistudio python auth.py /settings <name> <admin|corrector|viewer>
 
-   The account works at once; no restart is needed.
+   An account made later, while the server runs, works at once; no restart is needed.
+7. Start it: `docker compose up -d`.
 8. Let the reverse proxy pass `https://<your host name>` on to `127.0.0.1:8771`, with the `Host` header
    unchanged and the address of the visitor added to `X-Forwarded-For`.
 

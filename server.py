@@ -25,6 +25,7 @@ import string
 import sys
 import threading
 import time
+import traceback
 import unicodedata
 import xml.etree.ElementTree as ET
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
@@ -736,6 +737,8 @@ def plain_error(e):
     s = str(e).strip("'\"")
     if isinstance(e, json.JSONDecodeError) or s.startswith(("invalid literal", "could not convert")):
         return "The request is not valid."
+    if isinstance(e, KeyError) and re.fullmatch(r"\w{1,4}", s):       # a missing part of the address, such as c or v
+        return f"The request misses a part: {s}."
     return s
 
 
@@ -745,6 +748,7 @@ class Handler(BaseHTTPRequestHandler):
     def oops(self, e):
         """Something unforeseen (a damaged file, for instance): a plain answer, the cause in the log."""
         print(f"error in {self.command} {self.path.split('?')[0]}: {type(e).__name__}: {e}", file=sys.stderr, flush=True)
+        traceback.print_exc()
         try:
             self.send_json({"error": "Something went wrong on the server."}, 500)
         except OSError:

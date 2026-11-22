@@ -569,6 +569,10 @@ class NameSearch:
                 per[n["list"]] = per.get(n["list"], 0) + 1
             lists = [dict(l, on=l.get("on", True), names=per.get(l["id"], 0)) for l in self.lists]
             names = [dict(n, hits=counts.get(n["id"], {}).get("total", 0)) for n in self.names if not lid or n["list"] == lid]
+            if getattr(self.srv.COLL, "hide_private", False):       # server mode: nothing of a collection that is not shown
+                shown = set(self.srv.COLL.ids())
+                names = [dict(n, collections=[c for c in n["collections"] if c in shown]) if n.get("collections") else n
+                         for n in names if not n.get("collections") or shown.intersection(n["collections"])]
             return {"lists": lists, "names": names, "status": dict(self.state)}
 
     # ------------------------------------------------------------ matching

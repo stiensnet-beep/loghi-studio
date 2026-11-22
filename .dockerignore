@@ -1,0 +1,12 @@
+# not needed to build the image, and large or private
+.git
+deploy/data
+deploy/settings
+deploy/cache
+settings
+cache
+training
+review
+docs
+tests
+testset
