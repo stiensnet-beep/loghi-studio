@@ -1121,10 +1121,10 @@ def main():
         import auth
         hosts = [h for h in os.environ.get("LOGHI_HOSTS", "").split(",") if h.strip()]
         accounts = auth.Auth(SETTINGS_DIR)
-        COLL.hide_private = True    # scans for own use only are not shown to visitors
         if not hosts or not accounts.users:
             raise SystemExit("Server mode needs LOGHI_HOSTS and at least one account (python auth.py <settings> <name> <role>).")
         srv = make_server(port, accounts, hosts, os.environ.get("LOGHI_BASE", "/"), os.environ.get("LOGHI_INSECURE") != "1")
+        COLL.hide_private = True    # scans for own use only are not shown to visitors (COLL exists after make_server)
         print(f"Loghi-studio, server mode, port {port}, for {', '.join(hosts)}", flush=True)
     else:                                   # the reading queue and adding books only exist on the own computer
         srv = make_server(port)

@@ -835,6 +835,44 @@ class ServerTest(unittest.TestCase):
         g.main(str(ged), str(out), everybody=True)
         self.assertEqual(len(json.loads(out.read_text(encoding="utf-8"))), 3)
 
+    def test_server_mode_really_starts(self):
+        # the program itself, started as on a server: the other tests build the server by hand and so missed
+        # a mistake in main() once (23 Nov 2026: the site answered 502 after a roll-out)
+        import auth
+        import socket
+        import subprocess
+        import sys
+        home = Path(TMP.name) / "started"
+        auth.Auth(home / "settings").set_user("kijker", "viewer", auth.make_password())
+        with socket.socket() as sock:
+            sock.bind(("127.0.0.1", 0))
+            port = sock.getsockname()[1]
+        env = dict(os.environ, LOGHI_MODE="server", LOGHI_HOSTS="start.example", LOGHI_INSECURE="1",
+                   LOGHI_STUDIO_SETTINGS=str(home / "settings"), LOGHI_STUDIO_CACHE=str(home / "cache"),
+                   LOGHI_STUDIO_TRAINING=str(home / "training"))
+        proc = subprocess.Popen([sys.executable, str(Path(server.__file__)), str(port)], env=env,
+                                stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
+        try:
+            codes = None
+            for _ in range(50):
+                try:
+                    req = urllib.request.Request(f"http://127.0.0.1:{port}/", headers={"Host": "start.example"})
+                    with urllib.request.urlopen(req, timeout=5) as r:
+                        codes = r.status
+                    break
+                except urllib.error.HTTPError as e:
+                    codes = e.code
+                    break
+                except OSError:
+                    if proc.poll() is not None:
+                        break
+                    time.sleep(0.2)
+            self.assertEqual(codes, 200, proc.stderr.read().decode("utf-8", "replace")[-600:] if proc.poll() is not None else "no answer")
+        finally:
+            proc.kill()
+            proc.wait(timeout=10)
+            proc.stderr.close()
+
     def test_server_mode_login_and_roles(self):
         import auth
         accounts = auth.Auth(Path(TMP.name) / "accounts")
