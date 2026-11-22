@@ -1,6 +1,6 @@
-# local settings (paths on this pc), caches and logs; the lines checked by people do go into git (a copy)
-settings/*
-!settings/corrections/
+# local settings, caches and logs. Also the lines checked by people: they can hold text of scans that may
+# not be shared. For a copy of them in a private repository of your own, see the README (Structure).
+settings/
 instellingen/
 cache/
 __pycache__/
@@ -20,3 +20,5 @@ training/
 testset/runs/
 # notes of a reviewer of the public copy
 review/
+# books put next to compose.yml for server mode
+deploy/data/

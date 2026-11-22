@@ -793,6 +793,48 @@ class ServerTest(unittest.TestCase):
         self.assertEqual(built["nl"], {k: v["nl"] for k, v in data.items()})     # run tools_i18n_build.py after a change
         self.assertEqual(built["fy"], {k: v["fy"] for k, v in data.items()})
 
+    def test_login_slows_a_name_down_but_never_locks_it_out(self):
+        import auth
+        a = auth.Auth(Path(TMP.name) / "accounts2")
+        pw = auth.make_password()
+        a.set_user("Beheer", "admin", pw)
+        for i in range(auth.MAX_FAILS):                  # a stranger guesses, each time from another address
+            self.assertEqual(a.login("beheer", "wrong", f"10.0.0.{i}")[1], "wrong")
+        self.assertEqual(a.login("beheer", pw, "10.0.1.1")[1], "slow")       # the owner must wait a few seconds, no more
+        gap, auth.NAME_GAP = auth.NAME_GAP, 0
+        try:
+            self.assertTrue(a.login("beheer", pw, "10.0.1.1")[0])
+        finally:
+            auth.NAME_GAP = gap
+        for i in range(auth.MAX_FAILS):                  # one address that keeps guessing does have to wait
+            a.login(f"name{i}", "wrong", "10.9.9.9")
+        self.assertEqual(a.login("beheer", pw, "10.9.9.9")[1], "wait")
+        auth.Auth(a.file.parent).set_user("nieuw", "viewer", pw)             # made while the server runs
+        self.assertTrue(a.login("nieuw", pw, "10.0.2.2")[0])
+
+    def test_damaged_file_gives_a_plain_answer(self):
+        bad = self.root / "0002" / "page" / "000001.xml"
+        bad.write_text("<PcGts><Page", encoding="utf-8")
+        try:
+            self.assertEqual(self.call("/api/page?c=proef&v=0002&s=000001"), (500, {"error": "Something went wrong on the server."}))
+        finally:
+            bad.unlink()
+        self.assertEqual(self.call("/api/hits?c=proef&v=0001&limit=abc"), (400, {"error": "The request is not valid."}))
+
+    def test_gedcom_leaves_out_people_who_may_be_alive(self):
+        import tools_gedcom_names as g
+        ged, out = Path(TMP.name) / "t.ged", Path(TMP.name) / "t.json"
+        ged.write_text("0 HEAD\n0 @I1@ INDI\n1 NAME Jan /Haijes/\n1 BIRT\n2 DATE 1610\n1 FAMS @F1@\n"
+                       "0 @I2@ INDI\n1 NAME Piet /Jansen/\n1 BIRT\n2 DATE 12 MAR 1990\n1 FAMC @F1@\n"
+                       "0 @I3@ INDI\n1 NAME Klaas /Jansen/\n1 DEAT Y\n1 FAMC @F1@\n"
+                       "0 @F1@ FAM\n1 HUSB @I1@\n1 CHIL @I2@\n1 CHIL @I3@\n0 TRLR\n", encoding="utf-8")
+        g.main(str(ged), str(out))
+        people = json.loads(out.read_text(encoding="utf-8"))
+        self.assertEqual([p["name"] for p in people], ["Jan Haijes", "Klaas Jansen"])
+        self.assertEqual(people[0]["relatives"], ["Klaas Jansen"])
+        g.main(str(ged), str(out), everybody=True)
+        self.assertEqual(len(json.loads(out.read_text(encoding="utf-8"))), 3)
+
     def test_server_mode_login_and_roles(self):
         import auth
         accounts = auth.Auth(Path(TMP.name) / "accounts")
@@ -848,6 +890,18 @@ class ServerTest(unittest.TestCase):
             self.assertEqual(cols[0]["id"], "proef")
             self.assertNotIn("root", cols[0])
             self.assertEqual(call("/api/search?c=proef&q=jan", cookie=viewer)[0], 200)
+            self.assertEqual(call("/api/search?c=proef&q=(a%2B)%2B%24&mode=regex", cookie=viewer)[0], 400)    # not from a visitor
+            # a collection with scans for own use only does not exist in server mode
+            server.COLL.get("proef")["private"] = True
+            server.COLL.hide_private = True
+            try:
+                self.assertEqual(json.loads(call("/api/collections", cookie=viewer)[1]), [])
+                self.assertEqual(call("/img/proef/0001/000001.jpg", cookie=viewer)[0], 400)
+                self.assertEqual(call("/api/search?c=proef&q=jan", cookie=viewer)[0], 400)
+            finally:
+                server.COLL.hide_private = False
+                server.COLL.get("proef")["private"] = False
+            self.assertEqual(len(json.loads(call("/api/collections", cookie=viewer)[1])), 1)
             for path in ("/api/browse", "/api/queue", "/api/jobs", "/api/queue/books?c=proef"):
                 self.assertEqual(call(path, cookie=viewer)[0], 403, path)
             self.assertEqual(call("/api/lists", "POST", {"title": "x"}, cookie=viewer)[0], 403)

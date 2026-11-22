@@ -103,8 +103,10 @@ class Jobs:
         with self.lock:
             if any(j["collection"] == cid and j["book"] == book and j["state"] in OPEN_STATES for j in self.jobs):
                 raise ValueError(f"Book {book} is already being added.")
-        if d.exists() and any(e.name.lower().endswith(IMG_EXT) for e in os.scandir(d)):
-            raise ValueError(f"Book {book} already exists in this collection. Choose another name.")
+        if d.exists():
+            with os.scandir(d) as it:
+                if any(e.name.lower().endswith(IMG_EXT) for e in it):
+                    raise ValueError(f"Book {book} already exists in this collection. Choose another name.")
         return d
 
     def _new(self, kind, cid, book, **extra):

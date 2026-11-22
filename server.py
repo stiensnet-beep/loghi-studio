@@ -4,11 +4,12 @@ Usage:  python server.py [port]      (default 8771)
 Then open http://127.0.0.1:8771/
 
 Server mode (reachable from outside, behind a web server that does https): set LOGHI_MODE=server and
-LOGHI_HOSTS=<host name(s), comma separated>, optionally LOGHI_BASE=/loghi/ (the path the web server puts
-in front). Every request then needs a login (auth.py); nothing is read, added or removed on the disk: only
-looking, searching, for the admin the lists of names, and for the admin and correctors checking lines.
+LOGHI_HOSTS=<host name(s), comma separated>. The site must be at the root of its host name. Every request
+then needs a login (auth.py); nothing is read, added or removed on the disk: only looking, searching, for
+the admin the lists of names, and for the admin and correctors checking lines. Collections marked as
+scans for own use only do not exist in server mode, and searching with a regular expression is off there.
 
-Only the Python standard library is used. Collections live in
+Only the Python standard library is used (reading a book enlarged also needs Pillow). Collections live in
 settings/collections.json (created on first start, editable in the interface).
 A collection is a folder with one sub-folder per volume (book/film); each volume folder
 holds the scans (*.jpg), page/*.xml (PageXML from Loghi) and txt/*.txt (plain text).
@@ -56,7 +57,11 @@ class Collections:
         self.path = Path(path)
         self.lock = threading.RLock()
         self.items = []
+        self.hide_private = False   # server mode: collections with scans for own use only do not exist there
         self.load()
+
+    def _shown(self):
+        return [c for c in self.items if not (self.hide_private and c.get("private"))]
 
     def load(self):
         with self.lock:
@@ -78,21 +83,21 @@ class Collections:
 
     def get(self, cid):
         with self.lock:
-            for c in self.items:
+            for c in self._shown():
                 if c["id"] == cid:
                     return c
         raise KeyError(f"unknown collection: {cid}")
 
     def ids(self):
         with self.lock:
-            return [c["id"] for c in self.items]
+            return [c["id"] for c in self._shown()]
 
     def root(self, cid):
         return Path(self.get(cid)["root"])
 
     def public(self):
         with self.lock:
-            return [dict(c, exists=Path(c["root"]).is_dir()) for c in self.items]
+            return [dict(c, exists=Path(c["root"]).is_dir()) for c in self._shown()]
 
     @staticmethod
     def _clean(data, partial=False):
@@ -651,6 +656,8 @@ class TextIndex:
         if not q:
             return {"total": 0, "results": [], "per_vol": {}, "terms": [], "docs": len(self.docs)}
         if mode == "regex":
+            if len(q) > 200:
+                raise ValueError("The regular expression is too long (more than 200 characters).")
             rx = re.compile(q, re.I)
             test = lambda raw, nl: rx.search(raw)
         elif mode == "exact":
@@ -724,7 +731,25 @@ def index_for(cid):
 
 # ---------------------------------------------------------------- HTTP
 
+def plain_error(e):
+    """The message of a refused request, without the inside of Python."""
+    s = str(e).strip("'\"")
+    if isinstance(e, json.JSONDecodeError) or s.startswith(("invalid literal", "could not convert")):
+        return "The request is not valid."
+    return s
+
+
 class Handler(BaseHTTPRequestHandler):
+    timeout = 60                # seconds a connection may stay silent while we wait for it
+
+    def oops(self, e):
+        """Something unforeseen (a damaged file, for instance): a plain answer, the cause in the log."""
+        print(f"error in {self.command} {self.path.split('?')[0]}: {type(e).__name__}: {e}", file=sys.stderr, flush=True)
+        try:
+            self.send_json({"error": "Something went wrong on the server."}, 500)
+        except OSError:
+            pass
+
     server_version = "LoghiStudio/" + VERSION
 
     def log_message(self, fmt, *args):
@@ -794,7 +819,7 @@ class Handler(BaseHTTPRequestHandler):
         if origin and urlparse(origin).netloc.lower() not in ok_hosts:
             self.send_json({"error": "request from another website refused"}, 403)
             return None
-        if writing and "application/json" not in (self.headers.get("Content-Type") or ""):
+        if writing and not (self.headers.get("Content-Type") or "").strip().lower().startswith("application/json"):
             self.send_json({"error": "JSON only"}, 415)
             return None
         if not auth:
@@ -807,7 +832,7 @@ class Handler(BaseHTTPRequestHandler):
 
     def read_body(self):
         n = int(self.headers.get("Content-Length") or 0)
-        if n > 8_000_000:
+        if n < 0 or n > 8_000_000:
             raise ValueError("too much data")
         data = json.loads(self.rfile.read(n).decode("utf-8") or "{}")
         if not isinstance(data, dict):
@@ -902,8 +927,10 @@ class Handler(BaseHTTPRequestHandler):
                 return
             if path == "/api/search":
                 t0 = time.time()
+                if self.server.auth and q.get("mode") == "regex":     # one pattern can keep a processor busy for minutes
+                    raise ValueError("Searching with a regular expression is switched off on this server.")
                 res = index_for(q["c"]).search(q.get("q", ""), q.get("mode", "loose"), q.get("v") or None,
-                                               int(q.get("w", 1)), int(q.get("limit", 500)))
+                                               min(int(q.get("w", 1)), 5), min(int(q.get("limit", 500)), 1000))
                 if q.get("mode", "loose") in ("loose", "fuzzy", "names"):       # names read by people, if there is an index
                     res["index"] = CORR.index_search(q["c"], q.get("q", ""), q.get("v") or None)
                 res["secs"] = round(time.time() - t0, 2)
@@ -915,9 +942,11 @@ class Handler(BaseHTTPRequestHandler):
         except re.error as e:
             self.send_json({"error": f"invalid regular expression: {e}"}, 400)
         except (KeyError, ValueError) as e:
-            self.send_json({"error": str(e).strip("'\"")}, 400)
+            self.send_json({"error": plain_error(e)}, 400)
         except (BrokenPipeError, ConnectionResetError):
             pass
+        except Exception as e:
+            self.oops(e)
 
     def _write(self, method):
         who = self.guard(writing=method != "DELETE")
@@ -934,6 +963,8 @@ class Handler(BaseHTTPRequestHandler):
                         return self.send_json(res, 200, [self.cookie(token, 7 * 86400)])
                     if res == "wait":
                         return self.send_json({"error": "too many wrong attempts; wait 15 minutes"}, 429)
+                    if res == "slow":
+                        return self.send_json({"error": "many wrong attempts for this name; wait a few seconds"}, 429, [("Retry-After", "5")])
                     return self.send_json({"error": "name or password is not right"}, 401)
                 if path == "/api/logout" and method == "POST":
                     auth.logout(self.token())
@@ -1018,9 +1049,11 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send_json(COLL.remove(cid))
             self.send_json({"error": "not allowed"}, 405)
         except (KeyError, ValueError) as e:
-            self.send_json({"error": str(e).strip("'\"")}, 400)
+            self.send_json({"error": plain_error(e)}, 400)
         except (BrokenPipeError, ConnectionResetError):
             pass
+        except Exception as e:
+            self.oops(e)
 
     def do_POST(self):
         self._write("POST")
@@ -1088,6 +1121,7 @@ def main():
         import auth
         hosts = [h for h in os.environ.get("LOGHI_HOSTS", "").split(",") if h.strip()]
         accounts = auth.Auth(SETTINGS_DIR)
+        COLL.hide_private = True    # scans for own use only are not shown to visitors
         if not hosts or not accounts.users:
             raise SystemExit("Server mode needs LOGHI_HOSTS and at least one account (python auth.py <settings> <name> <role>).")
         srv = make_server(port, accounts, hosts, os.environ.get("LOGHI_BASE", "/"), os.environ.get("LOGHI_INSECURE") != "1")

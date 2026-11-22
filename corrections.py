@@ -333,6 +333,11 @@ class Corrections:
         with self._git_lock:
             state = {"time": time.time(), "ok": True, "message": ""}
             try:
+                ignored = subprocess.run(["git", "-C", str(repo), "check-ignore", "-q", "--", rel], capture_output=True,
+                                         stdin=subprocess.DEVNULL, timeout=60,
+                                         creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0)).returncode == 0
+                if ignored:
+                    raise OSError("This folder is ignored by git here (.gitignore). Keep the copy in a private repository of your own; see the README.")
                 git("add", "--", rel)
                 if git("status", "--porcelain", "--", rel).strip():
                     git("commit", "-q", "-m", "Corrections: copy of the checked lines", "--only", "--", rel)
@@ -616,8 +621,10 @@ class Corrections:
             try:
                 if (self.second_dir / cid / vol / "page").is_dir():
                     out[vol] = "other"
-                elif any(e.name.endswith(".xml.bak") for e in os.scandir(self.srv.vol_path(cid, vol) / "page")):
-                    out[vol] = "before"
+                else:
+                    with os.scandir(self.srv.vol_path(cid, vol) / "page") as it:
+                        if any(e.name.endswith(".xml.bak") for e in it):
+                            out[vol] = "before"
             except (KeyError, OSError):
                 pass
         self._second_books[cid] = (time.time(), out)

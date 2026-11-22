@@ -4,7 +4,9 @@
 # names.json, users.json with password hashes) and cache/. See deploy/SERVER-MODE.md.
 services:
   loghistudio:
-    build: ./app
+    build:
+      context: ..             # the folder of the repository
+      dockerfile: deploy/Dockerfile
     container_name: loghistudio
     restart: unless-stopped
     read_only: true
@@ -23,13 +25,10 @@ services:
       - ./data:/data:ro
       - ./settings:/settings
       - ./cache:/cache
-    networks: [intern]
+    ports:
+      - "127.0.0.1:8771:8771"      # only this machine: the reverse proxy passes requests on
     logging:
       driver: json-file
       options:
         max-size: 1m
         max-file: "2"
-
-networks:
-  intern:
-    external: true

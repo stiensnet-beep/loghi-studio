@@ -3,6 +3,17 @@
 Version numbers: 0.x is beta (trial version). 1.0 comes when adding, the queue and automatic starting work and have been tested.
 
 ## Unreleased
+- After a review by another model (Claude Opus 5.5), server mode: collections with scans for own use only do
+  not exist there; searching with a regular expression is off there; many wrong passwords for a name slow that
+  name down for everyone but no longer lock it out (an address with five wrong attempts still waits 15
+  minutes); an account made while the server runs works at once.
+- A damaged PageXML file gives a plain message instead of a dropped connection; messages no longer show
+  the inside of Python; a request with a negative length is refused and a silent connection ends after a minute.
+- Docker containers are named after the copy that started them (`loghi-studio-<code>-...`), so two copies on
+  one computer leave each other's containers alone.
+- `tools_gedcom_names.py` leaves out people who may still be alive, also as relatives (`--all` writes everybody).
+- The README no longer claims a light theme or a contrast of 12:1 without the button High contrast, and names
+  Pillow (needed for reading a book enlarged and for the tests).
 - Made ready to be shared: a licence (MIT, Johan Dijkstra), a README for others with pictures, `docs/FINDINGS.md` (what we
   measured), `deploy/SERVER-MODE.md`, and `tools_public_export.py`, which makes the public copy and stops
   when a file still holds a private detail.

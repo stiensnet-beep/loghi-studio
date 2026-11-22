@@ -8,17 +8,18 @@ text are then moved into <book>/page and <book>/txt. So:
 - progress and the expected finishing time are known while a book is being read.
 
 Pausing freezes the running container (docker pause); resuming continues exactly where it was.
-Containers started here are named loghi-studio-*; other containers are never touched. While another
+Containers started here are named loghi-studio-<code of this copy>-*; other containers are never touched. While another
 Loghi run is active on this computer, the queue waits.
 
 State is kept in settings/queue.json. Scans are never changed. An existing page/<scan>.xml is only
-replaced when that scan is read again (after a failure, or on request); the old file is kept as
-<scan>.xml.bak.
+replaced when that scan is read again (after a failure, or on request); the file it replaces is kept as
+<scan>.xml.bak (one step back: reading again once more replaces that copy).
 
 Reading again, enlarged: on a scan of a large page with small writing the line finder misses most lines.
 A queue item with "enlarge": 2 reads all scans of the book again from a copy that is twice as large; the
 coordinates in the PageXML are scaled back to the scan. The marker file lists the scans done this way.
 """
+import hashlib
 import json
 import os
 import re
@@ -37,7 +38,15 @@ IMG_TOOL = f"loghi/docker.loghi-tooling:{LOGHI_VERSION}"
 BIN = "/src/loghi-tooling/minions/target/appassembler/bin"
 NS = "-use_2013_namespace"
 MEM = ["-m", "16g", "--shm-size", "8g"]
-PREFIX = "loghi-studio-"
+
+
+def _copy_code():
+    """Four signs that differ per copy of Loghi-studio on this computer (per settings folder)."""
+    where = os.environ.get("LOGHI_STUDIO_SETTINGS") or str(Path(__file__).resolve().parent)
+    return hashlib.sha1(os.path.normcase(os.path.abspath(where)).encode("utf-8")).hexdigest()[:4]
+
+
+PREFIX = f"loghi-studio-{_copy_code()}-"     # so a second copy never clears away the containers of this one
 WORK_DIR = ".loghi-studio-work"
 MARKER = ".loghi-studio.json"
 LINE_MODEL = "baseline2"
@@ -213,7 +222,7 @@ class DockerEngine:
         self._call("rm", "-f", name)
 
     def cleanup(self):
-        """Remove containers left behind by an earlier run of this program (names loghi-studio-*)."""
+        """Remove containers left behind by an earlier run of this copy of the program (names start with PREFIX)."""
         rc, out = self._call("ps", "-a", "--filter", f"name=^{PREFIX}", "--format", "{{.Names}}")
         for name in out.split() if rc == 0 else []:
             if name.startswith(PREFIX):

@@ -675,9 +675,9 @@
   "nl": "Beschrijving",
   "fy": "Beskriuwing"
  },
- "To make a bookmark: press <kbd>Ctrl</kbd> + <kbd>D</kbd>. Loghi-studio must be running before the bookmark works; use the Loghi-studio shortcut on the desktop for that.": {
-  "nl": "Bladwijzer maken: druk op <kbd>Ctrl</kbd> + <kbd>D</kbd>. Loghi-studio moet draaien voordat de bladwijzer werkt; gebruik daarvoor de snelkoppeling Loghi-studio op het bureaublad.",
-  "fy": "Blêdwizer meitsje: druk op <kbd>Ctrl</kbd> + <kbd>D</kbd>. Loghi-studio moat draaie foardat de blêdwizer wurket; brûk dêrfoar de fluchkeppeling Loghi-studio op it buroblêd."
+ "To make a bookmark: press <kbd>Ctrl</kbd> + <kbd>D</kbd>. Loghi-studio must be running before the bookmark works; start it with start_loghi_studio.bat, or with a shortcut to that file.": {
+  "nl": "Bladwijzer maken: druk op <kbd>Ctrl</kbd> + <kbd>D</kbd>. Loghi-studio moet draaien voordat de bladwijzer werkt; start het met start_loghi_studio.bat, of met een snelkoppeling naar dat bestand.",
+  "fy": "Blêdwizer meitsje: druk op <kbd>Ctrl</kbd> + <kbd>D</kbd>. Loghi-studio moat draaie foardat de blêdwizer wurket; start it mei start_loghi_studio.bat, of mei in fluchkeppeling nei dat bestân."
  },
  "done": {
   "nl": "klaar",

@@ -18,7 +18,8 @@ What we measured on our own books (enlarging scans, models, Transkribus, fine-tu
 ## Starting
 - Double-click `start_loghi_studio.bat`, or run `python server.py 8771`.
 - Then open http://127.0.0.1:8771/
-- Needed: Python 3.10 or newer (standard library only). For reading books: Docker Desktop, the Loghi
+- Needed: Python 3.10 or newer. The application uses the standard library only; reading a book enlarged
+  and the tests also need Pillow (`pip install pillow`). For reading books: Docker Desktop, the Loghi
   images (version 2.3.2) and a folder with the Loghi models.
 - First use: open the tab Collections and add a folder. A collection is a folder with one folder per book;
   a book holds the scans (`000001.jpg`, ...) and, once Loghi has read it, `page/000001.xml` (PageXML) and
@@ -99,7 +100,8 @@ What we measured on our own books (enlarging scans, models, Transkribus, fine-tu
 - At most 300 hits per name per book are kept. The certainty of the lines is cached in `cache/conf/`.
 
 ## Accessibility
-- Large text (buttons A− and A+), light and dark theme with a contrast of 12:1 or higher.
+- Large text (buttons A− and A+). One dark theme: text has a contrast of at least 7:1 with its background,
+  and of 12:1 or higher with the button High contrast.
 - Everything works with the keyboard; tabs with the arrow keys; a visible focus ring.
 - Labels for the screen reader; messages in a status line (`aria-live`).
 - Meaning is never carried by colour alone: there is always a word or a symbol too.
@@ -116,10 +118,12 @@ What we measured on our own books (enlarging scans, models, Transkribus, fine-tu
   what it brings with `--measure`). `tools_analiticcl_trial.py` is the record of the trial that led to it.
 - `index.html`: the whole page, without a build step.
 - `settings/`: collections, names, jobs and the queue (made on first start; not in git), and
-  `corrections/`: the lines checked by people. That folder can be kept in git: when the file
-  `settings/git_backup.on` exists, the server on the own computer
-  commits and pushes it by itself ten minutes after the last check, and once when it starts. Only that
-  folder goes into such a commit. The Correct tab says when the last copy was made, or why it failed.
+  `corrections/`: the lines checked by people. The public code lets git ignore `settings/` as a whole,
+  because checked lines can hold text of scans that may not be shared. To keep a copy of them in a private
+  repository of your own: take `settings/corrections/` out of `.gitignore` there and make the file
+  `settings/git_backup.on`. The server on the own computer then commits that folder by itself ten minutes
+  after the last check and once when it starts, and pushes the branch (every commit of the branch that was
+  not sent yet goes along). The Correct tab says when the last copy was made, or why it failed.
 - `training/`: training sets made from the corrections (not in git; can be made again).
 - `cache/`: search index, name hits and Loghi logs (not in git).
 - `tests/`: `python -m unittest discover -s tests` (Docker is replaced by a fake; no scans are touched).
@@ -127,7 +131,7 @@ What we measured on our own books (enlarging scans, models, Transkribus, fine-tu
 ## Rules
 - Text read by Loghi is a pointer; a find only counts after it has been read on the scan itself.
 - Scans are never changed. Scans, models and the text read by Loghi do not go into git; the lines
-  checked by people do (text only, as a copy).
+  checked by people only when you switch that on (see Structure).
 - Scans from FamilySearch are for personal use only.
 
 ## Known limits
@@ -138,7 +142,13 @@ What we measured on our own books (enlarging scans, models, Transkribus, fine-tu
 - The Frisian texts of the interface were not checked by someone who writes Frisian.
 - The Correct tab is new and has seen little use. That checked lines make a better reading model is the
   aim, not yet a result: see docs/FINDINGS.md.
-- No full round with a screen reader by an outside tester has been done yet.
+- No full round with a screen reader by an outside tester has been done yet. The login page has no button
+  for high contrast.
+- Server mode must be at the root of a host name of its own; a path such as example.org/loghi/ does not work.
+- Several copies on one computer leave each other's Docker containers alone (each names them after its own
+  settings folder), but they do not share the processor and the memory wisely. Let one copy read at a time.
+- Parts of the code come from the first use and mean little elsewhere: the reading of a `batch.log`, the
+  hits of older search scripts (`hits*.md`), and the research scripts `tools_*` and `runpod_jobs/`.
 
 ## Licence and credits
 - Loghi-studio: MIT, see [LICENSE](LICENSE). Idea, design and testing: Johan Dijkstra. The code was written
@@ -148,4 +158,7 @@ What we measured on our own books (enlarging scans, models, Transkribus, fine-tu
   holds no code of Loghi.
 - `reading_errors.json` was learned from the index of names of AlleFriezen, fetched through Open Archives.
 - The scan in the pictures is from the archive of the VOC at the Nationaal Archief (The Hague, 1.04.02);
-  its text is from the GLOBALISE ground truth (doi:10.34894/IQ0YMT, CC-BY-SA-4.0).
+  its text is from the GLOBALISE ground truth (doi:10.34894/IQ0YMT, CC-BY-SA-4.0). Because of that text
+  the pictures in `docs/screenshots/` are under CC-BY-SA-4.0, not under the MIT licence.
+- The faint map behind the page is the map of Friesland from the Schotanus atlas of 1718 (Rijksmuseum,
+  RP-P-AO-2-12-1, public domain).

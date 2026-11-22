@@ -23,6 +23,7 @@ SESSION_IDLE = 12 * 3600        # a session ends after 12 hours without a reques
 SESSION_MAX = 7 * 86400         # and after 7 days in any case
 MAX_FAILS = 5                   # wrong passwords before a pause
 FAIL_PAUSE = 15 * 60            # seconds
+NAME_GAP = 5                # seconds between attempts for a name that had that many wrong passwords
 WORDS = ("anker boek brug dijk eiken fluit gouden haven iepen kade lente molen noord oever pomp roer schip terp "
          "veld wad zeil akker bries dorp eb vloed greide hoeve klif meer sloot turf wier zomer sluis toren reiger "
          "kievit grutto zwaan otter linde wilg riet klaver boter kaas vlas hooi oogst ploeg schuur stal weide").split()
@@ -44,7 +45,8 @@ class Auth:
         self.sessions = {}          # sha256(token) -> {"user", "role", "seen", "made"}
         self.fails = {}             # "ip:<ip>" or "user:<name>" -> [count, time of the last failure]
         self.users = {}
-        self.load()
+        self._stamp = None
+        self._fresh()
 
     def load(self):
         try:
@@ -67,18 +69,37 @@ class Auth:
             os.replace(tmp, self.file)
 
     # ------------------------------------------------------------ logging in
+    def _fresh(self):
+        """Read users.json again when it changed: an account made while the server runs works at once."""
+        try:
+            st = self.file.stat()
+            stamp = (st.st_mtime_ns, st.st_size)
+        except OSError:
+            stamp = None
+        if stamp != self._stamp:
+            self._stamp = stamp
+            self.load()
+
     def _blocked(self, key, now):
         n, last = self.fails.get(key, (0, 0))
         return n >= MAX_FAILS and now - last < FAIL_PAUSE
 
     def login(self, name, password, ip):
-        """(token, user) after a right password; (None, reason) otherwise. Reasons: "wrong", "wait"."""
+        """(token, user) after a right password; (None, reason) otherwise. Reasons: "wrong", "wait", "slow".
+
+        An address with MAX_FAILS wrong attempts waits FAIL_PAUSE. A name with that many wrong attempts, from
+        whatever address, is only slowed down (one attempt per NAME_GAP seconds): a stranger who knows a name
+        must not be able to keep its owner out."""
         now = time.time()
         name = str(name or "").strip()
         keys = (f"ip:{ip}", f"user:{name.lower()}")
         with self.lock:
-            if any(self._blocked(k, now) for k in keys):
+            self._fresh()
+            if self._blocked(keys[0], now):
                 return None, "wait"
+            n, last = self.fails.get(keys[1], (0, 0))
+            if n >= MAX_FAILS and now - last < NAME_GAP:
+                return None, "slow"
             user = self.users.get(name.lower())
         # always do the work of one hash, so the answer takes as long for an unknown name
         salt = bytes.fromhex(user["salt"]) if user else b"0" * 16
@@ -88,6 +109,8 @@ class Auth:
                 for k in keys:
                     n, last = self.fails.get(k, (0, 0))
                     self.fails[k] = [1 if now - last > FAIL_PAUSE else n + 1, now]
+                if len(self.fails) > 2000:          # forget what is long ago
+                    self.fails = {k: v for k, v in self.fails.items() if now - v[1] < FAIL_PAUSE}
                 return None, "wrong"
             for k in keys:
                 self.fails.pop(k, None)
@@ -104,6 +127,7 @@ class Auth:
             return None
         key, now = hashlib.sha256(token.encode()).hexdigest(), time.time()
         with self.lock:
+            self._fresh()
             s = self.sessions.get(key)
             if not s:
                 return None
