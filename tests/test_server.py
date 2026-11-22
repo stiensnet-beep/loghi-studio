@@ -837,7 +837,7 @@ class ServerTest(unittest.TestCase):
 
     def test_server_mode_really_starts(self):
         # the program itself, started as on a server: the other tests build the server by hand and so missed
-        # a mistake in main() once (23 Nov 2026: the site answered 502 after a roll-out)
+        # a mistake in main() once (22 Nov 2026: the site answered 502 after a roll-out)
         import auth
         import socket
         import subprocess

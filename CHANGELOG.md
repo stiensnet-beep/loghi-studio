@@ -3,6 +3,8 @@
 Version numbers: 0.x is beta (trial version). 1.0 comes when adding, the queue and automatic starting work and have been tested.
 
 ## Unreleased
+
+## 0.6.0-beta (22 Nov 2026)
 - After a review by another model (Claude Opus 5.5), server mode: collections with scans for own use only do
   not exist there; searching with a regular expression is off there; many wrong passwords for a name slow that
   name down for everyone but no longer lock it out (an address with five wrong attempts still waits 15
