@@ -1,0 +1,2 @@
+*.sh text eol=lf
+runpod_jobs/* text eol=lf

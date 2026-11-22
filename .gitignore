@@ -1,0 +1,20 @@
+# local settings (paths on this pc), caches and logs; the lines checked by people do go into git (a copy)
+settings/*
+!settings/corrections/
+instellingen/
+cache/
+__pycache__/
+*.pyc
+server.err
+server.log
+# never commit scans, models or transcriptions
+*.jpg
+*.jpeg
+*.png
+!docs/screenshots/*.png
+*.pth
+models/
+# training sets made from the checked lines (can be made again; line images of scans)
+training/
+# trial runs of the test set (can be made again)
+testset/runs/

@@ -1,0 +1,2546 @@
+{
+ "Skip to the content": {
+  "nl": "Naar de inhoud",
+  "fy": "Nei de ynhâld"
+ },
+ "Collection": {
+  "nl": "Collectie",
+  "fy": "Kolleksje"
+ },
+ "Display": {
+  "nl": "Weergave",
+  "fy": "Werjefte"
+ },
+ "Smaller text": {
+  "nl": "Kleinere tekst",
+  "fy": "Lytsere tekst"
+ },
+ "Larger text": {
+  "nl": "Grotere tekst",
+  "fy": "Gruttere tekst"
+ },
+ "High contrast": {
+  "nl": "Hoog contrast",
+  "fy": "Heech kontrast"
+ },
+ "Language": {
+  "nl": "Taal",
+  "fy": "Taal"
+ },
+ "Sections": {
+  "nl": "Onderdelen",
+  "fy": "Underdielen"
+ },
+ "Home": {
+  "nl": "Start",
+  "fy": "Start"
+ },
+ "View": {
+  "nl": "Bekijken",
+  "fy": "Besjen"
+ },
+ "Search": {
+  "nl": "Zoeken",
+  "fy": "Sykje"
+ },
+ "Name finder": {
+  "nl": "Namenzoeker",
+  "fy": "Nammesiker"
+ },
+ "Progress": {
+  "nl": "Voortgang",
+  "fy": "Fuortgong"
+ },
+ "Add": {
+  "nl": "Toevoegen",
+  "fy": "Tafoegje"
+ },
+ "Queue": {
+  "nl": "Wachtrij",
+  "fy": "Wachtrige"
+ },
+ "Collections": {
+  "nl": "Collecties",
+  "fy": "Kolleksjes"
+ },
+ "Old Frisian handwriting, readable and searchable": {
+  "nl": "Oude Friese handschriften, leesbaar en doorzoekbaar",
+  "fy": "Alde Fryske hânskriften, lêsber en trochsykber"
+ },
+ "Search the text of the old books": {
+  "nl": "Zoek in de tekst van de oude boeken",
+  "fy": "Sykje yn de tekst fan de âlde boeken"
+ },
+ "Search for a name, a place or a word": {
+  "nl": "Zoek op een naam, een plaats of een woord",
+  "fy": "Sykje op in namme, in plak of in wurd"
+ },
+ "Loghi-studio lets the computer read court books, orphan books and other archive records from Friesland, from the sixteenth to the nineteenth century. Browse the scans with the text beside them, search for any word, and have the names from your family tree traced by themselves.": {
+  "nl": "Loghi-studio laat de computer rechtboeken, weesboeken en andere archiefstukken uit Friesland lezen, van de zestiende tot de negentiende eeuw. Blader door de scans met de tekst ernaast, zoek op elk woord en laat de namen uit je stamboom vanzelf opsporen.",
+  "fy": "Loghi-studio lit de kompjûter rjochtboeken, weesboeken en oare argyfstikken út Fryslân lêze, fan de sechstjinde oant de njoggentjinde iuw. Blêdzje troch de scans mei de tekst dernjonken, sykje op elk wurd en lit de nammen út dyn stambeam fansels opspoare."
+ },
+ "The computer does not read without mistakes. A find only counts after it has been read on the scan itself.": {
+  "nl": "De computer leest niet foutloos. Een vondst telt pas na lezing op de scan zelf.",
+  "fy": "De kompjûter lêst net sûnder flaters. In fynst telt pas nei lêzing op de scan sels."
+ },
+ "Books in this collection": {
+  "nl": "Boeken in deze collectie",
+  "fy": "Boeken yn dizze kolleksje"
+ },
+ "Books": {
+  "nl": "Boeken",
+  "fy": "Boeken"
+ },
+ "Filter books": {
+  "nl": "Boeken filteren",
+  "fy": "Boeken filterje"
+ },
+ "No book chosen": {
+  "nl": "Geen boek gekozen",
+  "fy": "Gjin boek keazen"
+ },
+ "Browse and zoom": {
+  "nl": "Bladeren en zoomen",
+  "fy": "Blêdzje en zoome"
+ },
+ "◀ Previous scan": {
+  "nl": "◀ Vorige scan",
+  "fy": "◀ Foarige scan"
+ },
+ "Scan": {
+  "nl": "Scan",
+  "fy": "Scan"
+ },
+ "Next scan ▶": {
+  "nl": "Volgende scan ▶",
+  "fy": "Folgjende scan ▶"
+ },
+ "Choose a scan with the slider": {
+  "nl": "Kies een scan met de schuif",
+  "fy": "Kies in scan mei de skowe"
+ },
+ "Zoom out": {
+  "nl": "Uitzoomen",
+  "fy": "Utzoome"
+ },
+ "Zoom in": {
+  "nl": "Inzoomen",
+  "fy": "Ynzoome"
+ },
+ "Whole scan": {
+  "nl": "Hele scan",
+  "fy": "Hiele scan"
+ },
+ "Full width": {
+  "nl": "Volle breedte",
+  "fy": "Folle breedte"
+ },
+ "Line boxes": {
+  "nl": "Regelvakken",
+  "fy": "Rigelfakken"
+ },
+ "Scan. Left and right arrow: previous and next scan. Up and down arrow: choose a line. Plus and minus: zoom.": {
+  "nl": "Scan. Pijl links en rechts: vorige en volgende scan. Pijl omhoog en omlaag: kies een regel. Plus en min: zoomen.",
+  "fy": "Scan. Pylk lofts en rjochts: foarige en folgjende scan. Pylk omheech en omleech: kies in rigel. Plus en min: zoome."
+ },
+ "Choose a book in the list.": {
+  "nl": "Kies een boek in de lijst.",
+  "fy": "Kies in boek yn de list."
+ },
+ "Text": {
+  "nl": "Tekst",
+  "fy": "Tekst"
+ },
+ "Show uncertainty": {
+  "nl": "Onzekerheid tonen",
+  "fy": "Unwissichheid sjen litte"
+ },
+ "Copy text": {
+  "nl": "Tekst kopiëren",
+  "fy": "Tekst kopiearje"
+ },
+ "Hits of the name finder on this scan": {
+  "nl": "Treffers van de namenzoeker op deze scan",
+  "fy": "Treffers fan de nammesiker op dizze scan"
+ },
+ "Lines of this scan": {
+  "nl": "Regels van deze scan",
+  "fy": "Rigels fan dizze scan"
+ },
+ "Keyboard shortcuts and explanation": {
+  "nl": "Sneltoetsen en uitleg",
+  "fy": "Fluchtoetsen en útlis"
+ },
+ "<kbd>←</kbd> and <kbd>→</kbd>: previous and next scan. <kbd>↑</kbd> and <kbd>↓</kbd>: previous and next line; the scan zooms to that line.": {
+  "nl": "<kbd>←</kbd> en <kbd>→</kbd>: vorige en volgende scan. <kbd>↑</kbd> en <kbd>↓</kbd>: vorige en volgende regel; de scan zoomt in op die regel.",
+  "fy": "<kbd>←</kbd> en <kbd>→</kbd>: foarige en folgjende scan. <kbd>↑</kbd> en <kbd>↓</kbd>: foarige en folgjende rigel; de scan zoomt yn op dy rigel."
+ },
+ "<kbd>+</kbd> and <kbd>−</kbd>: zoom. <kbd>0</kbd>: whole scan. <kbd>W</kbd>: full width. <kbd>L</kbd>: line boxes. <kbd>C</kbd>: uncertainty. <kbd>Esc</kbd>: let go of the line.": {
+  "nl": "<kbd>+</kbd> en <kbd>−</kbd>: zoomen. <kbd>0</kbd>: hele scan. <kbd>W</kbd>: volle breedte. <kbd>L</kbd>: regelvakken. <kbd>C</kbd>: onzekerheid. <kbd>Esc</kbd>: de regel loslaten.",
+  "fy": "<kbd>+</kbd> en <kbd>−</kbd>: zoome. <kbd>0</kbd>: hiele scan. <kbd>W</kbd>: folle breedte. <kbd>L</kbd>: rigelfakken. <kbd>C</kbd>: ûnwissichheid. <kbd>Esc</kbd>: de rigel loslitte."
+ },
+ "The shortcuts work when the cursor is not in an input field. With a screen reader: put the focus on the scan first.": {
+  "nl": "De sneltoetsen werken als de cursor niet in een invoerveld staat. Met een schermlezer: zet de focus eerst op de scan.",
+  "fy": "De fluchtoetsen wurkje as de cursor net yn in ynfierfjild stiet. Mei in skermlêzer: set de fokus earst op de scan."
+ },
+ "<strong>[?]</strong> before a line means: Loghi is unsure about this line. <strong>[??]</strong> means: very unsure. <strong>[name]</strong> means: a hit of the name finder.": {
+  "nl": "<strong>[?]</strong> voor een regel betekent: Loghi is onzeker over deze regel. <strong>[??]</strong> betekent: zeer onzeker. <strong>[naam]</strong> betekent: een treffer van de namenzoeker.",
+  "fy": "<strong>[?]</strong> foar in rigel betsjut: Loghi is ûnwis oer dizze rigel. <strong>[??]</strong> betsjut: tige ûnwis. <strong>[namme]</strong> betsjut: in treffer fan de nammesiker."
+ },
+ "Text read by Loghi is a pointer. A find only counts after it has been read on the scan itself.": {
+  "nl": "Tekst die Loghi gelezen heeft is een aanwijzing. Een vondst telt pas na lezing op de scan zelf.",
+  "fy": "Tekst dy't Loghi lêzen hat is in oanwizing. In fynst telt pas nei lêzing op de scan sels."
+ },
+ "Search the text that was read": {
+  "nl": "Zoeken in de gelezen tekst",
+  "fy": "Sykje yn de lêzen tekst"
+ },
+ "Search words": {
+  "nl": "Zoekwoorden",
+  "fy": "Sykwurden"
+ },
+ "Search mode": {
+  "nl": "Zoekwijze",
+  "fy": "Sykwize"
+ },
+ "Loose (spelling does not matter)": {
+  "nl": "Los (spelling maakt niet uit)",
+  "fy": "Los (stavering makket neat út)"
+ },
+ "Fuzzy (also reading errors)": {
+  "nl": "Ruim (ook leesfouten)",
+  "fy": "Rom (ek lêsflaters)"
+ },
+ "Literal": {
+  "nl": "Letterlijk",
+  "fy": "Letterlik"
+ },
+ "Regular expression": {
+  "nl": "Reguliere expressie",
+  "fy": "Reguliere ekspresje"
+ },
+ "Scope": {
+  "nl": "Bereik",
+  "fy": "Berik"
+ },
+ "All books of the collection": {
+  "nl": "Alle boeken van de collectie",
+  "fy": "Alle boeken fan de kolleksje"
+ },
+ "Only the current book": {
+  "nl": "Alleen het huidige boek",
+  "fy": "Allinnich it hjoeddeiske boek"
+ },
+ "Also across 2 lines": {
+  "nl": "Ook over 2 regels heen",
+  "fy": "Ek oer 2 rigels hinne"
+ },
+ "<strong>Loose</strong>: all words must be in the line; ij is y, ck is k, ae is aa, doubled letters count as one. <strong>Fuzzy</strong>: in addition 1 or 2 letters may differ per word, because Loghi often reads names slightly wrong. After Loghi-studio has started, the search index is built in the background; a search in those first minutes can take longer.": {
+  "nl": "<strong>Los</strong>: alle woorden moeten in de regel staan; ij is y, ck is k, ae is aa, dubbele letters tellen als één. <strong>Ruim</strong>: daarnaast mogen per woord 1 of 2 letters afwijken, omdat Loghi namen vaak net verkeerd leest. Na het starten van Loghi-studio wordt de zoekindex op de achtergrond opgebouwd; zoeken kan in die eerste minuten langer duren.",
+  "fy": "<strong>Los</strong>: alle wurden moatte yn de rigel stean; ij is y, ck is k, ae is aa, dûbele letters telle as ien. <strong>Rom</strong>: dêrnjonken meie per wurd 1 of 2 letters ôfwike, om't Loghi nammen faak krekt ferkeard lêst. Nei it starten fan Loghi-studio wurdt de sykyndeks op de eftergrûn opboud; sykjen kin yn dy earste minuten langer duorje."
+ },
+ "Loghi-studio searches by itself, in the background, for the names on your lists of names. The hits in the chosen collection are below, per person; open a person to see the hits. You manage the lists of names further down this page. To search for any word, use the Search tab.": {
+  "nl": "Loghi-studio zoekt vanzelf, op de achtergrond, naar de namen op je namenlijsten. De treffers in de gekozen collectie staan hieronder, per persoon; open een persoon om de treffers te zien. De namenlijsten beheer je verderop op deze pagina. Wil je op een willekeurig woord zoeken, gebruik dan het tabblad Zoeken.",
+  "fy": "Loghi-studio siket fansels, op de eftergrûn, nei de nammen op dyn nammelisten. De treffers yn de keazen kolleksje steane hjirûnder, per persoan; iepenje in persoan om de treffers te sjen. De nammelisten behearst fierderop op dizze side. Wolst op in willekeurich wurd sykje, brûk dan it ljepblêd Sykje."
+ },
+ "Hits": {
+  "nl": "Treffers",
+  "fy": "Treffers"
+ },
+ "List of names": {
+  "nl": "Namenlijst",
+  "fy": "Nammelist"
+ },
+ "All lists that are switched on": {
+  "nl": "Alle lijsten die aan staan",
+  "fy": "Alle listen dy't oan steane"
+ },
+ "Which hits": {
+  "nl": "Welke treffers",
+  "fy": "Hokker treffers"
+ },
+ "Best: strong hits; a very common name only with a relative on the scan": {
+  "nl": "Beste: sterke treffers; een veelvoorkomende naam alleen met een familielid op de scan",
+  "fy": "Bêste: sterke treffers; in namme dy't in soad foarkomt allinnich mei in famyljelid op de scan"
+ },
+ "Only hits with a relative on the same scan": {
+  "nl": "Alleen treffers met een familielid op dezelfde scan",
+  "fy": "Allinnich treffers mei in famyljelid op deselde scan"
+ },
+ "All strong hits": {
+  "nl": "Alle sterke treffers",
+  "fy": "Alle sterke treffers"
+ },
+ "All hits, also weak ones": {
+  "nl": "Alle treffers, ook zwakke",
+  "fy": "Alle treffers, ek swakke"
+ },
+ "Book": {
+  "nl": "Boek",
+  "fy": "Boek"
+ },
+ "All books": {
+  "nl": "Alle boeken",
+  "fy": "Alle boeken"
+ },
+ "Show only people on your lists named": {
+  "nl": "Toon alleen personen op je lijsten met de naam",
+  "fy": "Lit allinnich persoanen op dyn listen sjen mei de namme"
+ },
+ "Order": {
+  "nl": "Volgorde",
+  "fy": "Folchoarder"
+ },
+ "Name, A to Z": {
+  "nl": "Naam, A tot Z",
+  "fy": "Namme, A oant Z"
+ },
+ "Most hits first": {
+  "nl": "Meeste treffers eerst",
+  "fy": "Measte treffers earst"
+ },
+ "Most hits with a relative first": {
+  "nl": "Meeste treffers met een familielid eerst",
+  "fy": "Measte treffers mei in famyljelid earst"
+ },
+ "Source": {
+  "nl": "Bron",
+  "fy": "Boarne"
+ },
+ "Lists of names of Loghi-studio": {
+  "nl": "Namenlijsten van Loghi-studio",
+  "fy": "Nammelisten fan Loghi-studio"
+ },
+ "Old search scripts": {
+  "nl": "Oude zoekscripts",
+  "fy": "Alde sykskripts"
+ },
+ "A hit is <strong>strong</strong> when the name is spelled exactly like that, or when Loghi is sure of the line. A hit is <strong>weak</strong> when the name only looks like it and the line is unsure. A hit is <strong>with a relative</strong> when a partner, parent or child of that person is named on the same scan. A name with more than 100 strong hits is a <strong>very common name</strong>. Every hit is a pointer: it only counts after it has been read on the scan.": {
+  "nl": "Een treffer is <strong>sterk</strong> als de naam precies zo gespeld is, of als Loghi zeker is van de regel. Een treffer is <strong>zwak</strong> als de naam er alleen op lijkt en de regel onzeker is. Een treffer is <strong>met een familielid</strong> als een partner, ouder of kind van die persoon op dezelfde scan genoemd wordt. Een naam met meer dan 100 sterke treffers is een <strong>veelvoorkomende naam</strong>. Elke treffer is een aanwijzing: hij telt pas na lezing op de scan.",
+  "fy": "In treffer is <strong>sterk</strong> as de namme krekt sa stavere is, of as Loghi wis is fan de rigel. In treffer is <strong>swak</strong> as de namme der allinnich op liket en de rigel ûnwis is. In treffer is <strong>mei in famyljelid</strong> as in partner, âlder of bern fan dy persoan op deselde scan neamd wurdt. In namme mei mear as 100 sterke treffers is in <strong>namme dy't in soad foarkomt</strong>. Elke treffer is in oanwizing: hy telt pas nei lêzing op de scan."
+ },
+ "Download these hits as a CSV file": {
+  "nl": "Download deze treffers als CSV-bestand",
+  "fy": "Download dizze treffers as CSV-bestân"
+ },
+ "Pages of people": {
+  "nl": "Pagina's met personen",
+  "fy": "Siden mei persoanen"
+ },
+ "Previous 50 people": {
+  "nl": "Vorige 50 personen",
+  "fy": "Foarige 50 persoanen"
+ },
+ "Next 50 people": {
+  "nl": "Volgende 50 personen",
+  "fy": "Folgjende 50 persoanen"
+ },
+ "Lists of names": {
+  "nl": "Namenlijsten",
+  "fy": "Nammelisten"
+ },
+ "Every list can be switched off: its names stay on the computer, but its hits are not shown. Removing a list removes its names; nothing changes in the scans and texts.": {
+  "nl": "Elke lijst kan uitgezet worden: de namen blijven op de computer staan, maar de treffers worden niet getoond. Een lijst verwijderen verwijdert de namen; aan de scans en teksten verandert niets.",
+  "fy": "Elke list kin útset wurde: de nammen bliuwe op de kompjûter stean, mar de treffers wurde net toand. In list fuortsmite smyt de nammen fuort; oan de scans en teksten feroaret neat."
+ },
+ "Name of a new list": {
+  "nl": "Naam van een nieuwe lijst",
+  "fy": "Namme fan in nije list"
+ },
+ "Make list": {
+  "nl": "Lijst maken",
+  "fy": "List meitsje"
+ },
+ "The names in a list": {
+  "nl": "De namen in een lijst",
+  "fy": "De nammen yn in list"
+ },
+ "Show the names of list": {
+  "nl": "Toon de namen van lijst",
+  "fy": "Lit de nammen sjen fan list"
+ },
+ "Filter on name": {
+  "nl": "Filter op naam",
+  "fy": "Filter op namme"
+ },
+ "Add a name": {
+  "nl": "Naam toevoegen",
+  "fy": "Namme tafoegje"
+ },
+ "Name (for example Sijbrant Haijes)": {
+  "nl": "Naam (bijvoorbeeld Sijbrant Haijes)",
+  "fy": "Namme (bygelyks Sijbrant Haijes)"
+ },
+ "Other spellings, one per line (may stay empty)": {
+  "nl": "Andere spellingen, één per regel (mag leeg blijven)",
+  "fy": "Oare staveringen, ien per rigel (mei leech bliuwe)"
+ },
+ "Capitals, ij or y, ck or k, c or k, z or s and doubled letters do not matter. You do not have to list those separately.": {
+  "nl": "Hoofdletters, ij of y, ck of k, c of k, z of s en dubbele letters maken niet uit. Die hoef je niet apart op te geven.",
+  "fy": "Haadletters, ij of y, ck of k, c of k, z of s en dûbele letters meitsje neat út. Dy hoechst net apart op te jaan."
+ },
+ "Relatives, one per line (may stay empty)": {
+  "nl": "Familieleden, één per regel (mag leeg blijven)",
+  "fy": "Famyljeleden, ien per rigel (mei leech bliuwe)"
+ },
+ "Partner, parents, children. A hit with one of them on the same scan is marked as a hit with a relative.": {
+  "nl": "Partner, ouders, kinderen. Een treffer met een van hen op dezelfde scan wordt gemarkeerd als treffer met een familielid.",
+  "fy": "Partner, âlden, bern. In treffer mei ien fan harren op deselde scan wurdt markearre as treffer mei in famyljelid."
+ },
+ "In list": {
+  "nl": "In lijst",
+  "fy": "Yn list"
+ },
+ "Fuzzy: also reading errors of Loghi": {
+  "nl": "Ruim: ook leesfouten van Loghi",
+  "fy": "Rom: ek lêsflaters fan Loghi"
+ },
+ "Exact: only these spellings": {
+  "nl": "Exact: alleen deze spellingen",
+  "fy": "Eksakt: allinnich dizze staveringen"
+ },
+ "Search in": {
+  "nl": "Zoeken in",
+  "fy": "Sykje yn"
+ },
+ "All collections": {
+  "nl": "Alle collecties",
+  "fy": "Alle kolleksjes"
+ },
+ "Cancel": {
+  "nl": "Annuleren",
+  "fy": "Annulearje"
+ },
+ "Import many names at once": {
+  "nl": "Veel namen tegelijk importeren",
+  "fy": "In soad nammen tagelyk ymportearje"
+ },
+ "For a list of people from a family tree. Loghi-studio makes the search forms itself: first name with patronymic, first name with surname, and old spellings such as Pieter, Pyter and Pytter, or Hayes, Hayesz, Hayesen and Hayesdr. A person with only a first name is skipped. People with the same name become one name.": {
+  "nl": "Voor een lijst personen uit een stamboom. Loghi-studio maakt de zoekvormen zelf: voornaam met patroniem, voornaam met achternaam, en oude spellingen zoals Pieter, Pyter en Pytter, of Hayes, Hayesz, Hayesen en Hayesdr. Een persoon met alleen een voornaam wordt overgeslagen. Personen met dezelfde naam worden één naam.",
+  "fy": "Foar in list persoanen út in stambeam. Loghi-studio makket de sykfoarmen sels: foarnamme mei patronym, foarnamme mei efternamme, en âlde staveringen lykas Pieter, Pyter en Pytter, of Hayes, Hayesz, Hayesen en Hayesdr. In persoan mei allinnich in foarnamme wurdt oerslein. Persoanen mei deselde namme wurde ien namme."
+ },
+ "Put the names in": {
+  "nl": "Zet de namen in",
+  "fy": "Set de nammen yn"
+ },
+ "A new list": {
+  "nl": "Een nieuwe lijst",
+  "fy": "In nije list"
+ },
+ "Name of the new list": {
+  "nl": "Naam van de nieuwe lijst",
+  "fy": "Namme fan de nije list"
+ },
+ "File with names (text with one name per line, or JSON)": {
+  "nl": "Bestand met namen (tekst met één naam per regel, of JSON)",
+  "fy": "Bestân mei nammen (tekst mei ien namme per rigel, of JSON)"
+ },
+ "Or paste the names here, one per line": {
+  "nl": "Of plak de namen hier, één per regel",
+  "fy": "Of plak de nammen hjir, ien per rigel"
+ },
+ "After a name you may put a semicolon or a tab and a reference, for example the title of the page of that person in your family tree. A JSON file may also hold relatives; the tool tools_gedcom_names.py makes such a file from a GEDCOM file.": {
+  "nl": "Na een naam mag je een puntkomma of een tab zetten met een verwijzing, bijvoorbeeld de titel van de pagina van die persoon in je stamboom. Een JSON-bestand mag ook familieleden bevatten; het hulpprogramma tools_gedcom_names.py maakt zo'n bestand van een GEDCOM-bestand.",
+  "fy": "Nei in namme meist in puntkomma of in tab sette mei in ferwizing, bygelyks de titel fan de side fan dy persoan yn dyn stambeam. In JSON-bestân mei ek famyljeleden befetsje; it helpprogramma tools_gedcom_names.py makket sa'n bestân fan in GEDCOM-bestân."
+ },
+ "Web address for the references (may stay empty)": {
+  "nl": "Webadres voor de verwijzingen (mag leeg blijven)",
+  "fy": "Webadres foar de ferwizingen (mei leech bliuwe)"
+ },
+ "The text {uid} is replaced by the reference of the person, so every person gets a link to the family tree.": {
+  "nl": "De tekst {uid} wordt vervangen door de verwijzing van de persoon, zodat elke persoon een link naar de stamboom krijgt.",
+  "fy": "De tekst {uid} wurdt ferfongen troch de ferwizing fan de persoan, sadat elke persoan in keppeling nei de stambeam krijt."
+ },
+ "Import": {
+  "nl": "Importeren",
+  "fy": "Ymportearje"
+ },
+ "Progress per collection": {
+  "nl": "Voortgang per collectie",
+  "fy": "Fuortgong per kolleksje"
+ },
+ "One block per book. Point at a block, or go to it with Tab and the arrow keys, to see which book it is; Enter opens the book. Refreshes every minute.": {
+  "nl": "Eén blokje per boek. Wijs een blokje aan, of ga erheen met Tab en de pijltjestoetsen, om te zien welk boek het is; Enter opent het boek. Ververst elke minuut.",
+  "fy": "Ien blokje per boek. Wiis in blokje oan, of gean derhinne mei Tab en de pylktoetsen, om te sjen hokker boek it is; Enter iepenet it boek. Fernijt elke minút."
+ },
+ "Add a book": {
+  "nl": "Boek toevoegen",
+  "fy": "Boek tafoegje"
+ },
+ "A new book goes into the collection chosen at the top of the page:": {
+  "nl": "Een nieuw boek komt in de collectie die bovenaan de pagina gekozen is:",
+  "fy": "In nij boek komt yn de kolleksje dy't boppe-oan de side keazen is:"
+ },
+ "After the book has been added": {
+  "nl": "Nadat het boek is toegevoegd",
+  "fy": "Neidat it boek tafoege is"
+ },
+ "Do not read it yet (state: to do)": {
+  "nl": "Nog niet lezen (toestand: te doen)",
+  "fy": "Noch net lêze (tastân: te dwaan)"
+ },
+ "From a folder with scans": {
+  "nl": "Uit een map met scans",
+  "fy": "Ut in map mei scans"
+ },
+ "Folder with the scans (jpg files)": {
+  "nl": "Map met de scans (jpg-bestanden)",
+  "fy": "Map mei de scans (jpg-bestannen)"
+ },
+ "Browse…": {
+  "nl": "Bladeren…",
+  "fy": "Blêdzje…"
+ },
+ "Name of the book (letters, digits, hyphen; no spaces)": {
+  "nl": "Naam van het boek (letters, cijfers, streepje; geen spaties)",
+  "fy": "Namme fan it boek (letters, sifers, streekje; gjin spaasjes)"
+ },
+ "The scans are copied. The original folder stays as it is.": {
+  "nl": "De scans worden gekopieerd. De oorspronkelijke map blijft zoals hij is.",
+  "fy": "De scans wurde kopiearre. De oarspronklike map bliuwt sa't er is."
+ },
+ "Add book from folder": {
+  "nl": "Boek toevoegen uit map",
+  "fy": "Boek tafoegje út map"
+ },
+ "From Tresoar, with an inventory number": {
+  "nl": "Van Tresoar, met een inventarisnummer",
+  "fy": "Fan Tresoar, mei in ynventarisnûmer"
+ },
+ "Finding aid number, Dutch: toegang (for example 13-07)": {
+  "nl": "Toegangsnummer (bijvoorbeeld 13-07)",
+  "fy": "Tagongsnûmer (bygelyks 13-07)"
+ },
+ "Inventory number (for example 90)": {
+  "nl": "Inventarisnummer (bijvoorbeeld 90)",
+  "fy": "Ynventarisnûmer (bygelyks 90)"
+ },
+ "Size of the scans": {
+  "nl": "Grootte van de scans",
+  "fy": "Grutte fan de scans"
+ },
+ "2000 pixels (default)": {
+  "nl": "2000 pixels (standaard)",
+  "fy": "2000 piksels (standert)"
+ },
+ "1600 pixels (faster, less sharp)": {
+  "nl": "1600 pixels (sneller, minder scherp)",
+  "fy": "1600 piksels (flugger, minder skerp)"
+ },
+ "3000 pixels (sharper, twice as large)": {
+  "nl": "3000 pixels (scherper, twee keer zo groot)",
+  "fy": "3000 piksels (skerper, twa kear sa grut)"
+ },
+ "Name of the book (leave empty: the inventory number)": {
+  "nl": "Naam van het boek (leeg laten: het inventarisnummer)",
+  "fy": "Namme fan it boek (leech litte: it ynventarisnûmer)"
+ },
+ "Loghi-studio first counts how many scans are online and then fetches them. Downloading stops by itself when less than 25 GB of disk space is free.": {
+  "nl": "Loghi-studio telt eerst hoeveel scans er online staan en haalt ze dan op. Het downloaden stopt vanzelf als er minder dan 25 GB schijfruimte vrij is.",
+  "fy": "Loghi-studio telt earst hoefolle scans der online steane en hellet se dan op. It downloaden stopet fansels as der minder as 25 GB skiifromte frij is."
+ },
+ "Download book from Tresoar": {
+  "nl": "Boek downloaden van Tresoar",
+  "fy": "Boek downloade fan Tresoar"
+ },
+ "Adding a film from FamilySearch is not possible here yet; that goes through your logged-in browser and comes later.": {
+  "nl": "Een film van FamilySearch toevoegen kan hier nog niet; dat gaat via je ingelogde browser en komt later.",
+  "fy": "In film fan FamilySearch tafoegje kin hjir noch net; dat giet fia dyn ynlogde browser en komt letter."
+ },
+ "Jobs": {
+  "nl": "Taken",
+  "fy": "Taken"
+ },
+ "Reading queue": {
+  "nl": "Leeswachtrij",
+  "fy": "Lêswachtrige"
+ },
+ "Loghi reads the books in this queue one at a time, from top to bottom. A book is read in small chunks of scans, so after a stop or a restart only the chunk that was running is read again. A scan that fails is tried once more and skipped after the second failure.": {
+  "nl": "Loghi leest de boeken in deze wachtrij één voor één, van boven naar beneden. Een boek wordt in kleine porties scans gelezen, zodat na een stop of herstart alleen de portie die bezig was opnieuw gelezen wordt. Een scan die mislukt wordt nog één keer geprobeerd en na de tweede mislukking overgeslagen.",
+  "fy": "Loghi lêst de boeken yn dizze wachtrige ien foar ien, fan boppen nei ûnderen. In boek wurdt yn lytse porsjes scans lêzen, sadat nei in stop of werstart allinnich de porsje dy't dwaande wie opnij lêzen wurdt. In scan dy't mislearret wurdt noch ien kear besocht en nei de twadde mislearring oerslein."
+ },
+ "⏸ Pause the queue": {
+  "nl": "⏸ Wachtrij pauzeren",
+  "fy": "⏸ Wachtrige skoftsje"
+ },
+ "Clear finished books from the list": {
+  "nl": "Afgeronde boeken uit de lijst halen",
+  "fy": "Ofrûne boeken út de list helje"
+ },
+ "Add books to the queue": {
+  "nl": "Boeken aan de wachtrij toevoegen",
+  "fy": "Boeken oan de wachtrige tafoegje"
+ },
+ "Books of the collection chosen at the top of the page:": {
+  "nl": "Boeken van de collectie die bovenaan de pagina gekozen is:",
+  "fy": "Boeken fan de kolleksje dy't boppe-oan de side keazen is:"
+ },
+ "Books with scans that still have to be read": {
+  "nl": "Boeken met scans die nog gelezen moeten worden",
+  "fy": "Boeken mei scans dy't noch lêzen wurde moatte"
+ },
+ "Select all": {
+  "nl": "Alles selecteren",
+  "fy": "Alles selektearje"
+ },
+ "Select none": {
+  "nl": "Niets selecteren",
+  "fy": "Neat selektearje"
+ },
+ "Reading model": {
+  "nl": "Leesmodel",
+  "fy": "Lêsmodel"
+ },
+ "Also try the scans again that were skipped after failing twice": {
+  "nl": "Probeer ook de scans opnieuw die na twee mislukkingen zijn overgeslagen",
+  "fy": "Besykje ek de scans opnij dy't nei twa mislearringen oerslein binne"
+ },
+ "Add to the queue": {
+  "nl": "Aan de wachtrij toevoegen",
+  "fy": "Oan de wachtrige tafoegje"
+ },
+ "Settings": {
+  "nl": "Instellingen",
+  "fy": "Ynstellings"
+ },
+ "Threads by day": {
+  "nl": "Draden overdag",
+  "fy": "Triedden oerdei"
+ },
+ "Threads from 23:00 to 07:00 (0 = the same as by day)": {
+  "nl": "Draden van 23:00 tot 07:00 (0 = hetzelfde als overdag)",
+  "fy": "Triedden fan 23:00 oant 07:00 (0 = itselde as oerdei)"
+ },
+ "Scans per chunk (default 20)": {
+  "nl": "Scans per portie (standaard 20)",
+  "fy": "Scans per porsje (standert 20)"
+ },
+ "Folder with the Loghi models": {
+  "nl": "Map met de Loghi-modellen",
+  "fy": "Map mei de Loghi-modellen"
+ },
+ "More threads is faster, but leaves less of the computer for other work. A change of the number of threads takes effect at once.": {
+  "nl": "Meer draden is sneller, maar laat minder van de computer over voor ander werk. Een wijziging van het aantal draden werkt meteen.",
+  "fy": "Mear triedden is flugger, mar lit minder fan de kompjûter oer foar oar wurk. In wiziging fan it tal triedden wurket daliks."
+ },
+ "Save settings": {
+  "nl": "Instellingen opslaan",
+  "fy": "Ynstellings bewarje"
+ },
+ "Manage collections": {
+  "nl": "Collecties beheren",
+  "fy": "Kolleksjes beheare"
+ },
+ "A collection is a folder with a sub-folder of scans for every book. Removing a collection from this list does not delete any scans or texts from the disk.": {
+  "nl": "Een collectie is een map met voor elk boek een submap met scans. Een collectie uit deze lijst halen verwijdert geen scans of teksten van de schijf.",
+  "fy": "In kolleksje is in map mei foar elk boek in submap mei scans. In kolleksje út dizze list helje smyt gjin scans of teksten fan de skiif."
+ },
+ "Add a collection": {
+  "nl": "Collectie toevoegen",
+  "fy": "Kolleksje tafoegje"
+ },
+ "Name": {
+  "nl": "Naam",
+  "fy": "Namme"
+ },
+ "Folder with the books": {
+  "nl": "Map met de boeken",
+  "fy": "Map mei de boeken"
+ },
+ "For example C:\\archive\\scans\\bildt": {
+  "nl": "Bijvoorbeeld C:\\archive\\scans\\bildt",
+  "fy": "Bygelyks C:\\archive\\scans\\bildt"
+ },
+ "Choose a folder": {
+  "nl": "Kies een map",
+  "fy": "Kies in map"
+ },
+ "▲ One folder up": {
+  "nl": "▲ Eén map omhoog",
+  "fy": "▲ Ien map omheech"
+ },
+ "Choose this folder": {
+  "nl": "Kies deze map",
+  "fy": "Kies dizze map"
+ },
+ "Close": {
+  "nl": "Sluiten",
+  "fy": "Slute"
+ },
+ "Years (for example 1599-1613)": {
+  "nl": "Jaren (bijvoorbeeld 1599-1613)",
+  "fy": "Jierren (bygelyks 1599-1613)"
+ },
+ "Description": {
+  "nl": "Beschrijving",
+  "fy": "Beskriuwing"
+ },
+ "To make a bookmark: press <kbd>Ctrl</kbd> + <kbd>D</kbd>. Loghi-studio must be running before the bookmark works; use the Loghi-studio shortcut on the desktop for that.": {
+  "nl": "Bladwijzer maken: druk op <kbd>Ctrl</kbd> + <kbd>D</kbd>. Loghi-studio moet draaien voordat de bladwijzer werkt; gebruik daarvoor de snelkoppeling Loghi-studio op het bureaublad.",
+  "fy": "Blêdwizer meitsje: druk op <kbd>Ctrl</kbd> + <kbd>D</kbd>. Loghi-studio moat draaie foardat de blêdwizer wurket; brûk dêrfoar de fluchkeppeling Loghi-studio op it buroblêd."
+ },
+ "done": {
+  "nl": "klaar",
+  "fy": "klear"
+ },
+ "running": {
+  "nl": "bezig",
+  "fy": "dwaande"
+ },
+ "partial": {
+  "nl": "deels",
+  "fy": "foar in part"
+ },
+ "to do": {
+  "nl": "te doen",
+  "fy": "te dwaan"
+ },
+ "Loghi-studio version {0}. This is a trial version (beta).": {
+  "nl": "Loghi-studio versie {0}. Dit is een proefversie (bèta).",
+  "fy": "Loghi-studio ferzje {0}. Dit is in proefferzje (bèta)."
+ },
+ "{0} of {1} read": {
+  "nl": "{0} van {1} gelezen",
+  "fy": "{0} fan {1} lêzen"
+ },
+ ", in the queue": {
+  "nl": ", in de wachtrij",
+  "fy": ", yn de wachtrige"
+ },
+ "Book {0}": {
+  "nl": "Boek {0}",
+  "fy": "Boek {0}"
+ },
+ "of {0}": {
+  "nl": "van {0}",
+  "fy": "fan {0}"
+ },
+ "Text of scan {0}": {
+  "nl": "Tekst van scan {0}",
+  "fy": "Tekst fan scan {0}"
+ },
+ "Loading…": {
+  "nl": "Laden…",
+  "fy": "Laden…"
+ },
+ "Scan {0} of book {1}": {
+  "nl": "Scan {0} van boek {1}",
+  "fy": "Scan {0} fan boek {1}"
+ },
+ "No text on this scan.": {
+  "nl": "Geen tekst op deze scan.",
+  "fy": "Gjin tekst op dizze scan."
+ },
+ "certainty {0} percent": {
+  "nl": "zekerheid {0} procent",
+  "fy": "wissichheid {0} persint"
+ },
+ "line": {
+  "nl": "regel",
+  "fy": "rigel"
+ },
+ "very unsure": {
+  "nl": "zeer onzeker",
+  "fy": "tige ûnwis"
+ },
+ "unsure": {
+  "nl": "onzeker",
+  "fy": "ûnwis"
+ },
+ "lines": {
+  "nl": "regels",
+  "fy": "rigels"
+ },
+ "{0}: {1} very unsure [??], {2} unsure [?], {3} sure.": {
+  "nl": "{0}: {1} zeer onzeker [??], {2} onzeker [?], {3} zeker.",
+  "fy": "{0}: {1} tige ûnwis [??], {2} ûnwis [?], {3} wis."
+ },
+ "threads": {
+  "nl": "draden",
+  "fy": "triedden"
+ },
+ "books": {
+  "nl": "boeken",
+  "fy": "boeken"
+ },
+ "Scans read": {
+  "nl": "Gelezen scans",
+  "fy": "Lêzen scans"
+ },
+ "scans": {
+  "nl": "scans",
+  "fy": "scans"
+ },
+ "Open": {
+  "nl": "Openen",
+  "fy": "Iepenje"
+ },
+ "Search in this collection": {
+  "nl": "Zoeken in deze collectie",
+  "fy": "Sykje yn dizze kolleksje"
+ },
+ "Searches in: {0}. Choose another collection at the top of the page.": {
+  "nl": "Zoekt in: {0}. Kies bovenaan de pagina een andere collectie.",
+  "fy": "Siket yn: {0}. Kies boppe-oan de side in oare kolleksje."
+ },
+ "Scan {0} of {1}, {2}.": {
+  "nl": "Scan {0} van {1}, {2}.",
+  "fy": "Scan {0} fan {1}, {2}."
+ },
+ "Text size {0} pixels": {
+  "nl": "Tekstgrootte {0} pixels",
+  "fy": "Tekstgrutte {0} piksels"
+ },
+ "Searching…": {
+  "nl": "Zoeken…",
+  "fy": "Sykje…"
+ },
+ "book": {
+  "nl": "boek",
+  "fy": "boek"
+ },
+ "scan": {
+  "nl": "scan",
+  "fy": "scan"
+ },
+ "hit": {
+  "nl": "treffer",
+  "fy": "treffer"
+ },
+ "hits": {
+  "nl": "treffers",
+  "fy": "treffers"
+ },
+ "person": {
+  "nl": "persoon",
+  "fy": "persoan"
+ },
+ "people": {
+  "nl": "personen",
+  "fy": "persoanen"
+ },
+ "name": {
+  "nl": "naam",
+  "fy": "namme"
+ },
+ "names": {
+  "nl": "namen",
+  "fy": "nammen"
+ },
+ "thread": {
+  "nl": "draad",
+  "fy": "tried"
+ },
+ "High contrast is on.": {
+  "nl": "Hoog contrast staat aan.",
+  "fy": "Heech kontrast stiet oan."
+ },
+ "High contrast is off.": {
+  "nl": "Hoog contrast staat uit.",
+  "fy": "Heech kontrast stiet út."
+ },
+ "There are no collections yet. Add one.": {
+  "nl": "Er zijn nog geen collecties. Voeg er een toe.",
+  "fy": "Der binne noch gjin kolleksjes. Foegje der ien ta."
+ },
+ "There are no collections yet.": {
+  "nl": "Er zijn nog geen collecties.",
+  "fy": "Der binne noch gjin kolleksjes."
+ },
+ "No books in this collection": {
+  "nl": "Geen boeken in deze collectie",
+  "fy": "Gjin boeken yn dizze kolleksje"
+ },
+ "This collection has no books yet.": {
+  "nl": "Deze collectie heeft nog geen boeken.",
+  "fy": "Dizze kolleksje hat noch gjin boeken."
+ },
+ "Collection {0}: {1}.": {
+  "nl": "Collectie {0}: {1}.",
+  "fy": "Kolleksje {0}: {1}."
+ },
+ "No books found.": {
+  "nl": "Geen boeken gevonden.",
+  "fy": "Gjin boeken fûn."
+ },
+ "This book has no scans yet.": {
+  "nl": "Dit boek heeft nog geen scans.",
+  "fy": "Dit boek hat noch gjin scans."
+ },
+ "Scan not found.": {
+  "nl": "Scan niet gevonden.",
+  "fy": "Scan net fûn."
+ },
+ "This scan has not been read yet.": {
+  "nl": "Deze scan is nog niet gelezen.",
+  "fy": "Dizze scan is noch net lêzen."
+ },
+ "hit:": {
+  "nl": "treffer:",
+  "fy": "treffer:"
+ },
+ "{0}; no certainty known.": {
+  "nl": "{0}; geen zekerheid bekend.",
+  "fy": "{0}; gjin wissichheid bekend."
+ },
+ "Hit {0}, line {1}": {
+  "nl": "Treffer {0}, regel {1}",
+  "fy": "Treffer {0}, rigel {1}"
+ },
+ "The text of this scan was copied.": {
+  "nl": "De tekst van deze scan is gekopieerd.",
+  "fy": "De tekst fan dizze scan is kopiearre."
+ },
+ "Copying failed.": {
+  "nl": "Kopiëren is mislukt.",
+  "fy": "Kopiearjen is mislearre."
+ },
+ "Enter a search word first.": {
+  "nl": "Vul eerst een zoekwoord in.",
+  "fy": "Folje earst in sykwurd yn."
+ },
+ "{0} in {1}.": {
+  "nl": "{0} in {1}.",
+  "fy": "{0} yn {1}."
+ },
+ "{0} in {1}": {
+  "nl": "{0} in {1}",
+  "fy": "{0} yn {1}"
+ },
+ "Error: {0}": {
+  "nl": "Fout: {0}",
+  "fy": "Flater: {0}"
+ },
+ "Error while searching: {0}": {
+  "nl": "Fout bij het zoeken: {0}",
+  "fy": "Flater by it sykjen: {0}"
+ },
+ "{0} searched in {1} seconds.": {
+  "nl": "{0} doorzocht in {1} seconden.",
+  "fy": "{0} trochsocht yn {1} sekonden."
+ },
+ "The first {0} are below.": {
+  "nl": "De eerste {0} staan hieronder.",
+  "fy": "De earste {0} steane hjirûnder."
+ },
+ "Limit to one book": {
+  "nl": "Beperk tot één boek",
+  "fy": "Beheine ta ien boek"
+ },
+ "scan {0}, line {1}": {
+  "nl": "scan {0}, regel {1}",
+  "fy": "scan {0}, rigel {1}"
+ },
+ "Opened book {0}, scan {1}, line {2}.": {
+  "nl": "Boek {0} geopend, scan {1}, regel {2}.",
+  "fy": "Boek {0} iepene, scan {1}, rigel {2}."
+ },
+ "Error while starting: {0}": {
+  "nl": "Fout bij het starten: {0}",
+  "fy": "Flater by it starten: {0}"
+ },
+ "unknown": {
+  "nl": "onbekend",
+  "fy": "ûnbekend"
+ },
+ "{0} minutes": {
+  "nl": "{0} minuten",
+  "fy": "{0} minuten"
+ },
+ "{0} hours": {
+  "nl": "{0} uur",
+  "fy": "{0} oere"
+ },
+ "{0} days": {
+  "nl": "{0} dagen",
+  "fy": "{0} dagen"
+ },
+ "Book {0}: {1}, {2} of {3} scans read": {
+  "nl": "Boek {0}: {1}, {2} van {3} scans gelezen",
+  "fy": "Boek {0}: {1}, {2} fan {3} scans lêzen"
+ },
+ "Reading book {0} ({1} scans)": {
+  "nl": "Leest boek {0} ({1} scans)",
+  "fy": "Lêst boek {0} ({1} scans)"
+ },
+ ", step {0}": {
+  "nl": ", stap {0}",
+  "fy": ", stap {0}"
+ },
+ "Not running; there are unread scans": {
+  "nl": "Loopt niet; er zijn ongelezen scans",
+  "fy": "Rint net; der binne net-lêzen scans"
+ },
+ "Everything has been read": {
+  "nl": "Alles is gelezen",
+  "fy": "Alles is lêzen"
+ },
+ "{0}% read": {
+  "nl": "{0}% gelezen",
+  "fy": "{0}% lêzen"
+ },
+ "State": {
+  "nl": "Toestand",
+  "fy": "Tastân"
+ },
+ "Scans": {
+  "nl": "Scans",
+  "fy": "Scans"
+ },
+ "{0} of {1} in finished books": {
+  "nl": "{0} van {1} in afgeronde boeken",
+  "fy": "{0} fan {1} yn ôfrûne boeken"
+ },
+ "{0} of {1} done": {
+  "nl": "{0} van {1} klaar",
+  "fy": "{0} fan {1} klear"
+ },
+ "Speed": {
+  "nl": "Snelheid",
+  "fy": "Faasje"
+ },
+ "{0} scans per minute": {
+  "nl": "{0} scans per minuut",
+  "fy": "{0} scans per minút"
+ },
+ "Still to do": {
+  "nl": "Nog te doen",
+  "fy": "Noch te dwaan"
+ },
+ ", about {0}; ready around {1}": {
+  "nl": ", ongeveer {0}; klaar rond {1}",
+  "fy": ", likernôch {0}; klear om {1} hinne"
+ },
+ "Books of {0}, one block per book": {
+  "nl": "Boeken van {0}, één blokje per boek",
+  "fy": "Boeken fan {0}, ien blokje per boek"
+ },
+ "All {0} books as a table": {
+  "nl": "Alle {0} boeken als tabel",
+  "fy": "Alle {0} boeken as tabel"
+ },
+ "Read": {
+  "nl": "Gelezen",
+  "fy": "Lêzen"
+ },
+ "Open book {0}": {
+  "nl": "Open boek {0}",
+  "fy": "Iepenje boek {0}"
+ },
+ "There are no names to search for in this collection. Add a name or switch a list on, further down this page.": {
+  "nl": "Er zijn geen namen om naar te zoeken in deze collectie. Voeg een naam toe of zet een lijst aan, verderop op deze pagina.",
+  "fy": "Der binne gjin nammen om nei te sykjen yn dizze kolleksje. Foegje in namme ta of set in list oan, fierderop op dizze side."
+ },
+ "{0} with hits, {1} together.": {
+  "nl": "{0} met treffers, samen {1}.",
+  "fy": "{0} mei treffers, mei-inoar {1}."
+ },
+ "Names with only hits that the choice under Which hits leaves out: {0}.": {
+  "nl": "Namen met alleen treffers die door de keuze bij Welke treffers wegvallen: {0}.",
+  "fy": "Nammen mei allinnich treffers dy't troch de kar by Hokker treffers ôffalle: {0}."
+ },
+ "Names without any hit: {0}.": {
+  "nl": "Namen zonder enige treffer: {0}.",
+  "fy": "Nammen sûnder ien treffer: {0}."
+ },
+ "Names with more than 300 hits in one book, of which 300 per book were kept: {0}.": {
+  "nl": "Namen met meer dan 300 treffers in één boek, waarvan er 300 per boek bewaard zijn: {0}.",
+  "fy": "Nammen mei mear as 300 treffers yn ien boek, dêr't 300 per boek fan bewarre binne: {0}."
+ },
+ "No name on your lists matches \"{0}\". This box does not search the books; it only narrows down the people on your lists.": {
+  "nl": "Geen naam op je lijsten komt overeen met \"{0}\". Dit vak zoekt niet in de boeken; het beperkt alleen de personen op je lijsten.",
+  "fy": "Gjin namme op dyn listen komt oerien mei \"{0}\". Dit fak siket net yn de boeken; it behint allinnich de persoanen op dyn listen."
+ },
+ "Search all books for \"{0}\"": {
+  "nl": "Zoek in alle boeken naar \"{0}\"",
+  "fy": "Sykje yn alle boeken nei \"{0}\""
+ },
+ "People {0} to {1} of {2}": {
+  "nl": "Personen {0} tot en met {1} van {2}",
+  "fy": "Persoanen {0} oant en mei {1} fan {2}"
+ },
+ "Family tree:": {
+  "nl": "Stamboom:",
+  "fy": "Stambeam:"
+ },
+ "(opens in a new tab)": {
+  "nl": "(opent in een nieuw tabblad)",
+  "fy": "(iepenet yn in nij ljepblêd)"
+ },
+ "Reference: {0}": {
+  "nl": "Verwijzing: {0}",
+  "fy": "Ferwizing: {0}"
+ },
+ "First year in the family tree: {0}": {
+  "nl": "Eerste jaar in de stamboom: {0}",
+  "fy": "Earste jier yn de stambeam: {0}"
+ },
+ "{0} in all, {1} of them strong": {
+  "nl": "{0} in totaal, waarvan {1} sterk",
+  "fy": "{0} yn totaal, dêr't {1} fan sterk binne"
+ },
+ "A very common name: only the hits with a relative on the same scan are shown. Choose All strong hits under Which hits to see the others": {
+  "nl": "Een veelvoorkomende naam: alleen de treffers met een familielid op dezelfde scan worden getoond. Kies Alle sterke treffers bij Welke treffers om de andere te zien",
+  "fy": "In namme dy't in soad foarkomt: allinnich de treffers mei in famyljelid op deselde scan wurde toand. Kies Alle sterke treffers by Hokker treffers om de oare te sjen"
+ },
+ "In one or more books this name has more than 300 hits; not kept: {0}": {
+  "nl": "In een of meer boeken heeft deze naam meer dan 300 treffers; niet bewaard: {0}",
+  "fy": "Yn ien of mear boeken hat dizze namme mear as 300 treffers; net bewarre: {0}"
+ },
+ ", {0} with a relative": {
+  "nl": ", {0} met een familielid",
+  "fy": ", {0} mei in famyljelid"
+ },
+ "very common name": {
+  "nl": "veelvoorkomende naam",
+  "fy": "namme dy't in soad foarkomt"
+ },
+ "Show more hits": {
+  "nl": "Meer treffers tonen",
+  "fy": "Mear treffers sjen litte"
+ },
+ "strong": {
+  "nl": "sterk",
+  "fy": "sterk"
+ },
+ "weak": {
+  "nl": "zwak",
+  "fy": "swak"
+ },
+ "line {0}": {
+  "nl": "regel {0}",
+  "fy": "rigel {0}"
+ },
+ "with a relative": {
+  "nl": "met een familielid",
+  "fy": "mei in famyljelid"
+ },
+ "Show the next {0} of {1} more hits": {
+  "nl": "Toon de volgende {0} van nog {1} treffers",
+  "fy": "Lit de folgjende {0} fan noch {1} treffers sjen"
+ },
+ "{0} added.": {
+  "nl": "{0} toegevoegd.",
+  "fy": "{0} tafoege."
+ },
+ "Place": {
+  "nl": "Plaats",
+  "fy": "Plak"
+ },
+ "Actions": {
+  "nl": "Acties",
+  "fy": "Aksjes"
+ },
+ "now": {
+  "nl": "nu",
+  "fy": "no"
+ },
+ "▶ running": {
+  "nl": "▶ bezig",
+  "fy": "▶ dwaande"
+ },
+ "○ waiting": {
+  "nl": "○ wacht",
+  "fy": "○ wachtet"
+ },
+ "✓ done": {
+  "nl": "✓ klaar",
+  "fy": "✓ klear"
+ },
+ "⚠ failed": {
+  "nl": "⚠ mislukt",
+  "fy": "⚠ mislearre"
+ },
+ "■ stopped": {
+  "nl": "■ gestopt",
+  "fy": "■ stoppe"
+ },
+ "◷ on hold": {
+  "nl": "◷ in de wacht",
+  "fy": "◷ yn de wacht"
+ },
+ "Step {0} of 6, {1}: {2}.": {
+  "nl": "Stap {0} van 6, {1}: {2}.",
+  "fy": "Stap {0} fan 6, {1}: {2}."
+ },
+ "scans {0} to {1} of {2}": {
+  "nl": "scans {0} tot en met {1} van {2}",
+  "fy": "scans {0} oant en mei {1} fan {2}"
+ },
+ "second try for {0}": {
+  "nl": "tweede poging voor {0}",
+  "fy": "twadde besykjen foar {0}"
+ },
+ "finding the lines on the page": {
+  "nl": "regels zoeken op de pagina",
+  "fy": "rigels sykje op de side"
+ },
+ "extracting the baselines": {
+  "nl": "basislijnen bepalen",
+  "fy": "basislinen bepale"
+ },
+ "cutting out the lines": {
+  "nl": "regels uitsnijden",
+  "fy": "rigels útsnije"
+ },
+ "reading the lines": {
+  "nl": "regels lezen",
+  "fy": "rigels lêze"
+ },
+ "merging text and reading order": {
+  "nl": "tekst en leesvolgorde samenvoegen",
+  "fy": "tekst en lêsfolchoarder gearfoegje"
+ },
+ "writing the text files": {
+  "nl": "tekstbestanden schrijven",
+  "fy": "tekstbestannen skriuwe"
+ },
+ "Stop reading book {0}": {
+  "nl": "Stop met lezen van boek {0}",
+  "fy": "Stopje mei lêzen fan boek {0}"
+ },
+ "Reading model for book {0}": {
+  "nl": "Leesmodel voor boek {0}",
+  "fy": "Lêsmodel foar boek {0}"
+ },
+ "Move book {0} down": {
+  "nl": "Zet boek {0} omlaag",
+  "fy": "Set boek {0} omleech"
+ },
+ "Move book {0} up": {
+  "nl": "Zet boek {0} omhoog",
+  "fy": "Set boek {0} omheech"
+ },
+ "Move book {0} to the top": {
+  "nl": "Zet boek {0} bovenaan",
+  "fy": "Set boek {0} boppe-oan"
+ },
+ "Remove book {0} from the queue": {
+  "nl": "Haal boek {0} uit de wachtrij",
+  "fy": "Helje boek {0} út de wachtrige"
+ },
+ "Remove book {0} from the list": {
+  "nl": "Haal boek {0} uit de lijst",
+  "fy": "Helje boek {0} út de list"
+ },
+ "■ Stop": {
+  "nl": "■ Stoppen",
+  "fy": "■ Stopje"
+ },
+ "▼ Down": {
+  "nl": "▼ Omlaag",
+  "fy": "▼ Omleech"
+ },
+ "▲ Up": {
+  "nl": "▲ Omhoog",
+  "fy": "▲ Omheech"
+ },
+ "⤒ Top": {
+  "nl": "⤒ Bovenaan",
+  "fy": "⤒ Boppe-oan"
+ },
+ "Remove": {
+  "nl": "Verwijderen",
+  "fy": "Fuortsmite"
+ },
+ "Stop": {
+  "nl": "Stoppen",
+  "fy": "Stopje"
+ },
+ "Change": {
+  "nl": "Wijzigen",
+  "fy": "Wizigje"
+ },
+ "Rename": {
+  "nl": "Hernoemen",
+  "fy": "Omneame"
+ },
+ "Save": {
+  "nl": "Opslaan",
+  "fy": "Bewarje"
+ },
+ "Waiting.": {
+  "nl": "Wacht.",
+  "fy": "Wachtet."
+ },
+ "{0} to read again, enlarged.": {
+  "nl": "{0} opnieuw te lezen, vergroot.",
+  "fy": "{0} opnij te lêzen, fergrutte."
+ },
+ "{0} to read.": {
+  "nl": "{0} te lezen.",
+  "fy": "{0} te lêzen."
+ },
+ "{0} to read, of which {1} failed in an earlier run.": {
+  "nl": "{0} te lezen, waarvan {1} in een eerdere ronde mislukt.",
+  "fy": "{0} te lêzen, dêr't {1} fan yn in eardere rûnte mislearre binne."
+ },
+ "Done: {0} read.": {
+  "nl": "Klaar: {0} gelezen.",
+  "fy": "Klear: {0} lêzen."
+ },
+ "{0} failed twice and were skipped: {1}.": {
+  "nl": "{0} twee keer mislukt en overgeslagen: {1}.",
+  "fy": "{0} twa kear mislearre en oerslein: {1}."
+ },
+ "{0} failed twice and was skipped: {1}.": {
+  "nl": "{0} twee keer mislukt en overgeslagen: {1}.",
+  "fy": "{0} twa kear mislearre en oerslein: {1}."
+ },
+ "Interrupted; continues with the scans that are still unread.": {
+  "nl": "Onderbroken; gaat verder met de scans die nog niet gelezen zijn.",
+  "fy": "Underbrutsen; giet fierder mei de scans dy't noch net lêzen binne."
+ },
+ "Stopping.": {
+  "nl": "Stopt.",
+  "fy": "Stopet."
+ },
+ "Paused.": {
+  "nl": "Gepauzeerd.",
+  "fy": "Skoft."
+ },
+ "Choose Resume to continue.": {
+  "nl": "Kies Hervatten om door te gaan.",
+  "fy": "Kies Ferfetsje om fierder te gean."
+ },
+ "Waiting: another Loghi run (not started by Loghi-studio) is active on this computer.": {
+  "nl": "Wacht: er loopt een andere Loghi-taak (niet gestart door Loghi-studio) op deze computer.",
+  "fy": "Wachtet: der rint in oare Loghi-taak (net start troch Loghi-studio) op dizze kompjûter."
+ },
+ "Checking that no other Loghi run is active on this computer.": {
+  "nl": "Controleert of er geen andere Loghi-taak loopt op deze computer.",
+  "fy": "Kontrolearret oft der gjin oare Loghi-taak rint op dizze kompjûter."
+ },
+ "Docker is not running.": {
+  "nl": "Docker draait niet.",
+  "fy": "Docker draait net."
+ },
+ "Start Docker Desktop; the queue continues by itself.": {
+  "nl": "Start Docker Desktop; de wachtrij gaat vanzelf verder.",
+  "fy": "Start Docker Desktop; de wachtrige giet fansels fierder."
+ },
+ "Stopped at your request.": {
+  "nl": "Gestopt op jouw verzoek.",
+  "fy": "Stoppe op dyn fersyk."
+ },
+ "The scans that were read are kept.": {
+  "nl": "De gelezen scans blijven bewaard.",
+  "fy": "De lêzen scans bliuwe bewarre."
+ },
+ "Failed: {0}": {
+  "nl": "Mislukt: {0}",
+  "fy": "Mislearre: {0}"
+ },
+ "Reading book {0}: {1} of {2} scans, with {3}.": {
+  "nl": "Leest boek {0}: {1} van {2} scans, met {3}.",
+  "fy": "Lêst boek {0}: {1} fan {2} scans, mei {3}."
+ },
+ "{0} waiting.": {
+  "nl": "In de wacht: {0}.",
+  "fy": "Yn de wacht: {0}."
+ },
+ "The whole queue is expected to be ready around {0}.": {
+  "nl": "De hele wachtrij is naar verwachting klaar rond {0}.",
+  "fy": "De hiele wachtrige is nei ferwachting klear om {0} hinne."
+ },
+ "{0} waiting; reading starts shortly.": {
+  "nl": "In de wacht: {0}; het lezen begint zo.",
+  "fy": "Yn de wacht: {0}; it lêzen begjint aanst."
+ },
+ "Nothing is being read.": {
+  "nl": "Er wordt niets gelezen.",
+  "fy": "Der wurdt neat lêzen."
+ },
+ "The queue is empty.": {
+  "nl": "De wachtrij is leeg.",
+  "fy": "De wachtrige is leech."
+ },
+ "Add books below.": {
+  "nl": "Voeg hieronder boeken toe.",
+  "fy": "Foegje hjirûnder boeken ta."
+ },
+ "The queue is paused.": {
+  "nl": "De wachtrij is gepauzeerd.",
+  "fy": "De wachtrige is skoft."
+ },
+ "Reading is frozen and continues exactly here when you resume.": {
+  "nl": "Het lezen is bevroren en gaat precies hier verder als je hervat.",
+  "fy": "It lêzen is beferzen en giet krekt hjir fierder asto ferfettest."
+ },
+ "The queue continues.": {
+  "nl": "De wachtrij gaat verder.",
+  "fy": "De wachtrige giet fierder."
+ },
+ "▶ Resume the queue": {
+  "nl": "▶ Wachtrij hervatten",
+  "fy": "▶ Wachtrige ferfetsje"
+ },
+ "Book {0} is next, but reading is on hold.": {
+  "nl": "Boek {0} is aan de beurt, maar het lezen staat in de wacht.",
+  "fy": "Boek {0} is oan bar, mar it lêzen stiet yn de wacht."
+ },
+ "{0} of {1} scans read.": {
+  "nl": "{0} van {1} scans gelezen.",
+  "fy": "{0} fan {1} scans lêzen."
+ },
+ "Expected to be ready around {0}.": {
+  "nl": "Naar verwachting klaar rond {0}.",
+  "fy": "Nei ferwachting klear om {0} hinne."
+ },
+ "Put it in the reading queue, model {0}": {
+  "nl": "Zet het in de leeswachtrij, model {0}",
+  "fy": "Set it yn de lêswachtrige, model {0}"
+ },
+ "Threads by day (this computer has {0})": {
+  "nl": "Draden overdag (deze computer heeft er {0})",
+  "fy": "Triedden oerdei (dizze kompjûter hat der {0})"
+ },
+ "{0} to read": {
+  "nl": "{0} te lezen",
+  "fy": "{0} te lêzen"
+ },
+ "{0} of them failed in an earlier run": {
+  "nl": "{0} daarvan eerder mislukt",
+  "fy": "{0} dêrfan earder mislearre"
+ },
+ "{0} skipped after failing twice": {
+  "nl": "{0} overgeslagen na twee mislukkingen",
+  "fy": "{0} oerslein nei twa mislearringen"
+ },
+ "already in the queue": {
+  "nl": "al in de wachtrij",
+  "fy": "al yn de wachtrige"
+ },
+ "being read by another Loghi run": {
+  "nl": "wordt gelezen door een andere Loghi-taak",
+  "fy": "wurdt lêzen troch in oare Loghi-taak"
+ },
+ "nothing to read": {
+  "nl": "niets te lezen",
+  "fy": "neat te lêzen"
+ },
+ "{0} selected.": {
+  "nl": "{0} geselecteerd.",
+  "fy": "{0} selektearre."
+ },
+ "No book selected.": {
+  "nl": "Geen boek geselecteerd.",
+  "fy": "Gjin boek selektearre."
+ },
+ "{0} added to the queue.": {
+  "nl": "{0} aan de wachtrij toegevoegd.",
+  "fy": "{0} oan de wachtrige tafoege."
+ },
+ "Not added: {0}": {
+  "nl": "Niet toegevoegd: {0}",
+  "fy": "Net tafoege: {0}"
+ },
+ "finished book": {
+  "nl": "afgerond boek",
+  "fy": "ôfrûn boek"
+ },
+ "finished books": {
+  "nl": "afgeronde boeken",
+  "fy": "ôfrûne boeken"
+ },
+ "job": {
+  "nl": "taak",
+  "fy": "taak"
+ },
+ "jobs": {
+  "nl": "taken",
+  "fy": "taken"
+ },
+ "folder": {
+  "nl": "map",
+  "fy": "map"
+ },
+ "folders": {
+  "nl": "mappen",
+  "fy": "mappen"
+ },
+ "{0} cleared from the list.": {
+  "nl": "{0} uit de lijst gehaald.",
+  "fy": "{0} út de list helle."
+ },
+ "Nothing was deleted from the disk.": {
+  "nl": "Er is niets van de schijf verwijderd.",
+  "fy": "Der is neat fan de skiif fuortsmiten."
+ },
+ "Book {0} was removed from the list.": {
+  "nl": "Boek {0} is uit de lijst gehaald.",
+  "fy": "Boek {0} is út de list helle."
+ },
+ "Reading book {0} is being stopped.": {
+  "nl": "Het lezen van boek {0} wordt gestopt.",
+  "fy": "It lêzen fan boek {0} wurdt stoppe."
+ },
+ "Reading model changed to {0}.": {
+  "nl": "Leesmodel gewijzigd in {0}.",
+  "fy": "Lêsmodel wizige yn {0}."
+ },
+ "Book {0} moved {1}.": {
+  "nl": "Boek {0} verplaatst: {1}.",
+  "fy": "Boek {0} ferpleatst: {1}."
+ },
+ "to the top": {
+  "nl": "naar boven",
+  "fy": "nei boppen"
+ },
+ "up": {
+  "nl": "omhoog",
+  "fy": "omheech"
+ },
+ "down": {
+  "nl": "omlaag",
+  "fy": "omleech"
+ },
+ "Stop reading book {0}?": {
+  "nl": "Stoppen met lezen van boek {0}?",
+  "fy": "Stopje mei lêzen fan boek {0}?"
+ },
+ "The scans that were already read are kept.": {
+  "nl": "De scans die al gelezen zijn blijven bewaard.",
+  "fy": "De scans dy't al lêzen binne bliuwe bewarre."
+ },
+ "You can put the book in the queue again later; only the unread scans are read then.": {
+  "nl": "Je kunt het boek later opnieuw in de wachtrij zetten; dan worden alleen de ongelezen scans gelezen.",
+  "fy": "Do kinst it boek letter opnij yn de wachtrige sette; dan wurde allinnich de net-lêzen scans lêzen."
+ },
+ "The settings were saved.": {
+  "nl": "De instellingen zijn opgeslagen.",
+  "fy": "De ynstellings binne bewarre."
+ },
+ "Choose a collection first.": {
+  "nl": "Kies eerst een collectie.",
+  "fy": "Kies earst in kolleksje."
+ },
+ "Counting the unread scans…": {
+  "nl": "Telt de ongelezen scans…",
+  "fy": "Telt de net-lêzen scans…"
+ },
+ "All scans of this collection have been read.": {
+  "nl": "Alle scans van deze collectie zijn gelezen.",
+  "fy": "Alle scans fan dizze kolleksje binne lêzen."
+ },
+ "The folder with the Loghi models is not set or does not exist.": {
+  "nl": "De map met de Loghi-modellen is niet ingesteld of bestaat niet.",
+  "fy": "De map mei de Loghi-modellen is net ynsteld of bestiet net."
+ },
+ "Set it under Settings below.": {
+  "nl": "Stel hem in bij Instellingen hieronder.",
+  "fy": "Stel him yn by Ynstellings hjirûnder."
+ },
+ "The line model ({0}) is missing in the models folder.": {
+  "nl": "Het regelmodel ({0}) ontbreekt in de modellenmap.",
+  "fy": "It rigelmodel ({0}) ûntbrekt yn de modellemap."
+ },
+ "There is no reading model in the models folder.": {
+  "nl": "Er staat geen leesmodel in de modellenmap.",
+  "fy": "Der stiet gjin lêsmodel yn de modellemap."
+ },
+ "{0} running or waiting.": {
+  "nl": "{0} bezig of in de wacht.",
+  "fy": "{0} dwaande of yn de wacht."
+ },
+ "No job is running now.": {
+  "nl": "Er loopt nu geen taak.",
+  "fy": "Der rint no gjin taak."
+ },
+ "There are no jobs yet.": {
+  "nl": "Er zijn nog geen taken.",
+  "fy": "Der binne noch gjin taken."
+ },
+ "Book {0} was put on the list of jobs.": {
+  "nl": "Boek {0} is op de takenlijst gezet.",
+  "fy": "Boek {0} is op de takelist set."
+ },
+ "The job is being stopped.": {
+  "nl": "De taak wordt gestopt.",
+  "fy": "De taak wurdt stoppe."
+ },
+ "Stop the job for book {0}": {
+  "nl": "Stop de taak voor boek {0}",
+  "fy": "Stopje de taak foar boek {0}"
+ },
+ "Stopped before the job began.": {
+  "nl": "Gestopt voordat de taak begon.",
+  "fy": "Stoppe foardat de taak begûn."
+ },
+ "Copying: {0} of {1} scans.": {
+  "nl": "Kopiëren: {0} van {1} scans.",
+  "fy": "Kopiearje: {0} fan {1} scans."
+ },
+ "Counting the scans that are online.": {
+  "nl": "Telt de scans die online staan.",
+  "fy": "Telt de scans dy't online steane."
+ },
+ "Downloading: {0} of {1} scans.": {
+  "nl": "Downloaden: {0} van {1} scans.",
+  "fy": "Downloade: {0} fan {1} scans."
+ },
+ "Running.": {
+  "nl": "Bezig.",
+  "fy": "Dwaande."
+ },
+ "Folder": {
+  "nl": "Map",
+  "fy": "Map"
+ },
+ "Years": {
+  "nl": "Jaren",
+  "fy": "Jierren"
+ },
+ "⚠ Folder not found": {
+  "nl": "⚠ Map niet gevonden",
+  "fy": "⚠ Map net fûn"
+ },
+ "Remove {0} from the list": {
+  "nl": "Haal {0} uit de lijst",
+  "fy": "Helje {0} út de list"
+ },
+ "Change collection: {0}": {
+  "nl": "Collectie wijzigen: {0}",
+  "fy": "Kolleksje wizigje: {0}"
+ },
+ "Collection {0} was added.": {
+  "nl": "Collectie {0} is toegevoegd.",
+  "fy": "Kolleksje {0} is tafoege."
+ },
+ "Collection {0} was saved.": {
+  "nl": "Collectie {0} is opgeslagen.",
+  "fy": "Kolleksje {0} is bewarre."
+ },
+ "Collection {0} was removed from the list.": {
+  "nl": "Collectie {0} is uit de lijst gehaald.",
+  "fy": "Kolleksje {0} is út de list helle."
+ },
+ "Remove collection \"{0}\" from the list?": {
+  "nl": "Collectie \"{0}\" uit de lijst halen?",
+  "fy": "Kolleksje \"{0}\" út de list helje?"
+ },
+ "The scans and texts in {0} stay on the disk.": {
+  "nl": "De scans en teksten in {0} blijven op de schijf staan.",
+  "fy": "De scans en teksten yn {0} bliuwe op de skiif stean."
+ },
+ "Current folder: {0}.": {
+  "nl": "Huidige map: {0}.",
+  "fy": "Hjoeddeiske map: {0}."
+ },
+ "{0} in it.": {
+  "nl": "Daarin: {0}.",
+  "fy": "Dêryn: {0}."
+ },
+ "No folders in here.": {
+  "nl": "Hier staan geen mappen.",
+  "fy": "Hjir steane gjin mappen."
+ },
+ "Folder chosen: {0}": {
+  "nl": "Map gekozen: {0}",
+  "fy": "Map keazen: {0}"
+ },
+ "Searching for names in {0}: book {1} of {2}.": {
+  "nl": "Zoekt naar namen in {0}: boek {1} van {2}.",
+  "fy": "Siket nei nammen yn {0}: boek {1} fan {2}."
+ },
+ "Searching for names in {0}.": {
+  "nl": "Zoekt naar namen in {0}.",
+  "fy": "Siket nei nammen yn {0}."
+ },
+ "Searching for names: book {0} of {1}.": {
+  "nl": "Zoekt naar namen: boek {0} van {1}.",
+  "fy": "Siket nei nammen: boek {0} fan {1}."
+ },
+ "Searching for names.": {
+  "nl": "Zoekt naar namen.",
+  "fy": "Siket nei nammen."
+ },
+ "Hits are added as soon as a book is ready.": {
+  "nl": "Treffers komen erbij zodra een boek klaar is.",
+  "fy": "Treffers komme derby sa gau't in boek klear is."
+ },
+ "The search for names is ready.": {
+  "nl": "Het zoeken naar namen is klaar.",
+  "fy": "It sykjen nei nammen is klear."
+ },
+ "Newly read books are searched automatically.": {
+  "nl": "Nieuw gelezen boeken worden vanzelf doorzocht.",
+  "fy": "Nij lêzen boeken wurde fansels trochsocht."
+ },
+ "The lists of names are still empty.": {
+  "nl": "De namenlijsten zijn nog leeg.",
+  "fy": "De nammelisten binne noch leech."
+ },
+ "Add a name further down this page.": {
+  "nl": "Voeg verderop op deze pagina een naam toe.",
+  "fy": "Foegje fierderop op dizze side in namme ta."
+ },
+ "Only {0}": {
+  "nl": "Alleen {0}",
+  "fy": "Allinnich {0}"
+ },
+ "List": {
+  "nl": "Lijst",
+  "fy": "List"
+ },
+ "Names": {
+  "nl": "Namen",
+  "fy": "Nammen"
+ },
+ "Hits shown": {
+  "nl": "Treffers getoond",
+  "fy": "Treffers toand"
+ },
+ "✓ on": {
+  "nl": "✓ aan",
+  "fy": "✓ oan"
+ },
+ "✕ off": {
+  "nl": "✕ uit",
+  "fy": "✕ út"
+ },
+ "Switch on": {
+  "nl": "Aanzetten",
+  "fy": "Oansette"
+ },
+ "Switch off": {
+  "nl": "Uitzetten",
+  "fy": "Utsette"
+ },
+ "Switch off list {0}": {
+  "nl": "Zet lijst {0} uit",
+  "fy": "Set list {0} út"
+ },
+ "Switch on list {0}": {
+  "nl": "Zet lijst {0} aan",
+  "fy": "Set list {0} oan"
+ },
+ "Rename list {0}": {
+  "nl": "Hernoem lijst {0}",
+  "fy": "Neam list {0} om"
+ },
+ "Remove list {0}": {
+  "nl": "Verwijder lijst {0}",
+  "fy": "Smyt list {0} fuort"
+ },
+ "List {0}: {1}.": {
+  "nl": "Lijst {0}: {1}.",
+  "fy": "List {0}: {1}."
+ },
+ "List {0}: {1} with this filter.": {
+  "nl": "Lijst {0}: {1} met dit filter.",
+  "fy": "List {0}: {1} mei dit filter."
+ },
+ "The first 100 are below; use the filter to find a name.": {
+  "nl": "De eerste 100 staan hieronder; gebruik het filter om een naam te vinden.",
+  "fy": "De earste 100 steane hjirûnder; brûk it filter om in namme te finen."
+ },
+ "Names in list {0}": {
+  "nl": "Namen in lijst {0}",
+  "fy": "Nammen yn list {0}"
+ },
+ "Other spellings": {
+  "nl": "Andere spellingen",
+  "fy": "Oare staveringen"
+ },
+ "Relatives": {
+  "nl": "Familieleden",
+  "fy": "Famyljeleden"
+ },
+ "Hits in this collection": {
+  "nl": "Treffers in deze collectie",
+  "fy": "Treffers yn dizze kolleksje"
+ },
+ "all collections": {
+  "nl": "alle collecties",
+  "fy": "alle kolleksjes"
+ },
+ "fuzzy": {
+  "nl": "ruim",
+  "fy": "rom"
+ },
+ "exact": {
+  "nl": "exact",
+  "fy": "eksakt"
+ },
+ "{0} and {1} more": {
+  "nl": "{0} en nog {1}",
+  "fy": "{0} en noch {1}"
+ },
+ "Change {0}": {
+  "nl": "Wijzig {0}",
+  "fy": "Wizigje {0}"
+ },
+ "Remove {0}": {
+  "nl": "Verwijder {0}",
+  "fy": "Smyt {0} fuort"
+ },
+ "No names here.": {
+  "nl": "Hier staan geen namen.",
+  "fy": "Hjir steane gjin nammen."
+ },
+ "List {0} is switched off: its hits are hidden.": {
+  "nl": "Lijst {0} is uitgezet: de treffers zijn verborgen.",
+  "fy": "List {0} is útset: de treffers binne ferburgen."
+ },
+ "List {0} is switched on: its hits are shown.": {
+  "nl": "Lijst {0} is aangezet: de treffers worden getoond.",
+  "fy": "List {0} is oanset: de treffers wurde toand."
+ },
+ "New name for the list \"{0}\":": {
+  "nl": "Nieuwe naam voor de lijst \"{0}\":",
+  "fy": "Nije namme foar de list \"{0}\":"
+ },
+ "The list is now called {0}.": {
+  "nl": "De lijst heet nu {0}.",
+  "fy": "De list hjit no {0}."
+ },
+ "Remove the list \"{0}\" with its {1} names?": {
+  "nl": "De lijst \"{0}\" met {1} namen verwijderen?",
+  "fy": "De list \"{0}\" mei {1} nammen fuortsmite?"
+ },
+ "The hits of these names disappear.": {
+  "nl": "De treffers van deze namen verdwijnen.",
+  "fy": "De treffers fan dizze nammen ferdwine."
+ },
+ "Nothing changes in the scans and texts.": {
+  "nl": "Aan de scans en teksten verandert niets.",
+  "fy": "Oan de scans en teksten feroaret neat."
+ },
+ "The list {0} was removed.": {
+  "nl": "De lijst {0} is verwijderd.",
+  "fy": "De list {0} is fuortsmiten."
+ },
+ "The list {0} was made.": {
+  "nl": "De lijst {0} is gemaakt.",
+  "fy": "De list {0} is makke."
+ },
+ "It is still empty.": {
+  "nl": "Hij is nog leeg.",
+  "fy": "Hy is noch leech."
+ },
+ "Change name: {0}": {
+  "nl": "Naam wijzigen: {0}",
+  "fy": "Namme wizigje: {0}"
+ },
+ "Remove the name \"{0}\" from the list?": {
+  "nl": "De naam \"{0}\" uit de lijst verwijderen?",
+  "fy": "De namme \"{0}\" út de list fuortsmite?"
+ },
+ "The hits of this name disappear.": {
+  "nl": "De treffers van deze naam verdwijnen.",
+  "fy": "De treffers fan dizze namme ferdwine."
+ },
+ "{0} was removed from the list.": {
+  "nl": "{0} is uit de lijst verwijderd.",
+  "fy": "{0} is út de list fuortsmiten."
+ },
+ "choose at least one collection, or tick All collections.": {
+  "nl": "kies minstens één collectie, of vink Alle collecties aan.",
+  "fy": "kies op syn minst ien kolleksje, of fink Alle kolleksjes oan."
+ },
+ "choose a file or paste the names": {
+  "nl": "kies een bestand of plak de namen",
+  "fy": "kies in bestân of plak de nammen"
+ },
+ "give the new list a name": {
+  "nl": "geef de nieuwe lijst een naam",
+  "fy": "jou de nije list in namme"
+ },
+ "{0} was saved.": {
+  "nl": "{0} is opgeslagen.",
+  "fy": "{0} is bewarre."
+ },
+ "Only this name is searched again.": {
+  "nl": "Alleen deze naam wordt opnieuw gezocht.",
+  "fy": "Allinnich dizze namme wurdt opnij socht."
+ },
+ "{0} was added.": {
+  "nl": "{0} is toegevoegd.",
+  "fy": "{0} is tafoege."
+ },
+ "The search has started; the hits appear by themselves.": {
+  "nl": "Het zoeken is begonnen; de treffers verschijnen vanzelf.",
+  "fy": "It sykjen is begûn; de treffers ferskine fansels."
+ },
+ "Change cancelled.": {
+  "nl": "Wijziging geannuleerd.",
+  "fy": "Wiziging annulearre."
+ },
+ "{0} added to the list {1}.": {
+  "nl": "{0} toegevoegd aan de lijst {1}.",
+  "fy": "{0} tafoege oan de list {1}."
+ },
+ "{0} had the same name as someone else on the list; such people share one name.": {
+  "nl": "{0} had dezelfde naam als iemand anders op de lijst; zulke personen delen één naam.",
+  "fy": "{0} hie deselde namme as in oar op de list; sokke persoanen diele ien namme."
+ },
+ "{0} skipped (only a first name): {1}.": {
+  "nl": "{0} overgeslagen (alleen een voornaam): {1}.",
+  "fy": "{0} oerslein (allinnich in foarnamme): {1}."
+ },
+ "{0} imported into the list {1}.": {
+  "nl": "{0} geïmporteerd in de lijst {1}.",
+  "fy": "{0} ymportearre yn de list {1}."
+ },
+ "There are no hits of the old search scripts for this collection.": {
+  "nl": "Er zijn geen treffers van de oude zoekscripts voor deze collectie.",
+  "fy": "Der binne gjin treffers fan de âlde sykskripts foar dizze kolleksje."
+ },
+ "{0} of the old search scripts.": {
+  "nl": "{0} van de oude zoekscripts.",
+  "fy": "{0} fan de âlde sykskripts."
+ },
+ "The first 500 are below; use the filter to narrow them down.": {
+  "nl": "De eerste 500 staan hieronder; gebruik het filter om ze te beperken.",
+  "fy": "De earste 500 steane hjirûnder; brûk it filter om se te beheinen."
+ },
+ "book {0}: {1} of {2} scans read": {
+  "nl": "boek {0}: {1} van {2} scans gelezen",
+  "fy": "boek {0}: {1} fan {2} scans lêzen"
+ },
+ "Remove from list": {
+  "nl": "Uit de lijst halen",
+  "fy": "Ut de list helje"
+ },
+ "Log out": {
+  "nl": "Uitloggen",
+  "fy": "Utlogge"
+ },
+ "Logged in as {0}": {
+  "nl": "Ingelogd als {0}",
+  "fy": "Ynlogd as {0}"
+ },
+ "Possible reading errors of a name, with a relative on the same scan": {
+  "nl": "Mogelijke leesfouten in een naam, met een familielid op dezelfde scan",
+  "fy": "Mooglike lêsflaters yn in namme, mei in famyljelid op deselde scan"
+ },
+ "All possible reading errors of a name": {
+  "nl": "Alle mogelijke leesfouten in een naam",
+  "fy": "Alle mooglike lêsflaters yn in namme"
+ },
+ "A hit is a <strong>possible reading error</strong> when one word of the name is there as usual and the other word only fits if Loghi made one of its typical reading errors, such as u for n, y for i or S for P. These hits are kept apart: you only see them when you choose them under Which hits.": {
+  "nl": "Een treffer is een <strong>mogelijke leesfout</strong> als één woord van de naam er gewoon staat en het andere woord alleen past als Loghi een van zijn typische leesfouten heeft gemaakt, zoals u voor n, y voor i of S voor P. Deze treffers staan apart: je ziet ze alleen als je ze kiest bij Welke treffers.",
+  "fy": "In treffer is in <strong>mooglike lêsflater</strong> as ien wurd fan de namme der gewoan stiet en it oare wurd allinnich past as Loghi ien fan syn typyske lêsflaters makke hat, lykas u foar n, y foar i of S foar P. Dizze treffers steane apart: jo sjogge se allinnich as jo se kieze by Hokker treffers."
+ },
+ "possible reading error": {
+  "nl": "mogelijke leesfout",
+  "fy": "mooglike lêsflater"
+ },
+ "{0} more with a possible reading error": {
+  "nl": "{0} extra met een mogelijke leesfout",
+  "fy": "{0} ekstra mei in mooglike lêsflater"
+ },
+ "Correct": {
+  "nl": "Verbeteren",
+  "fy": "Ferbetterje"
+ },
+ "Correct this line": {
+  "nl": "Deze regel verbeteren",
+  "fy": "Dizze rigel ferbetterje"
+ },
+ "<kbd>E</kbd>: correct the chosen line, or the first line of the scan that was not checked yet.": {
+  "nl": "<kbd>E</kbd>: de gekozen regel verbeteren, of de eerste regel van de scan die nog niet is nagekeken.",
+  "fy": "<kbd>E</kbd>: de keazen rigel ferbetterje, of de earste rigel fan de scan dy't noch net neisjoen is."
+ },
+ "corrected": {
+  "nl": "verbeterd",
+  "fy": "ferbettere"
+ },
+ "checked": {
+  "nl": "nagekeken",
+  "fy": "neisjoen"
+ },
+ "unreadable": {
+  "nl": "onleesbaar",
+  "fy": "ûnlêsber"
+ },
+ "{0} checked by a person.": {
+  "nl": "{0} door een mens nagekeken.",
+  "fy": "{0} troch in minske neisjoen."
+ },
+ "Correct lines": {
+  "nl": "Regels verbeteren",
+  "fy": "Rigels ferbetterje"
+ },
+ "Read the line on the scan and make the text the same as what is written there. Every line you check is kept apart from the text of Loghi, and becomes a training line for a reading model that knows Frisian handwriting better.": {
+  "nl": "Lees de regel op de scan en maak de tekst gelijk aan wat er staat. Elke regel die je nakijkt wordt apart van de tekst van Loghi bewaard, en wordt een trainingsregel voor een leesmodel dat Fries handschrift beter kent.",
+  "fy": "Lês de rigel op de scan en meitsje de tekst gelyk oan wat der stiet. Elke rigel dy't jo neisjogge wurdt apart fan de tekst fan Loghi bewarre, en wurdt in trainingsrigel foar in lêsmodel dat Frysk hânskrift better ken."
+ },
+ "In reading order": {
+  "nl": "In leesvolgorde",
+  "fy": "Yn lêsfolchoarder"
+ },
+ "Unsure lines first": {
+  "nl": "Onzekere regels eerst",
+  "fy": "Unwisse rigels earst"
+ },
+ "Next line to check": {
+  "nl": "Volgende regel om na te kijken",
+  "fy": "Folgjende rigel om nei te sjen"
+ },
+ "Image of the line": {
+  "nl": "Plaatje van de regel",
+  "fy": "Plaatsje fan de rigel"
+ },
+ "Smaller image": {
+  "nl": "Plaatje kleiner",
+  "fy": "Plaatsje lytser"
+ },
+ "Larger image": {
+  "nl": "Plaatje groter",
+  "fy": "Plaatsje grutter"
+ },
+ "More around the line": {
+  "nl": "Meer rondom de regel",
+  "fy": "Mear om de rigel hinne"
+ },
+ "Outline of the line": {
+  "nl": "Omtrek van de regel",
+  "fy": "Omtrek fan de rigel"
+ },
+ "Open this line in View": {
+  "nl": "Deze regel openen in Bekijken",
+  "fy": "Dizze rigel iepenje yn Besjen"
+ },
+ "Image of the line, cut from the scan. Scroll with the arrow keys when it is larger than the box.": {
+  "nl": "Plaatje van de regel, uitgeknipt uit de scan. Schuif met de pijltjestoetsen als het groter is dan het vak.",
+  "fy": "Plaatsje fan de rigel, útknipt út de scan. Skow mei de pylktoetsen as it grutter is as it fak."
+ },
+ "Loghi read:": {
+  "nl": "Loghi las:",
+  "fy": "Loghi lies:"
+ },
+ "Line before:": {
+  "nl": "Regel ervoor:",
+  "fy": "Rigel derfoar:"
+ },
+ "Line after:": {
+  "nl": "Regel erna:",
+  "fy": "Rigel dernei:"
+ },
+ "Text of this line, as it is written on the scan": {
+  "nl": "Tekst van deze regel, zoals die op de scan staat",
+  "fy": "Tekst fan dizze rigel, sa't dy op de scan stiet"
+ },
+ "Save and next line": {
+  "nl": "Opslaan en volgende regel",
+  "fy": "Bewarje en folgjende rigel"
+ },
+ "Unreadable": {
+  "nl": "Onleesbaar",
+  "fy": "Unlêsber"
+ },
+ "Skip, do not save": {
+  "nl": "Overslaan, niet opslaan",
+  "fy": "Oerslaan, net bewarje"
+ },
+ "Line before": {
+  "nl": "Regel ervoor",
+  "fy": "Rigel derfoar"
+ },
+ "Withdraw this check": {
+  "nl": "Deze controle intrekken",
+  "fy": "Dizze kontrôle ynlûke"
+ },
+ "Rules for typing, and the keyboard": {
+  "nl": "Regels voor het typen, en het toetsenbord",
+  "fy": "Regels foar it typen, en it toetseboerd"
+ },
+ "Type what is written, letter by letter: keep the old spelling, the capitals and the punctuation. Do not make it modern and do not write out abbreviations.": {
+  "nl": "Typ wat er staat, letter voor letter: houd de oude spelling, de hoofdletters en de leestekens aan. Maak het niet modern en schrijf afkortingen niet uit.",
+  "fy": "Typ wat der stiet, letter foar letter: hâld de âlde stavering, de haadletters en de lêstekens oan. Meitsje it net modern en skriuw ôfkoartingen net út."
+ },
+ "A line that Loghi read right is saved as it is: that is a training line too.": {
+  "nl": "Een regel die Loghi goed las sla je ongewijzigd op: ook dat is een trainingsregel.",
+  "fy": "In rigel dy't Loghi goed lies bewarje jo sa't er is: ek dat is in trainingsrigel."
+ },
+ "Can you not read the line with certainty? Choose Unreadable and do not guess. A guessed line teaches the reading model mistakes.": {
+  "nl": "Kun je de regel niet met zekerheid lezen? Kies Onleesbaar en gok niet. Een gegokte regel leert het leesmodel fouten aan.",
+  "fy": "Kinne jo de rigel net mei wissichheid lêze? Kies Unlêsber en gok net. In gokte rigel leart it lêsmodel flaters oan."
+ },
+ "The text of Loghi is never thrown away: withdraw a check and the line is as Loghi read it.": {
+  "nl": "De tekst van Loghi wordt nooit weggegooid: trek een controle in en de regel is weer zoals Loghi die las.",
+  "fy": "De tekst fan Loghi wurdt nea fuortsmiten: lûk in kontrôle yn en de rigel is wer sa't Loghi dy lies."
+ },
+ "What was checked": {
+  "nl": "Wat is nagekeken",
+  "fy": "Wat is neisjoen"
+ },
+ "Training set": {
+  "nl": "Trainingsset",
+  "fy": "Trainingsset"
+ },
+ "Makes training lines for Loghi from all checked lines of this collection: for every line its image, cut from the scan by Loghi itself, and its text.": {
+  "nl": "Maakt trainingsregels voor Loghi van alle nagekeken regels van deze collectie: per regel het plaatje, door Loghi zelf uit de scan geknipt, en de tekst.",
+  "fy": "Makket trainingsrigels foar Loghi fan alle neisjoene rigels fan dizze kolleksje: per rigel it plaatsje, troch Loghi sels út de scan knipt, en de tekst."
+ },
+ "<strong>Own use only.</strong> The scans of this collection may not be shared; the training set says so and must stay on this computer.": {
+  "nl": "<strong>Alleen voor eigen gebruik.</strong> De scans van deze collectie mogen niet gedeeld worden; dat staat bij de trainingsset en die moet op deze computer blijven.",
+  "fy": "<strong>Allinnich foar eigen gebrûk.</strong> De scans fan dizze kolleksje meie net dield wurde; dat stiet by de trainingsset en dy moat op dizze kompjûter bliuwe."
+ },
+ "Make the training set": {
+  "nl": "Trainingsset maken",
+  "fy": "Trainingsset meitsje"
+ },
+ "No lines were checked in this collection yet.": {
+  "nl": "In deze collectie zijn nog geen regels nagekeken.",
+  "fy": "Yn dizze kolleksje binne noch gjin rigels neisjoen."
+ },
+ "Checked lines per book": {
+  "nl": "Nagekeken regels per boek",
+  "fy": "Neisjoene rigels per boek"
+ },
+ "Lines checked": {
+  "nl": "Regels nagekeken",
+  "fy": "Rigels neisjoen"
+ },
+ "Of which corrected": {
+  "nl": "Waarvan verbeterd",
+  "fy": "Wêrfan ferbettere"
+ },
+ "Letters Loghi read wrong": {
+  "nl": "Letters die Loghi fout las",
+  "fy": "Letters dy't Loghi ferkeard lies"
+ },
+ "Letters Loghi read wrong: the letters that had to be changed, added or dropped, per 100 letters of the checked lines. The number only says something about the lines that were checked.": {
+  "nl": "Letters die Loghi fout las: de letters die veranderd, toegevoegd of weggehaald moesten worden, per 100 letters van de nagekeken regels. Het getal zegt alleen iets over de regels die zijn nagekeken.",
+  "fy": "Letters dy't Loghi ferkeard lies: de letters dy't feroare, tafoege of fuorthelle wurde moasten, per 100 letters fan de neisjoene rigels. It getal seit allinnich wat oer de rigels dy't neisjoen binne."
+ },
+ "Nothing yet. Choose a book above, or choose a line in View and press Correct this line.": {
+  "nl": "Nog niets. Kies hierboven een boek, of kies in Bekijken een regel en druk op Deze regel verbeteren.",
+  "fy": "Noch neat. Kies hjirboppe in boek, of kies yn Besjen in rigel en druk op Dizze rigel ferbetterje."
+ },
+ "By {0}.": {
+  "nl": "Door {0}.",
+  "fy": "Troch {0}."
+ },
+ "Corrected on {0}.": {
+  "nl": "Verbeterd op {0}.",
+  "fy": "Ferbettere op {0}."
+ },
+ "Checked on {0}: right as read.": {
+  "nl": "Nagekeken op {0}: goed gelezen.",
+  "fy": "Neisjoen op {0}: goed lêzen."
+ },
+ "Marked as unreadable on {0}.": {
+  "nl": "Als onleesbaar aangemerkt op {0}.",
+  "fy": "As ûnlêsber oanmurken op {0}."
+ },
+ "Not checked yet. Loghi is very unsure about this line.": {
+  "nl": "Nog niet nagekeken. Loghi is zeer onzeker over deze regel.",
+  "fy": "Noch net neisjoen. Loghi is tige ûnwis oer dizze rigel."
+ },
+ "Not checked yet. Loghi is unsure about this line.": {
+  "nl": "Nog niet nagekeken. Loghi is onzeker over deze regel.",
+  "fy": "Noch net neisjoen. Loghi is ûnwis oer dizze rigel."
+ },
+ "Not checked yet. Loghi is sure about this line.": {
+  "nl": "Nog niet nagekeken. Loghi is zeker over deze regel.",
+  "fy": "Noch net neisjoen. Loghi is wis oer dizze rigel."
+ },
+ "Not checked yet.": {
+  "nl": "Nog niet nagekeken.",
+  "fy": "Noch net neisjoen."
+ },
+ "This line cannot be checked: its place on the scan is not known.": {
+  "nl": "Deze regel kan niet nagekeken worden: de plaats op de scan is niet bekend.",
+  "fy": "Dizze rigel kin net neisjoen wurde: it plak op de scan is net bekend."
+ },
+ "Book {0}, scan {1}, line {2}": {
+  "nl": "Boek {0}, scan {1}, regel {2}",
+  "fy": "Boek {0}, scan {1}, rigel {2}"
+ },
+ "Line {0} of scan {1}, cut from the scan": {
+  "nl": "Regel {0} van scan {1}, uitgeknipt uit de scan",
+  "fy": "Rigel {0} fan scan {1}, útknipt út de scan"
+ },
+ "Scan {0}, line {1}.": {
+  "nl": "Scan {0}, regel {1}.",
+  "fy": "Scan {0}, rigel {1}."
+ },
+ "The reading model does not know: {0}. Check that this is what is written.": {
+  "nl": "Het leesmodel kent niet: {0}. Controleer of dit is wat er staat.",
+  "fy": "It lêsmodel ken net: {0}. Kontrolearje oft dit is wat der stiet."
+ },
+ "This collection has no books with text yet.": {
+  "nl": "Deze collectie heeft nog geen boeken met tekst.",
+  "fy": "Dizze kolleksje hat noch gjin boeken mei tekst."
+ },
+ "Looking for the lines Loghi is least sure of…": {
+  "nl": "Bezig met zoeken naar de regels waar Loghi het minst zeker van is…",
+  "fy": "Dwaande mei sykjen nei de rigels dêr't Loghi it minst wis fan is…"
+ },
+ "No more lines to check in book {0}.": {
+  "nl": "Geen regels meer om na te kijken in boek {0}.",
+  "fy": "Gjin rigels mear om nei te sjen yn boek {0}."
+ },
+ "The check of line {0} was withdrawn.": {
+  "nl": "De controle van regel {0} is ingetrokken.",
+  "fy": "De kontrôle fan rigel {0} is ynlutsen."
+ },
+ "Line {0}: marked as unreadable.": {
+  "nl": "Regel {0}: als onleesbaar aangemerkt.",
+  "fy": "Rigel {0}: as ûnlêsber oanmurken."
+ },
+ "Line {0}: saved, corrected.": {
+  "nl": "Regel {0}: opgeslagen, verbeterd.",
+  "fy": "Rigel {0}: bewarre, ferbettere."
+ },
+ "Line {0}: saved, right as read.": {
+  "nl": "Regel {0}: opgeslagen, goed gelezen.",
+  "fy": "Rigel {0}: bewarre, goed lêzen."
+ },
+ "Line {0}: skipped, not saved.": {
+  "nl": "Regel {0}: overgeslagen, niet opgeslagen.",
+  "fy": "Rigel {0}: oerslein, net bewarre."
+ },
+ "Back to the line you did before.": {
+  "nl": "Terug naar de regel die je hiervoor deed.",
+  "fy": "Werom nei de rigel dy't jo hjirfoar diene."
+ },
+ "This is the first line of the scan.": {
+  "nl": "Dit is de eerste regel van de scan.",
+  "fy": "Dit is de earste rigel fan de scan."
+ },
+ "Choose a book first.": {
+  "nl": "Kies eerst een boek.",
+  "fy": "Kies earst in boek."
+ },
+ "Last set: {0} training lines from {1} scans, made on {2}, in the folder {3}.": {
+  "nl": "Laatste set: {0} trainingsregels uit {1} scans, gemaakt op {2}, in de map {3}.",
+  "fy": "Lêste set: {0} trainingsrigels út {1} scans, makke op {2}, yn de map {3}."
+ },
+ "Image of the line at {0} percent.": {
+  "nl": "Plaatje van de regel op {0} procent.",
+  "fy": "Plaatsje fan de rigel op {0} persint."
+ },
+ "The image shows more around the line.": {
+  "nl": "Het plaatje toont meer rondom de regel.",
+  "fy": "It plaatsje lit mear om de rigel hinne sjen."
+ },
+ "The image shows the line alone.": {
+  "nl": "Het plaatje toont alleen de regel.",
+  "fy": "It plaatsje lit allinnich de rigel sjen."
+ },
+ "The scans are for own use only (never in a training set to share)": {
+  "nl": "De scans zijn alleen voor eigen gebruik (nooit in een trainingsset om te delen)",
+  "fy": "De scans binne allinnich foar eigen gebrûk (nea yn in trainingsset om te dielen)"
+ },
+ "Scans for own use only": {
+  "nl": "Scans alleen voor eigen gebruik",
+  "fy": "Scans allinnich foar eigen gebrûk"
+ },
+ "The text of the line is missing.": {
+  "nl": "De tekst van de regel ontbreekt.",
+  "fy": "De tekst fan de rigel ûntbrekt."
+ },
+ "The line is empty. Type what is written, or mark the line as unreadable.": {
+  "nl": "De regel is leeg. Typ wat er staat, of merk de regel aan als onleesbaar.",
+  "fy": "De rigel is leech. Typ wat der stiet, of merk de rigel oan as ûnlêsber."
+ },
+ "The line is too long (more than {0} characters).": {
+  "nl": "De regel is te lang (meer dan {0} tekens).",
+  "fy": "De rigel is te lang (mear as {0} tekens)."
+ },
+ "The line holds a character that cannot be saved.": {
+  "nl": "In de regel staat een teken dat niet opgeslagen kan worden.",
+  "fy": "Yn de rigel stiet in teken dat net bewarre wurde kin."
+ },
+ "This line is not on the scan. Was the scan read again? Open the scan once more.": {
+  "nl": "Deze regel staat niet op de scan. Is de scan opnieuw gelezen? Open de scan nog een keer.",
+  "fy": "Dizze rigel stiet net op de scan. Is de scan op 'e nij lêzen? Iepenje de scan noch in kear."
+ },
+ "This line has not been checked.": {
+  "nl": "Deze regel is niet nagekeken.",
+  "fy": "Dizze rigel is net neisjoen."
+ },
+ "A training set is being made already. Wait until it is ready.": {
+  "nl": "Er wordt al een trainingsset gemaakt. Wacht tot die klaar is.",
+  "fy": "Der wurdt al in trainingsset makke. Wachtsje oant dy klear is."
+ },
+ "Collecting the checked lines.": {
+  "nl": "De nagekeken regels worden verzameld.",
+  "fy": "De neisjoene rigels wurde sammele."
+ },
+ "Collecting the checked lines: book {0}, scan {1}.": {
+  "nl": "De nagekeken regels worden verzameld: boek {0}, scan {1}.",
+  "fy": "De neisjoene rigels wurde sammele: boek {0}, scan {1}."
+ },
+ "Cutting out {0} lines with Loghi (Docker).": {
+  "nl": "Loghi (Docker) knipt {0} regels uit.",
+  "fy": "Loghi (Docker) knipt {0} rigels út."
+ },
+ "Ready: {0} training lines from {1} scans.": {
+  "nl": "Klaar: {0} trainingsregels uit {1} scans.",
+  "fy": "Klear: {0} trainingsrigels út {1} scans."
+ },
+ "The scans and texts of {0} checked lines are ready, but the lines were not cut out: {1}": {
+  "nl": "De scans en teksten van {0} nagekeken regels staan klaar, maar de regels zijn niet uitgeknipt: {1}",
+  "fy": "De scans en teksten fan {0} neisjoene rigels steane klear, mar de rigels binne net útknipt: {1}"
+ },
+ "Making the training set failed: {0}": {
+  "nl": "Het maken van de trainingsset is mislukt: {0}",
+  "fy": "It meitsjen fan de trainingsset is mislearre: {0}"
+ },
+ "There are no checked lines yet.": {
+  "nl": "Er zijn nog geen nagekeken regels.",
+  "fy": "Der binne noch gjin neisjoene rigels."
+ },
+ "The cutting step of Loghi failed; see {0}.": {
+  "nl": "De uitknipstap van Loghi is mislukt; zie {0}.",
+  "fy": "De útknipstap fan Loghi is mislearre; sjoch {0}."
+ },
+ "The folder {0} holds other files; it was not made by Loghi-studio.": {
+  "nl": "In de map {0} staan andere bestanden; die map is niet door Loghi-studio gemaakt.",
+  "fy": "Yn de map {0} steane oare bestannen; dy map is net troch Loghi-studio makke."
+ },
+ "Lines with a name that was nearly read right": {
+  "nl": "Regels met een naam die bijna goed gelezen is",
+  "fy": "Rigels mei in namme dy't hast goed lêzen is"
+ },
+ "Names in the index for this scan": {
+  "nl": "Namen in de index bij deze scan",
+  "fy": "Nammen yn de yndeks by dizze scan"
+ },
+ "Read by people, from the index of AlleFriezen. A help for reading the names. The index may spell a name differently: type what is written on the scan.": {
+  "nl": "Door mensen gelezen, uit de index van AlleFriezen. Een hulp bij het lezen van de namen. De index kan een naam anders spellen: typ wat er op de scan staat.",
+  "fy": "Troch minsken lêzen, út de yndeks fan AlleFriezen. In help by it lêzen fan de nammen. De yndeks kin in namme oars staverje: typ wat der op de scan stiet."
+ },
+ "folio {0}": {
+  "nl": "folio {0}",
+  "fy": "folio {0}"
+ },
+ "Deed that starts on this scan,": {
+  "nl": "Akte die op deze scan begint,",
+  "fy": "Akte dy't op dizze scan begjint,"
+ },
+ "Deed that starts on the scan before,": {
+  "nl": "Akte die op de scan ervoor begint,",
+  "fy": "Akte dy't op de scan derfoar begjint,"
+ },
+ "Looking for lines with a name that was nearly read right…": {
+  "nl": "Bezig met zoeken naar regels met een naam die bijna goed gelezen is…",
+  "fy": "Dwaande mei sykjen nei rigels mei in namme dy't hast goed lêzen is…"
+ },
+ "Index of names made by people (a file; may stay empty)": {
+  "nl": "Index van namen die door mensen is gemaakt (een bestand; mag leeg blijven)",
+  "fy": "Yndeks fan nammen dy't troch minsken makke is (in bestân; mei leech bliuwe)"
+ },
+ "For example cache/allefriezen/het_bildt.json. The Correct tab then shows the names of the deed on a scan.": {
+  "nl": "Bijvoorbeeld cache/allefriezen/het_bildt.json. Het tabblad Verbeteren toont dan de namen van de akte op een scan.",
+  "fy": "Bygelyks cache/allefriezen/het_bildt.json. It ljepblêd Ferbetterje lit dan de nammen fan de akte op in scan sjen."
+ },
+ "This file does not exist: {0}": {
+  "nl": "Dit bestand bestaat niet: {0}",
+  "fy": "Dit bestân bestiet net: {0}"
+ },
+ "Select a piece": {
+  "nl": "Stuk selecteren",
+  "fy": "Stik selektearje"
+ },
+ "Copy this piece": {
+  "nl": "Dit stuk kopiëren",
+  "fy": "Dit stik kopiearje"
+ },
+ "Show all lines again": {
+  "nl": "Alle regels weer tonen",
+  "fy": "Alle rigels wer sjen litte"
+ },
+ "<kbd>S</kbd>: select a piece. Drag a box over the scan; the text of the lines in the box is shown beside the scan. Dragging with <kbd>Shift</kbd> held does the same. With the keyboard: <kbd>Shift</kbd> + <kbd>↑</kbd> or <kbd>↓</kbd> makes the piece larger or smaller from the chosen line. <kbd>Esc</kbd>: all lines again.": {
+  "nl": "<kbd>S</kbd>: een stuk selecteren. Sleep een vak over de scan; de tekst van de regels in het vak staat dan naast de scan. Slepen met <kbd>Shift</kbd> ingedrukt doet hetzelfde. Met het toetsenbord: <kbd>Shift</kbd> + <kbd>↑</kbd> of <kbd>↓</kbd> maakt het stuk groter of kleiner vanaf de gekozen regel. <kbd>Esc</kbd>: weer alle regels.",
+  "fy": "<kbd>S</kbd>: in stik selektearje. Sleep in fak oer de scan; de tekst fan de rigels yn it fak stiet dan njonken de scan. Slepe mei <kbd>Shift</kbd> yndrukt docht itselde. Mei it toetseboerd: <kbd>Shift</kbd> + <kbd>↑</kbd> of <kbd>↓</kbd> makket it stik grutter of lytser fan de keazen rigel ôf. <kbd>Esc</kbd>: wer alle rigels."
+ },
+ "Text of the chosen piece, scan {0}": {
+  "nl": "Tekst van het gekozen stuk, scan {0}",
+  "fy": "Tekst fan it keazen stik, scan {0}"
+ },
+ "Chosen piece: line {0}.": {
+  "nl": "Gekozen stuk: regel {0}.",
+  "fy": "Keazen stik: rigel {0}."
+ },
+ "Chosen piece: line {0} to {1}, {2}.": {
+  "nl": "Gekozen stuk: regel {0} tot en met {1}, {2}.",
+  "fy": "Keazen stik: rigel {0} oant en mei {1}, {2}."
+ },
+ "The text of the piece is beside the scan.": {
+  "nl": "De tekst van het stuk staat naast de scan.",
+  "fy": "De tekst fan it stik stiet njonken de scan."
+ },
+ "There are no lines in the box you drew.": {
+  "nl": "In het vak dat je tekende staan geen regels.",
+  "fy": "Yn it fak dat jo tekenen steane gjin rigels."
+ },
+ "Drag a box over the lines you want to read.": {
+  "nl": "Sleep een vak over de regels die je wilt lezen.",
+  "fy": "Sleep in fak oer de rigels dy't jo lêze wolle."
+ },
+ "Select a piece is on. Drag a box over the scan.": {
+  "nl": "Stuk selecteren staat aan. Sleep een vak over de scan.",
+  "fy": "Stik selektearje stiet oan. Sleep in fak oer de scan."
+ },
+ "Select a piece is off. Dragging moves the scan again.": {
+  "nl": "Stuk selecteren staat uit. Slepen verschuift de scan weer.",
+  "fy": "Stik selektearje stiet út. Slepen ferskoot de scan wer."
+ },
+ "All lines of the scan are shown again.": {
+  "nl": "Alle regels van de scan worden weer getoond.",
+  "fy": "Alle rigels fan de scan wurde wer toand."
+ },
+ "The text of the chosen piece was copied.": {
+  "nl": "De tekst van het gekozen stuk is gekopieerd.",
+  "fy": "De tekst fan it keazen stik is kopiearre."
+ },
+ "Text wider": {
+  "nl": "Tekst breder",
+  "fy": "Tekst breder"
+ },
+ "Text narrower": {
+  "nl": "Tekst smaller",
+  "fy": "Tekst smeller"
+ },
+ "Width of the text beside the scan. Drag this bar, or press the left arrow for wider and the right arrow for narrower.": {
+  "nl": "Breedte van de tekst naast de scan. Versleep deze balk, of druk op pijl links voor breder en pijl rechts voor smaller.",
+  "fy": "Breedte fan de tekst njonken de scan. Fersleep dizze balke, of druk op pylk lofts foar breder en pylk rjochts foar smeller."
+ },
+ "The text beside the scan can be made wider or narrower: drag the bar between the scan and the text, or use the buttons Text wider and Text narrower. The width is remembered.": {
+  "nl": "De tekst naast de scan kun je breder of smaller maken: versleep de balk tussen de scan en de tekst, of gebruik de knoppen Tekst breder en Tekst smaller. De breedte wordt onthouden.",
+  "fy": "De tekst njonken de scan kinne jo breder of smeller meitsje: fersleep de balke tusken de scan en de tekst, of brûk de knoppen Tekst breder en Tekst smeller. De breedte wurdt ûnthâlden."
+ },
+ "The text takes {0} percent of the width.": {
+  "nl": "De tekst neemt {0} procent van de breedte in.",
+  "fy": "De tekst nimt {0} persint fan de breedte yn."
+ },
+ "A copy of the checked lines goes to git by itself, ten minutes after the last check.": {
+  "nl": "Een kopie van de nagekeken regels gaat vanzelf naar git, tien minuten na de laatste controle.",
+  "fy": "In kopy fan de neisjoene rigels giet fansels nei git, tsien minuten nei de lêste kontrôle."
+ },
+ "Copy of the checked lines in git: made on {0}.": {
+  "nl": "Kopie van de nagekeken regels in git: gemaakt op {0}.",
+  "fy": "Kopy fan de neisjoene rigels yn git: makke op {0}."
+ },
+ "The copy to git failed on {0}: {1}": {
+  "nl": "De kopie naar git is mislukt op {0}: {1}",
+  "fy": "De kopy nei git is mislearre op {0}: {1}"
+ },
+ "Names in old spellings": {
+  "nl": "Namen in oude spellingen",
+  "fy": "Nammen yn âlde staveringen"
+ },
+ "<strong>Names in old spellings</strong>: for a person. Each word is also searched in the old spellings the name finder knows (Pieter also Pyter and Pytter, Hayes also Hayesen and Hayesdr, c or k, z or s, v or f), and one or two letters may differ. When the collection has an index of names made by people, the deeds that name the person are listed first: those names were read by people, so they are found even where Loghi read the name wrong.": {
+  "nl": "<strong>Namen in oude spellingen</strong>: voor een persoon. Elk woord wordt ook gezocht in de oude spellingen die de namenzoeker kent (Pieter ook Pyter en Pytter, Hayes ook Hayesen en Hayesdr, c of k, z of s, v of f), en een of twee letters mogen verschillen. Heeft de collectie een index van namen die door mensen is gemaakt, dan staan de akten waarin de persoon genoemd wordt bovenaan: die namen zijn door mensen gelezen en worden dus ook gevonden waar Loghi de naam verkeerd las.",
+  "fy": "<strong>Nammen yn âlde staveringen</strong>: foar in persoan. Elk wurd wurdt ek socht yn de âlde staveringen dy't de nammesiker ken (Pieter ek Pyter en Pytter, Hayes ek Hayesen en Hayesdr, c of k, z of s, v of f), en ien of twa letters meie ferskille. Hat de kolleksje in yndeks fan nammen dy't troch minsken makke is, dan steane de akten dêr't de persoan yn neamd wurdt boppe-oan: dy nammen binne troch minsken lêzen en wurde dus ek fûn dêr't Loghi de namme ferkeard lies."
+ },
+ "In the index of names: {0}": {
+  "nl": "In de index van namen: {0}",
+  "fy": "Yn de yndeks fan nammen: {0}"
+ },
+ "deed": {
+  "nl": "akte",
+  "fy": "akte"
+ },
+ "deeds": {
+  "nl": "akten",
+  "fy": "akten"
+ },
+ "These names were read by people (index of AlleFriezen). The index may spell a name differently from the scan.": {
+  "nl": "Deze namen zijn door mensen gelezen (index van AlleFriezen). De index kan een naam anders spellen dan de scan.",
+  "fy": "Dizze nammen binne troch minsken lêzen (yndeks fan AlleFriezen). De yndeks kin in namme oars staverje as de scan."
+ },
+ "scan {0}": {
+  "nl": "scan {0}",
+  "fy": "scan {0}"
+ },
+ "no scan linked": {
+  "nl": "geen scan gekoppeld",
+  "fy": "gjin scan keppele"
+ },
+ "Book {0} is not in this collection.": {
+  "nl": "Boek {0} staat niet in deze collectie.",
+  "fy": "Boek {0} stiet net yn dizze kolleksje."
+ },
+ "Opened book {0}, scan {1}: the deed of the index starts here.": {
+  "nl": "Boek {0}, scan {1} geopend: hier begint de akte uit de index.",
+  "fy": "Boek {0}, scan {1} iepene: hjir begjint de akte út de yndeks."
+ },
+ "Opened book {0}. The index does not say on which scan the deed stands.": {
+  "nl": "Boek {0} geopend. De index zegt niet op welke scan de akte staat.",
+  "fy": "Boek {0} iepene. De yndeks seit net op hokker scan de akte stiet."
+ },
+ "<strong>[corrected]</strong> or <strong>[checked]</strong> before a line means: a person read this line on the scan. <strong>[partly corrected]</strong> means: a person corrected some words, the rest is as Loghi read it. <strong>[unreadable]</strong> means: a person could not read it.": {
+  "nl": "<strong>[verbeterd]</strong> of <strong>[nagekeken]</strong> voor een regel betekent: iemand heeft deze regel op de scan gelezen. <strong>[deels verbeterd]</strong> betekent: iemand heeft een paar woorden verbeterd, de rest is zoals Loghi het las. <strong>[onleesbaar]</strong> betekent: iemand kon hem niet lezen.",
+  "fy": "<strong>[ferbettere]</strong> of <strong>[neisjoen]</strong> foar in rigel betsjut: immen hat dizze rigel op de scan lêzen. <strong>[foar in part ferbettere]</strong> betsjut: immen hat in pear wurden ferbettere, de rest is sa't Loghi it lies. <strong>[ûnlêsber]</strong> betsjut: immen koe him net lêze."
+ },
+ "<kbd>Enter</kbd>: save and go to the next line. <kbd>Alt</kbd> + <kbd>W</kbd>: only some words corrected. <kbd>Alt</kbd> + <kbd>U</kbd>: unreadable. <kbd>Alt</kbd> + <kbd>N</kbd>: skip without saving. <kbd>Alt</kbd> + <kbd>P</kbd>: the line before.": {
+  "nl": "<kbd>Enter</kbd>: opslaan en naar de volgende regel. <kbd>Alt</kbd> + <kbd>W</kbd>: alleen een paar woorden verbeterd. <kbd>Alt</kbd> + <kbd>U</kbd>: onleesbaar. <kbd>Alt</kbd> + <kbd>N</kbd>: overslaan zonder op te slaan. <kbd>Alt</kbd> + <kbd>P</kbd>: de regel ervoor.",
+  "fy": "<kbd>Enter</kbd>: bewarje en nei de folgjende rigel. <kbd>Alt</kbd> + <kbd>W</kbd>: allinnich in pear wurden ferbettere. <kbd>Alt</kbd> + <kbd>U</kbd>: ûnlêsber. <kbd>Alt</kbd> + <kbd>N</kbd>: oerslaan sûnder te bewarjen. <kbd>Alt</kbd> + <kbd>P</kbd>: de rigel derfoar."
+ },
+ "Checked in this collection: {0}, of which {1} corrected and {2} right as read. Partly corrected: {3}. Unreadable: {4}.": {
+  "nl": "Nagekeken in deze collectie: {0}, waarvan {1} verbeterd en {2} goed gelezen. Deels verbeterd: {3}. Onleesbaar: {4}.",
+  "fy": "Neisjoen yn dizze kolleksje: {0}, wêrfan {1} ferbettere en {2} goed lêzen. Foar in part ferbettere: {3}. Unlêsber: {4}."
+ },
+ "Only some words corrected": {
+  "nl": "Alleen een paar woorden verbeterd",
+  "fy": "Allinnich in pear wurden ferbettere"
+ },
+ "partly corrected": {
+  "nl": "deels verbeterd",
+  "fy": "foar in part ferbettere"
+ },
+ "Partly corrected": {
+  "nl": "Deels verbeterd",
+  "fy": "Foar in part ferbettere"
+ },
+ "Partly corrected on {0}: not a training line.": {
+  "nl": "Deels verbeterd op {0}: geen trainingsregel.",
+  "fy": "Foar in part ferbettere op {0}: gjin trainingsrigel."
+ },
+ "Line {0}: saved, partly corrected. It does not become a training line.": {
+  "nl": "Regel {0}: opgeslagen, deels verbeterd. Hij wordt geen trainingsregel.",
+  "fy": "Rigel {0}: bewarre, foar in part ferbettere. Hy wurdt gjin trainingsrigel."
+ },
+ "Did you correct only one or a few words, and can you not read the rest of the line with certainty? Choose Only some words corrected. Your correction is shown in View and Search, but the line does not become a training line.": {
+  "nl": "Heb je maar één of een paar woorden verbeterd, en kun je de rest van de regel niet met zekerheid lezen? Kies Alleen een paar woorden verbeterd. Je verbetering is te zien bij Bekijken en Zoeken, maar de regel wordt geen trainingsregel.",
+  "fy": "Hawwe jo mar ien of in pear wurden ferbettere, en kinne jo de rest fan de rigel net mei wissichheid lêze? Kies Allinnich in pear wurden ferbettere. Jo ferbettering is te sjen by Besjen en Sykje, mar de rigel wurdt gjin trainingsrigel."
+ },
+ "Lines that two readers read differently": {
+  "nl": "Regels die twee lezers verschillend lazen",
+  "fy": "Rigels dy't twa lêzers ferskillend liezen"
+ },
+ "Use the text of the other reader": {
+  "nl": "Tekst van de andere lezer overnemen",
+  "fy": "Tekst fan de oare lêzer oernimme"
+ },
+ "Other reader:": {
+  "nl": "Andere lezer:",
+  "fy": "Oare lêzer:"
+ },
+ "Reading before this one:": {
+  "nl": "Vorige lezing:",
+  "fy": "Foarige lêzing:"
+ },
+ "The other reader read the same.": {
+  "nl": "De andere lezer las hetzelfde.",
+  "fy": "De oare lêzer lies itselde."
+ },
+ "The two readers differ. Loghi: “{0}”. Other reader: “{1}”.": {
+  "nl": "De twee lezers verschillen. Loghi: “{0}”. Andere lezer: “{1}”.",
+  "fy": "De twa lêzers ferskille. Loghi: “{0}”. Oare lêzer: “{1}”."
+ },
+ "Looking for lines that the two readers read differently…": {
+  "nl": "Bezig met zoeken naar regels die de twee lezers verschillend lazen…",
+  "fy": "Oan it sykjen nei rigels dy't de twa lêzers ferskillend liezen…"
+ },
+ "The text of the other reader is in the field. Check it against the scan.": {
+  "nl": "De tekst van de andere lezer staat in het veld. Controleer hem met de scan.",
+  "fy": "De tekst fan de oare lêzer stiet yn it fjild. Kontrolearje him mei de scan."
+ },
+ "The other reader reads this line differently.": {
+  "nl": "De andere lezer leest deze regel anders.",
+  "fy": "De oare lêzer lêst dizze rigel oars."
+ },
+ "(nothing)": {
+  "nl": "(niets)",
+  "fy": "(neat)"
+ }
+}

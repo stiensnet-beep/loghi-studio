@@ -1,0 +1,35 @@
+# Loghi-studio for visitors from outside, behind a reverse proxy with HTTPS and behind its own login.
+# Looking and searching only: the scans and texts are mounted read-only, Loghi itself does not run here.
+# On the server only (not in the repo): data/ (scans and text per collection), settings/ (collections.json,
+# names.json, users.json with password hashes) and cache/. See deploy/SERVER-MODE.md.
+services:
+  loghistudio:
+    build: ./app
+    container_name: loghistudio
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    cpus: 2
+    mem_limit: 2g
+    environment:
+      - TZ=Europe/Amsterdam
+      - LOGHI_HOSTS=loghistudio.example.org
+    volumes:
+      - ./data:/data:ro
+      - ./settings:/settings
+      - ./cache:/cache
+    networks: [intern]
+    logging:
+      driver: json-file
+      options:
+        max-size: 1m
+        max-file: "2"
+
+networks:
+  intern:
+    external: true
