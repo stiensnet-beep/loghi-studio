@@ -18,3 +18,5 @@ models/
 training/
 # trial runs of the test set (can be made again)
 testset/runs/
+# notes of a reviewer of the public copy
+review/
