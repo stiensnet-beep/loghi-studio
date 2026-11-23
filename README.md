@@ -136,8 +136,9 @@ What we measured on our own books (enlarging scans, models, Transkribus, fine-tu
 
 ## Known limits
 - Tried on Windows 11 with Python 3.14 and Docker Desktop, and in a Linux container (server mode). Not on macOS.
-- One user at a time on the own computer; server mode has three roles (admin, corrector, viewer), no
-  registration and no "forgot password".
+- One user at a time on the own computer; server mode has three roles (admin, corrector, viewer). The admin
+  makes the accounts; there is no registration. A forgotten password is asked from the admin on the login
+  page; no e-mail is sent.
 - The reading queue expects the Loghi images of version 2.3.2 and scans as JPG.
 - The Frisian texts of the interface were not checked by someone who writes Frisian.
 - The Correct tab is new and has seen little use. That checked lines make a better reading model is the

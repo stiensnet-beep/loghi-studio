@@ -32,7 +32,7 @@ from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 from pathlib import Path
 from urllib.parse import urlparse, parse_qs, unquote
 
-VERSION = "0.6.1-beta"
+VERSION = "0.7.0-beta"
 HERE = Path(__file__).resolve().parent
 PROJECTS = HERE.parent
 SETTINGS_DIR = Path(os.environ.get("LOGHI_STUDIO_SETTINGS", HERE / "settings"))
@@ -745,6 +745,36 @@ def plain_error(e):
 class Handler(BaseHTTPRequestHandler):
     timeout = 60                # seconds a connection may stay silent while we wait for it
 
+    def accounts(self, who, d):
+        """An admin makes, changes or removes an account. The own password is asked again each time."""
+        auth = self.server.auth
+        if who["role"] != "admin":
+            return self.send_json({"error": "not allowed for this account"}, 403)
+        ok = auth.verify(who["user"], d.get("password"), self.client_ip())
+        if ok == "wait":
+            return self.send_json({"error": "too many wrong attempts; wait 15 minutes"}, 429)
+        if not ok:
+            return self.send_json({"error": "Your own password is not right."}, 403)
+        action, name = d.get("action"), str(d.get("name") or "").strip()
+        own = name.lower() == who["user"].lower()
+        out = {"name": name}
+        if action == "create":
+            out["password"] = auth.create(name, d.get("role"))
+        elif action == "role":
+            if own:
+                raise ValueError("You cannot change your own role. Ask another admin.")
+            auth.set_role(name, d.get("role"))
+        elif action == "password":
+            out["password"] = auth.new_password(name, self.token() if own else None)
+        elif action == "remove":
+            if own:
+                raise ValueError("You cannot remove your own account.")
+            auth.remove(name)
+        else:
+            raise ValueError("Unknown action.")
+        print(f"accounts: {who['user']} did {action} for {name}", file=sys.stderr, flush=True)
+        return self.send_json(dict(out, accounts=auth.accounts()), 201 if action == "create" else 200)
+
     def oops(self, e):
         """Something unforeseen (a damaged file, for instance): a plain answer, the cause in the log."""
         print(f"error in {self.command} {self.path.split('?')[0]}: {type(e).__name__}: {e}", file=sys.stderr, flush=True)
@@ -859,7 +889,12 @@ class Handler(BaseHTTPRequestHandler):
             if path in ("/", "/index.html"):
                 return self.send_file(HERE / "index.html", "text/html; charset=utf-8", cache=False)
             if path == "/api/me":
-                return self.send_json({"user": who["user"], "role": who["role"], "mode": "local" if local else "server"})
+                return self.send_json({"user": who["user"], "role": who["role"], "real": who.get("real", who["role"]),
+                                       "mode": "local" if local else "server"})
+            if path == "/api/accounts":             # server mode, the admin: who may log in
+                if local or who["role"] != "admin":
+                    return self.send_json({"error": "not allowed for this account"}, 403)
+                return self.send_json({"accounts": self.server.auth.accounts(), "roles": list(self.server.auth_roles)})
             if path == "/api/version":
                 return self.send_json({"version": VERSION})
             if path == "/api/collections":
@@ -973,8 +1008,16 @@ class Handler(BaseHTTPRequestHandler):
                 if path == "/api/logout" and method == "POST":
                     auth.logout(self.token())
                     return self.send_json({"ok": True}, 200, [self.cookie("", 0)])
+                if path == "/api/forgot" and method == "POST":         # asks the admin; the same answer for every name
+                    auth.ask_reset(self.read_body().get("user"), self.client_ip())
+                    return self.send_json({"ok": True})
                 if who["role"] is None:
                     return self.send_json({"error": "log in first"}, 401)
+                if path == "/api/me/role" and method == "POST":         # look as a lower role, or back to the own
+                    auth.act(self.token(), self.read_body().get("role"))
+                    return self.send_json(dict(auth.session(self.token()), mode="server"))
+                if path == "/api/accounts" and method == "POST":
+                    return self.accounts(who, self.read_body())
                 may = (who["role"] == "admin" and re.match(r"/api/(names|lists)(/|$)", path)) or \
                       (who["role"] in ("admin", "corrector") and path == "/api/corrections")
                 if not may:
@@ -1086,6 +1129,7 @@ def make_server(port=8771, auth=None, hosts=(), base="/", secure=True):
         init()
     srv = ThreadingHTTPServer(("0.0.0.0" if auth else "127.0.0.1", port), Handler)
     srv.auth, srv.hosts, srv.base, srv.secure = auth, {h.strip().lower() for h in hosts if h.strip()}, base, secure
+    srv.auth_roles = ("admin", "corrector", "viewer")
     return srv
 
 

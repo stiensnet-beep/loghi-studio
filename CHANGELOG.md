@@ -4,6 +4,18 @@ Version numbers: 0.x is beta (trial version). 1.0 comes when adding, the queue a
 
 ## Unreleased
 
+## 0.7.0-beta (23 Nov 2026)
+- Server mode: next to the name of who is logged in there is a choice "Look as". An admin can look as a
+  corrector or a viewer and go back; a corrector can look as a viewer. The server holds to the chosen role.
+- Server mode: a tab Accounts for the admin. Make an account with a role, change a role, give a new
+  password, remove an account. The password is made by the server, shown once and kept nowhere. Every
+  change asks for the own password again. The only admin cannot be removed or lowered, and nobody removes
+  or changes himself.
+- Server mode: "Forgot your password?" on the login page. No e-mail is sent: the admin sees in the tab
+  Accounts who asked and gives a new password. The answer is the same for a name that does not exist.
+- Server mode: the admin sees the tabs Add, Queue and Collections and the training set too, with a note
+  that they are switched off there because Loghi does not run on the server.
+
 ## 0.6.1-beta (23 Nov 2026)
 - Correct: what was saved last stays in sight below the buttons ("Saved just now"), with a button to
   withdraw that save (Alt+Z) and one to go back to that line. Saving always goes on to the next line; that

@@ -1,7 +1,7 @@
 # Loghi-studio in server mode
 
 Server mode is for showing books to other people over the internet: looking and searching behind a login.
-Loghi itself does not run there, so the tabs Add, Queue and Collections are hidden and their requests are
+Loghi itself does not run there, so the tabs Add, Queue and Collections are switched off and their requests are
 refused. The login is home-made (see `auth.py`); judge for yourself whether that is enough for your use.
 
 ## What you need
@@ -41,8 +41,18 @@ refused. The login is home-made (see `auth.py`); judge for yourself whether that
   look and search.
 - Wrong passwords: an address with five wrong attempts waits 15 minutes. A name with five wrong attempts,
   from whatever address, is slowed down to one attempt in five seconds, but it is never locked out.
-  A session ends after 12 hours without use, or after 7 days. There is no registration and no "forgot
-  password".
+  A session ends after 12 hours without use, or after 7 days.
+- Accounts: the first admin is made with the command of step 6. After that an admin manages the accounts in
+  the tab Accounts: a new account with a role, another role, a new password, removing. The server makes the
+  password, shows it once and keeps only a hash; every change asks for the admin's own password again.
+  There is no registration.
+- Forgot the password: the login page has "Forgot your password?". No e-mail is sent; the admin sees in the
+  tab Accounts who asked and gives a new password. The only admin who forgets the password uses the command
+  of step 6 again, with the same name and the role admin.
+- Look as: next to the name of who is logged in, an admin can choose to look as a corrector or a viewer,
+  and go back. The server holds to the chosen role, so this shows what such an account can do.
+- The tabs Add, Queue and Collections are shown to the admin with a note: they only work on the own
+  computer, where Loghi runs.
 - A collection marked as scans for own use only (the field `private` in `collections.json`) does not exist
   in server mode: it is not listed, not searched and its scans are not given. Better still: do not copy
   such scans to the server at all.

@@ -843,6 +843,84 @@ class ServerTest(unittest.TestCase):
         g.main(str(ged), str(out), everybody=True)
         self.assertEqual(len(json.loads(out.read_text(encoding="utf-8"))), 3)
 
+    def test_accounts_roles_to_look_as_and_forgotten_passwords(self):
+        import auth
+        accounts = auth.Auth(Path(TMP.name) / "accounts3")
+        pw = auth.make_password()
+        accounts.set_user("Beheer", "admin", pw)
+        srv = server.make_server(0, accounts, ["loghi.example"], "/", secure=False)
+        port = srv.server_address[1]
+        threading.Thread(target=srv.serve_forever, daemon=True).start()
+
+        def call(path, body=None, cookie=None):
+            h = {"Host": "loghi.example"}
+            if body is not None:
+                h["Content-Type"] = "application/json"
+            if cookie:
+                h["Cookie"] = cookie
+            req = urllib.request.Request(f"http://127.0.0.1:{port}{path}", method="POST" if body is not None else "GET", headers=h,
+                                         data=json.dumps(body).encode() if body is not None else None)
+            try:
+                with urllib.request.urlopen(req) as r:
+                    return r.status, json.loads(r.read().decode("utf-8")), r.headers
+            except urllib.error.HTTPError as e:
+                return e.code, json.loads(e.read().decode("utf-8")), e.headers
+        try:
+            admin = call("/api/login", {"user": "beheer", "password": pw})[2]["Set-Cookie"].split(";")[0]
+            self.assertEqual(call("/api/me", cookie=admin)[1], {"user": "Beheer", "role": "admin", "real": "admin", "mode": "server"})
+            self.assertEqual([a["name"] for a in call("/api/accounts", cookie=admin)[1]["accounts"]], ["Beheer"])
+            # a new account: the own password is asked again, the new password is given once
+            new = {"action": "create", "name": "Jantje", "role": "corrector"}
+            self.assertEqual(call("/api/accounts", dict(new, password="wrong-wrong-wrong"), admin)[0], 403)
+            code, r, _ = call("/api/accounts", dict(new, password=pw), admin)
+            self.assertEqual((code, [a["role"] for a in r["accounts"]]), (201, ["admin", "corrector"]))
+            pw2 = r["password"]
+            self.assertNotIn(pw2, accounts.file.read_text(encoding="utf-8"))
+            self.assertEqual(call("/api/accounts", dict(new, password=pw), admin)[0], 400)          # the name is taken
+            self.assertEqual(call("/api/accounts", {"action": "create", "name": "x/..", "role": "viewer", "password": pw}, admin)[0], 400)
+            jan = call("/api/login", {"user": "jantje", "password": pw2})[2]["Set-Cookie"].split(";")[0]
+            self.assertEqual(call("/api/accounts", cookie=jan)[0], 403)                             # not for a corrector
+            self.assertEqual(call("/api/accounts", {"action": "remove", "name": "Beheer", "password": pw2}, jan)[0], 403)
+            # look as a lower role: the server holds to it, and upwards is refused
+            self.assertEqual(call("/api/me/role", {"role": "admin"}, jan)[0], 400)
+            self.assertEqual(call("/api/me/role", {"role": "viewer"}, jan)[1]["role"], "viewer")
+            self.assertEqual(call("/api/corrections", {"collection": "proef", "book": "0001", "scan": "000001", "line": "l1",
+                                                       "text": "x", "state": "checked"}, jan)[0], 403)
+            self.assertEqual(call("/api/me/role", {"role": "viewer"}, admin)[1], {"user": "Beheer", "role": "viewer", "real": "admin", "mode": "server"})
+            self.assertEqual(call("/api/accounts", cookie=admin)[0], 403)
+            self.assertEqual(call("/api/accounts", {"action": "role", "name": "Jantje", "role": "admin", "password": pw}, admin)[0], 403)
+            self.assertEqual(call("/api/me/role", {"role": "admin"}, admin)[1]["role"], "admin")
+            # the only admin stays admin and stays; nobody changes or removes himself
+            self.assertEqual(call("/api/accounts", {"action": "role", "name": "Beheer", "role": "viewer", "password": pw}, admin)[0], 400)
+            self.assertEqual(call("/api/accounts", {"action": "remove", "name": "Beheer", "password": pw}, admin)[0], 400)
+            self.assertRaises(ValueError, accounts.remove, "beheer")
+            self.assertRaises(ValueError, accounts.set_role, "beheer", "viewer")
+            # forgot the password: the same answer for a name that exists and one that does not; the admin sees who asked
+            self.assertEqual(call("/api/forgot", {"user": "jantje"})[:2], (200, {"ok": True}))
+            self.assertEqual(call("/api/forgot", {"user": "nobody"})[:2], (200, {"ok": True}))
+            asked = {a["name"]: a["asked"] for a in call("/api/accounts", cookie=admin)[1]["accounts"]}
+            self.assertTrue(asked["Jantje"] and not asked["Beheer"])
+            code, r, _ = call("/api/accounts", {"action": "password", "name": "jantje", "password": pw}, admin)
+            pw3 = r["password"]
+            self.assertTrue(code == 200 and pw3 != pw2 and not [a for a in r["accounts"] if a["asked"]])
+            self.assertEqual(call("/api/me", cookie=jan)[0], 401)                                   # the old session ended
+            self.assertEqual(call("/api/login", {"user": "jantje", "password": pw2})[0], 401)
+            self.assertEqual(call("/api/login", {"user": "jantje", "password": pw3})[0], 200)
+            # role and removal
+            self.assertEqual(call("/api/accounts", {"action": "role", "name": "Jantje", "role": "viewer", "password": pw}, admin)[0], 200)
+            self.assertEqual(call("/api/accounts", {"action": "remove", "name": "Jantje", "password": pw}, admin)[1]["accounts"],
+                             [{"name": "Beheer", "role": "admin", "asked": None}])
+            self.assertEqual(call("/api/login", {"user": "jantje", "password": pw3})[0], 401)
+            # an admin who gives himself a new password stays logged in to read it
+            code, r, _ = call("/api/accounts", {"action": "password", "name": "Beheer", "password": pw}, admin)
+            self.assertEqual((code, call("/api/me", cookie=admin)[0]), (200, 200))
+            self.assertEqual(call("/api/login", {"user": "beheer", "password": pw})[0], 401)
+            self.assertEqual(call("/api/login", {"user": "beheer", "password": r["password"]})[0], 200)
+        finally:
+            srv.shutdown()
+            srv.server_close()
+        self.assertEqual(self.call("/api/accounts")[0], 403)             # the own computer has no accounts
+
     def test_server_mode_really_starts(self):
         # the program itself, started as on a server: the other tests build the server by hand and so missed
         # a mistake in main() once (22 Nov 2026: the site answered 502 after a roll-out)
@@ -931,7 +1009,7 @@ class ServerTest(unittest.TestCase):
             self.assertIn("SameSite=Lax", head["Set-Cookie"])
             viewer = head["Set-Cookie"].split(";")[0]
             self.assertIn("search-form", call("/", cookie=viewer)[1])
-            self.assertEqual(json.loads(call("/api/me", cookie=viewer)[1]), {"user": "kijker", "role": "viewer", "mode": "server"})
+            self.assertEqual(json.loads(call("/api/me", cookie=viewer)[1]), {"user": "kijker", "role": "viewer", "real": "viewer", "mode": "server"})
             cols = json.loads(call("/api/collections", cookie=viewer)[1])
             self.assertEqual(cols[0]["id"], "proef")
             self.assertNotIn("root", cols[0])
@@ -986,7 +1064,7 @@ class ServerTest(unittest.TestCase):
             srv.shutdown()
             srv.server_close()
         # the local application still needs no login
-        self.assertEqual(self.call("/api/me")[1], {"user": None, "role": "admin", "mode": "local"})
+        self.assertEqual(self.call("/api/me")[1], {"user": None, "role": "admin", "real": "admin", "mode": "local"})
 
     # ---- lines checked by a person, and the training set made from them
     def correct(self, line, text=None, state="checked", scan="000001"):

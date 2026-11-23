@@ -2582,5 +2582,165 @@
  "Back on line {0}.": {
   "nl": "Terug op regel {0}.",
   "fy": "Werom op rigel {0}."
+ },
+ "Accounts": {
+  "nl": "Accounts",
+  "fy": "Akkounts"
+ },
+ "Look as": {
+  "nl": "Bekijken als",
+  "fy": "Besjen as"
+ },
+ "admin": {
+  "nl": "beheerder",
+  "fy": "behearder"
+ },
+ "corrector": {
+  "nl": "corrector",
+  "fy": "korrektor"
+ },
+ "viewer": {
+  "nl": "kijker",
+  "fy": "sjogger"
+ },
+ "You now look as {0}.": {
+  "nl": "Je kijkt nu als {0}.",
+  "fy": "Jo sjogge no as {0}."
+ },
+ "Who may log in on this server. An admin sees everything and manages the lists of names and the accounts; a corrector may check lines; a viewer may look and search. A new password is shown once and is kept nowhere: pass it on yourself.": {
+  "nl": "Wie op deze server mag inloggen. Een beheerder ziet alles en beheert de namenlijsten en de accounts; een corrector mag regels nakijken; een kijker mag kijken en zoeken. Een nieuw wachtwoord wordt één keer getoond en nergens bewaard: geef het zelf door.",
+  "fy": "Wa't op dizze server ynlogge mei. In behearder sjocht alles en beheart de nammelisten en de akkounts; in korrektor mei rigels neisjen; in sjogger mei sjen en sykje. In nij wachtwurd wurdt ien kear toand en nearne bewarre: jou it sels troch."
+ },
+ "If the only admin forgets the password: on the server itself, run python auth.py with the settings folder, the name and the role admin. That gives a new password.": {
+  "nl": "Als de enige beheerder het wachtwoord vergeet: voer op de server zelf python auth.py uit met de map met instellingen, de naam en de rol admin. Dat geeft een nieuw wachtwoord.",
+  "fy": "As de iennige behearder it wachtwurd ferjit: fier op de server sels python auth.py út mei de map mei ynstellings, de namme en de rol admin. Dat jout in nij wachtwurd."
+ },
+ "Your own password, to confirm a change": {
+  "nl": "Je eigen wachtwoord, om een wijziging te bevestigen",
+  "fy": "Jo eigen wachtwurd, om in feroaring te befêstigjen"
+ },
+ "The accounts": {
+  "nl": "De accounts",
+  "fy": "De akkounts"
+ },
+ "New account": {
+  "nl": "Nieuw account",
+  "fy": "Nij akkount"
+ },
+ "Role": {
+  "nl": "Rol",
+  "fy": "Rol"
+ },
+ "Make the account": {
+  "nl": "Account maken",
+  "fy": "Akkount meitsje"
+ },
+ "(this is you)": {
+  "nl": "(dit ben jij)",
+  "fy": "(dit binne jo)"
+ },
+ "Asked for a new password on {0}.": {
+  "nl": "Vroeg op {0} om een nieuw wachtwoord.",
+  "fy": "Frege op {0} om in nij wachtwurd."
+ },
+ "Save the role": {
+  "nl": "Rol opslaan",
+  "fy": "Rol bewarje"
+ },
+ "Give a new password": {
+  "nl": "Nieuw wachtwoord geven",
+  "fy": "Nij wachtwurd jaan"
+ },
+ "Remove the account": {
+  "nl": "Account verwijderen",
+  "fy": "Akkount fuortsmite"
+ },
+ "Press again to remove {0}": {
+  "nl": "Druk nog eens om {0} te verwijderen",
+  "fy": "Druk nochris om {0} fuort te smiten"
+ },
+ "Type your own password first, in the field at the top.": {
+  "nl": "Typ eerst je eigen wachtwoord, in het veld bovenaan.",
+  "fy": "Typ earst jo eigen wachtwurd, yn it fjild boppe-oan."
+ },
+ "New password for {0}:": {
+  "nl": "Nieuw wachtwoord voor {0}:",
+  "fy": "Nij wachtwurd foar {0}:"
+ },
+ "It is shown once and kept nowhere. Write it down or pass it on now.": {
+  "nl": "Het wordt één keer getoond en nergens bewaard. Schrijf het nu op of geef het nu door.",
+  "fy": "It wurdt ien kear toand en nearne bewarre. Skriuw it no op of jou it no troch."
+ },
+ "Copy the password": {
+  "nl": "Wachtwoord kopiëren",
+  "fy": "Wachtwurd kopiearje"
+ },
+ "The password is on the clipboard.": {
+  "nl": "Het wachtwoord staat op het klembord.",
+  "fy": "It wachtwurd stiet op it klamboerd."
+ },
+ "Copying did not work. Select the password and copy it yourself.": {
+  "nl": "Kopiëren lukte niet. Selecteer het wachtwoord en kopieer het zelf.",
+  "fy": "Kopiearjen slagge net. Selektearje it wachtwurd en kopiearje it sels."
+ },
+ "The account {0} was made.": {
+  "nl": "Het account {0} is gemaakt.",
+  "fy": "It akkount {0} is makke."
+ },
+ "The role of {0} was saved.": {
+  "nl": "De rol van {0} is opgeslagen.",
+  "fy": "De rol fan {0} is bewarre."
+ },
+ "{0} has a new password.": {
+  "nl": "{0} heeft een nieuw wachtwoord.",
+  "fy": "{0} hat in nij wachtwurd."
+ },
+ "The account {0} was removed.": {
+  "nl": "Het account {0} is verwijderd.",
+  "fy": "It akkount {0} is fuortsmiten."
+ },
+ "Your own password is not right.": {
+  "nl": "Je eigen wachtwoord klopt niet.",
+  "fy": "Jo eigen wachtwurd kloppet net."
+ },
+ "There is an account with this name already.": {
+  "nl": "Er is al een account met deze naam.",
+  "fy": "Der is al in akkount mei dizze namme."
+ },
+ "A name is 2 to 40 letters, digits, spaces, dots or dashes.": {
+  "nl": "Een naam is 2 tot 40 letters, cijfers, spaties, punten of streepjes.",
+  "fy": "In namme is 2 oant 40 letters, sifers, spaasjes, punten of streekjes."
+ },
+ "This is the only admin. Make another account admin first.": {
+  "nl": "Dit is de enige beheerder. Maak eerst een ander account beheerder.",
+  "fy": "Dit is de iennige behearder. Meitsje earst in oar akkount behearder."
+ },
+ "You cannot change your own role. Ask another admin.": {
+  "nl": "Je kunt je eigen rol niet wijzigen. Vraag een andere beheerder.",
+  "fy": "Jo kinne jo eigen rol net feroarje. Freegje in oare behearder."
+ },
+ "You cannot remove your own account.": {
+  "nl": "Je kunt je eigen account niet verwijderen.",
+  "fy": "Jo kinne jo eigen akkount net fuortsmite."
+ },
+ "This account does not exist.": {
+  "nl": "Dit account bestaat niet.",
+  "fy": "Dit akkount bestiet net."
+ },
+ "Adding books is switched off on this server: Loghi and Docker do not run here, and the books are read-only. Add a book on the own computer and copy it to the server.": {
+  "nl": "Boeken toevoegen is op deze server uitgeschakeld: Loghi en Docker draaien hier niet, en de boeken zijn alleen-lezen. Voeg een boek toe op de eigen computer en kopieer het naar de server.",
+  "fy": "Boeken tafoegje is op dizze server útskeakele: Loghi en Docker draaie hjir net, en de boeken binne allinnich-lêzen. Foegje in boek ta op de eigen kompjûter en kopiearje it nei de server."
+ },
+ "The reading queue is switched off on this server: Loghi does not run here. Books are read on the own computer.": {
+  "nl": "De leeswachtrij is op deze server uitgeschakeld: Loghi draait hier niet. Boeken worden op de eigen computer gelezen.",
+  "fy": "De lêswachtrige is op dizze server útskeakele: Loghi draait hjir net. Boeken wurde op de eigen kompjûter lêzen."
+ },
+ "Collections are managed on the own computer, because they point to folders on the disk. This server shows the collections that were copied to it.": {
+  "nl": "Collecties worden op de eigen computer beheerd, omdat ze naar mappen op de schijf wijzen. Deze server toont de collecties die ernaartoe zijn gekopieerd.",
+  "fy": "Kolleksjes wurde op de eigen kompjûter beheard, om't se nei mappen op de skiif wize. Dizze server toant de kolleksjes dy't dernei kopiearre binne."
+ },
+ "A training set is made on the own computer, where Loghi runs. The lines checked here are kept on this server.": {
+  "nl": "Een trainingsset wordt op de eigen computer gemaakt, waar Loghi draait. De regels die hier zijn nagekeken, worden op deze server bewaard.",
+  "fy": "In trainingsset wurdt op de eigen kompjûter makke, dêr't Loghi draait. De rigels dy't hjir neisjoen binne, wurde op dizze server bewarre."
  }
 }
