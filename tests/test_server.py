@@ -911,11 +911,34 @@ class ServerTest(unittest.TestCase):
             self.assertEqual(call("/api/accounts", {"action": "remove", "name": "Jantje", "password": pw}, admin)[1]["accounts"],
                              [{"name": "Beheer", "role": "admin", "asked": None}])
             self.assertEqual(call("/api/login", {"user": "jantje", "password": pw3})[0], 401)
+            # a session of a removed account does not come back when an account with the same name is made again
+            code, r, _ = call("/api/accounts", {"action": "create", "name": "Wim", "role": "viewer", "password": pw}, admin)
+            wim = call("/api/login", {"user": "wim", "password": r["password"]})[2]["Set-Cookie"].split(";")[0]
+            call("/api/accounts", {"action": "remove", "name": "Wim", "password": pw}, admin)
+            call("/api/accounts", {"action": "create", "name": "wim", "role": "admin", "password": pw}, admin)
+            self.assertEqual(call("/api/me", cookie=wim)[0], 401)
+            # an admin lowered while a request is under way: checked again under the lock
+            self.assertRaises(PermissionError, accounts.create, "Sluiper", "admin", by="Jantje-weg")
             # an admin who gives himself a new password stays logged in to read it
             code, r, _ = call("/api/accounts", {"action": "password", "name": "Beheer", "password": pw}, admin)
             self.assertEqual((code, call("/api/me", cookie=admin)[0]), (200, 200))
             self.assertEqual(call("/api/login", {"user": "beheer", "password": pw})[0], 401)
             self.assertEqual(call("/api/login", {"user": "beheer", "password": r["password"]})[0], 200)
+            pw = r["password"]
+            # names that differ only in spaces, dots or dashes count as the same
+            self.assertEqual(call("/api/accounts", {"action": "create", "name": "Jan Smit", "role": "viewer", "password": pw}, admin)[0], 201)
+            for near in ("Jan.Smit", "jan  smit", "Jan-Smit"):
+                self.assertEqual(call("/api/accounts", {"action": "create", "name": near, "role": "viewer", "password": pw}, admin)[0], 400)
+            # a request for a new password can be ignored: the account keeps its password and its sessions
+            call("/api/forgot", {"user": "jan smit"})
+            self.assertTrue([a for a in call("/api/accounts", cookie=admin)[1]["accounts"] if a["asked"]])
+            code, r, _ = call("/api/accounts", {"action": "ignore", "name": "Jan Smit", "password": pw}, admin)
+            self.assertEqual((code, [a["asked"] for a in r["accounts"]]), (200, [None, None, None]))
+            # five wrong own passwords in a row end the session; the address can still log in
+            codes = [call("/api/accounts", {"action": "remove", "name": "Jan Smit", "password": "wrong-wrong-wrong"}, admin)[0] for _ in range(5)]
+            self.assertEqual(codes, [403, 403, 403, 403, 401])
+            self.assertEqual(call("/api/me", cookie=admin)[0], 401)
+            self.assertEqual(call("/api/login", {"user": "beheer", "password": pw})[0], 200)
         finally:
             srv.shutdown()
             srv.server_close()

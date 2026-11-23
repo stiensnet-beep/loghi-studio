@@ -750,28 +750,33 @@ class Handler(BaseHTTPRequestHandler):
         auth = self.server.auth
         if who["role"] != "admin":
             return self.send_json({"error": "not allowed for this account"}, 403)
-        ok = auth.verify(who["user"], d.get("password"), self.client_ip())
-        if ok == "wait":
-            return self.send_json({"error": "too many wrong attempts; wait 15 minutes"}, 429)
+        ok = auth.verify(who["user"], d.get("password"))
+        if ok == "out":             # wrong five times in a row: the sessions of this account have ended
+            return self.send_json({"error": "log in first"}, 401)
         if not ok:
             return self.send_json({"error": "Your own password is not right."}, 403)
         action, name = d.get("action"), str(d.get("name") or "").strip()
         own = name.lower() == who["user"].lower()
-        out = {"name": name}
-        if action == "create":
-            out["password"] = auth.create(name, d.get("role"))
-        elif action == "role":
-            if own:
-                raise ValueError("You cannot change your own role. Ask another admin.")
-            auth.set_role(name, d.get("role"))
-        elif action == "password":
-            out["password"] = auth.new_password(name, self.token() if own else None)
-        elif action == "remove":
-            if own:
-                raise ValueError("You cannot remove your own account.")
-            auth.remove(name)
-        else:
-            raise ValueError("Unknown action.")
+        out, by = {"name": name}, who["user"]
+        try:
+            if action == "create":
+                out["password"] = auth.create(name, d.get("role"), by=by)
+            elif action == "role":
+                if own:
+                    raise ValueError("You cannot change your own role. Ask another admin.")
+                auth.set_role(name, d.get("role"), by=by)
+            elif action == "password":
+                out["password"] = auth.new_password(name, self.token() if own else None, by=by)
+            elif action == "remove":
+                if own:
+                    raise ValueError("You cannot remove your own account.")
+                auth.remove(name, by=by)
+            elif action == "ignore":
+                auth.drop_ask(name, by=by)
+            else:
+                raise ValueError("Unknown action.")
+        except PermissionError:             # the own role was lowered while this request was under way
+            return self.send_json({"error": "not allowed for this account"}, 403)
         print(f"accounts: {who['user']} did {action} for {name}", file=sys.stderr, flush=True)
         return self.send_json(dict(out, accounts=auth.accounts()), 201 if action == "create" else 200)
 

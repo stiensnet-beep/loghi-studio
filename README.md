@@ -12,6 +12,11 @@ Good to know:
 
 ![View: the scan next to the text that was read](docs/screenshots/view.png)
 
+A video of a minute and a half shows it at work, spoken in English:
+[with English subtitles](docs/video/loghi-studio-demo-en.mp4) or
+[with Dutch subtitles](docs/video/loghi-studio-demo-nl.mp4). What is said, as text:
+[English](docs/video/loghi-studio-demo.en.srt), [Dutch](docs/video/loghi-studio-demo.nl.srt).
+
 More pictures: [Correct](docs/screenshots/correct.png), [Search](docs/screenshots/search.png).
 What we measured on our own books (enlarging scans, models, Transkribus, fine-tuning): [docs/FINDINGS.md](docs/FINDINGS.md).
 
@@ -161,5 +166,8 @@ What we measured on our own books (enlarging scans, models, Transkribus, fine-tu
 - The scan in the pictures is from the archive of the VOC at the Nationaal Archief (The Hague, 1.04.02);
   its text is from the GLOBALISE ground truth (doi:10.34894/IQ0YMT, CC-BY-SA-4.0). Because of that text
   the pictures in `docs/screenshots/` are under CC-BY-SA-4.0, not under the MIT licence.
+- The video in `docs/video/` shows pages of a court book of Het Bildt of 1611 to 1613, kept at Tresoar in
+  Leeuwarden (archive 13-07). The voice is the maker's own, copied by a computer (ElevenLabs). The video is
+  not under the MIT licence.
 - The faint map behind the page is the map of Friesland from the Schotanus atlas of 1718 (Rijksmuseum,
   RP-P-AO-2-12-1, public domain).

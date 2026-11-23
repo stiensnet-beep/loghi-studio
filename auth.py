@@ -42,12 +42,17 @@ def _hash(password, salt):
     return hashlib.scrypt(password.encode("utf-8"), salt=salt, n=2 ** 14, r=8, p=1, dklen=32)
 
 
+def _loose(name):
+    """A name as people hear it: "Jan Smit", "Jan  Smit" and "Jan.Smit" are the same."""
+    return re.sub(r"[\s.\-]+", " ", str(name).lower()).strip()
+
+
 class Auth:
     def __init__(self, settings_dir):
         self.file = Path(settings_dir) / "users.json"
         self.lock = threading.Lock()
         self.sessions = {}          # sha256(token) -> {"user", "role", "seen", "made"}
-        self.fails = {}             # "ip:<ip>" or "user:<name>" -> [count, time of the last failure]
+        self.fails = {}             # "ip:<ip>", "user:<name>", "own:<name>" or "ask:<ip>" -> [count, time of the last one]
         self.known = {}             # (name, ip) -> time of the last right password from that address
         self.users = {}
         self._stamp = None
@@ -88,7 +93,17 @@ class Auth:
     def _admins(self):
         return [u for u in self.users.values() if u["role"] == "admin"]
 
-    def create(self, name, role):
+    def _end_sessions(self, key, keep=None):
+        """End every session of the account with this key, except the one with the token `keep` (caller holds the lock)."""
+        mine = hashlib.sha256(keep.encode()).hexdigest() if keep else None
+        self.sessions = {k: s for k, s in self.sessions.items() if s["user"].lower() != key or k == mine}
+
+    def _still_admin(self, by):
+        """The admin who asks must still be admin now, under the lock: the role may have changed since the request came in."""
+        if by is not None and (self.users.get(str(by).lower()) or {}).get("role") != "admin":
+            raise PermissionError("not allowed for this account")
+
+    def create(self, name, role, by=None):
         """A new account; gives the password, which is kept nowhere."""
         name = str(name or "").strip()
         if not re.fullmatch(NAME_OK, name):
@@ -98,17 +113,23 @@ class Auth:
         password, salt = make_password(), os.urandom(16)
         with self.lock:
             self._fresh()
+            self._still_admin(by)
             if name.lower() in self.users:
                 raise ValueError("There is an account with this name already.")
+            near = next((u["name"] for u in self.users.values() if _loose(u["name"]) == _loose(name)), None)
+            if near:
+                raise ValueError(f"There is an account with nearly the same name already: {near}.")
             self.users[name.lower()] = {"name": name, "role": role, "salt": salt.hex(), "hash": _hash(password, salt).hex()}
+            self._end_sessions(name.lower())      # a session left over from an earlier account with this name
             self._save()
         return password
 
-    def set_role(self, name, role):
+    def set_role(self, name, role, by=None):
         if role not in ROLES:
             raise ValueError("Choose a role: admin, corrector or viewer.")
         with self.lock:
             self._fresh()
+            self._still_admin(by)
             u = self.users.get(str(name or "").strip().lower())
             if not u:
                 raise KeyError("This account does not exist.")
@@ -117,12 +138,13 @@ class Auth:
             u["role"] = role
             self._save()
 
-    def new_password(self, name, keep=None):
+    def new_password(self, name, keep=None, by=None):
         """Another password for an account; gives it. The sessions of that account end, except the one with
         the token `keep` (an admin who gives himself a new password stays logged in to read it)."""
         password, salt = make_password(), os.urandom(16)
         with self.lock:
             self._fresh()
+            self._still_admin(by)
             key = str(name or "").strip().lower()
             u = self.users.get(key)
             if not u:
@@ -130,14 +152,14 @@ class Auth:
             u.update(salt=salt.hex(), hash=_hash(password, salt).hex())
             u.pop("asked", None)
             self._save()
-            mine = hashlib.sha256(keep.encode()).hexdigest() if keep else None
-            self.sessions = {k: s for k, s in self.sessions.items() if s["user"].lower() != key or k == mine}
+            self._end_sessions(key, keep)
             self.fails.pop(f"user:{key}", None)
         return password
 
-    def remove(self, name):
+    def remove(self, name, by=None):
         with self.lock:
             self._fresh()
+            self._still_admin(by)
             key = str(name or "").strip().lower()
             u = self.users.get(key)
             if not u:
@@ -145,7 +167,19 @@ class Auth:
             if u["role"] == "admin" and len(self._admins()) == 1:
                 raise ValueError("This is the only admin. Make another account admin first.")
             del self.users[key]
+            self._end_sessions(key)
             self._save()
+
+    def drop_ask(self, name, by=None):
+        """Set a request for a new password aside, without giving one."""
+        with self.lock:
+            self._fresh()
+            self._still_admin(by)
+            u = self.users.get(str(name or "").strip().lower())
+            if not u:
+                raise KeyError("This account does not exist.")
+            if u.pop("asked", None):
+                self._save()
 
     def ask_reset(self, name, ip):
         """Somebody who forgot the password asks the admin for a new one. Says nothing about whether the name
@@ -157,28 +191,35 @@ class Auth:
             if n >= MAX_FAILS and now - last < FAIL_PAUSE:
                 return
             self.fails[key] = [1 if now - last > FAIL_PAUSE else n + 1, now]
+            self._prune(now)
             u = self.users.get(str(name or "").strip().lower())
             if u and not u.get("asked"):
                 u["asked"] = int(now)
                 self._save()
 
-    def verify(self, name, password, ip):
-        """Is this the password of this account? True, False, or "wait" after too many wrong tries from the
-        address. Asked again before an admin changes accounts."""
-        now = time.time()
+    def verify(self, name, password):
+        """Is this the password of this account? True or False; "out" after MAX_FAILS wrong ones in a row: the
+        sessions of the account then end, and logging in again has its own limits. Asked again before an admin
+        changes accounts. It has its own count per name, apart from logging in: a slip here must not keep
+        the address from logging in, and guessing from many addresses with a stolen session must not go on."""
+        key, now = str(name or "").strip().lower(), time.time()
         with self.lock:
             self._fresh()
-            if self._blocked(f"ip:{ip}", now):
-                return "wait"
-            user = self.users.get(str(name or "").lower())
+            user = self.users.get(key)
         salt = bytes.fromhex(user["salt"]) if user else b"0" * 16
         good = hmac.compare_digest(_hash(str(password or ""), salt).hex(), user["hash"] if user else "")
-        if not (user and good):
-            with self.lock:
-                n, last = self.fails.get(f"ip:{ip}", (0, 0))
-                self.fails[f"ip:{ip}"] = [1 if now - last > FAIL_PAUSE else n + 1, now]
+        with self.lock:
+            if user and good:
+                self.fails.pop(f"own:{key}", None)
+                return True
+            n, last = self.fails.get(f"own:{key}", (0, 0))
+            n = 1 if now - last > FAIL_PAUSE else n + 1
+            if n >= MAX_FAILS:
+                self.fails.pop(f"own:{key}", None)
+                self._end_sessions(key)
+                return "out"
+            self.fails[f"own:{key}"] = [n, now]
             return False
-        return True
 
     def act(self, token, role):
         """Look as a lower role for the rest of the session (an admin as corrector or viewer, a corrector as
@@ -205,6 +246,11 @@ class Auth:
         if stamp != self._stamp:
             self._stamp = stamp
             self.load()
+
+    def _prune(self, now):
+        """Forget the counts of long ago (the caller holds the lock)."""
+        if len(self.fails) > 2000:
+            self.fails = {k: v for k, v in self.fails.items() if now - v[1] < FAIL_PAUSE}
 
     def _blocked(self, key, now):
         n, last = self.fails.get(key, (0, 0))
@@ -238,8 +284,7 @@ class Auth:
                 for k in keys:
                     n, last = self.fails.get(k, (0, 0))
                     self.fails[k] = [1 if now - last > FAIL_PAUSE else n + 1, now]
-                if len(self.fails) > 2000:          # forget what is long ago
-                    self.fails = {k: v for k, v in self.fails.items() if now - v[1] < FAIL_PAUSE}
+                self._prune(now)
                 return None, "wrong"
             for k in keys:
                 self.fails.pop(k, None)

@@ -1,0 +1,72 @@
+1
+00:00:00,250 --> 00:00:05,099
+Old court books are full of people, but only if you can read the handwriting.
+
+2
+00:00:05,149 --> 00:00:11,589
+Loghi-studio helps you read, search and correct seventeenth-century manuscripts, on your own computer.
+
+3
+00:00:12,589 --> 00:00:19,029
+It is built around Loghi, the open-source handwriting recognition of the KNAW Humanities Cluster.
+
+4
+00:00:19,079 --> 00:00:23,310
+Open a book and you see the scan next to the text that was read.
+
+5
+00:00:23,360 --> 00:00:26,254
+Choose a line, and it lights up on the page.
+
+6
+00:00:27,254 --> 00:00:29,413
+Search a whole collection in seconds.
+
+7
+00:00:29,463 --> 00:00:34,428
+Old spellings are no problem: the search knows that a name was written in many ways,
+
+8
+00:00:34,478 --> 00:00:37,235
+and that a machine sometimes misreads a letter.
+
+9
+00:00:38,235 --> 00:00:43,260
+Looking for your ancestors? Give Loghi-studio a list of names, or a whole family tree.
+
+10
+00:00:43,310 --> 00:00:47,981
+It searches every book in the background and shows where each person may appear.
+
+11
+00:00:48,980 --> 00:00:50,998
+The machine is not always right.
+
+12
+00:00:51,048 --> 00:00:56,813
+In the Correct screen you see one line, cut from the scan and shown large, above its text.
+
+13
+00:00:56,863 --> 00:00:59,914
+Fix it, press Enter, and the next line is ready.
+
+14
+00:00:59,964 --> 00:01:05,858
+Every line you check is kept, and can later teach the model to read this handwriting better.
+
+15
+00:01:06,858 --> 00:01:12,384
+Everything works with the keyboard alone, with large text, high contrast and a screen reader.
+
+16
+00:01:12,434 --> 00:01:16,760
+It was designed that way from the start, by someone who needs it himself.
+
+17
+00:01:17,760 --> 00:01:23,039
+Loghi-studio is free and open source, in English, Dutch and Frisian.
+
+18
+00:01:23,089 --> 00:01:27,428
+You can find it on GitHub: stiensnet-beep, loghi-studio.
+

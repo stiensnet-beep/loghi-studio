@@ -5,6 +5,8 @@ Version numbers: 0.x is beta (trial version). 1.0 comes when adding, the queue a
 ## Unreleased
 
 ## 0.7.0-beta (23 Nov 2026)
+- Name finder: opening a person now shows that person's hits. Since 0.5.0 they were written into the list of
+  the Search tab instead, and after a search a person did not open at all (found while recording a demo).
 - Server mode: next to the name of who is logged in there is a choice "Look as". An admin can look as a
   corrector or a viewer and go back; a corrector can look as a viewer. The server holds to the chosen role.
 - Server mode: a tab Accounts for the admin. Make an account with a role, change a role, give a new
@@ -15,6 +17,14 @@ Version numbers: 0.x is beta (trial version). 1.0 comes when adding, the queue a
   Accounts who asked and gives a new password. The answer is the same for a name that does not exist.
 - Server mode: the admin sees the tabs Add, Queue and Collections and the training set too, with a note
   that they are switched off there because Loghi does not run on the server.
+- After a third look by the other model, before this version went anywhere: the sessions of an account end
+  when it is removed and when an account with that name is made (an old session came back with the role of
+  the new account). The role of the admin who asks is checked again at the moment of the change. Names that
+  differ only in spaces, dots or dashes count as the same. The own password has its own count: five wrong
+  ones in a row end the session, and no longer keep the address from logging in. A request for a new
+  password can be ignored. After a change in the list of accounts the keyboard stays where it was, removing
+  waits 20 seconds for the second press, and a new password is read out once, not twice.
+- A demo video of a minute and a half in `docs/video/`, with subtitles in English and Dutch.
 
 ## 0.6.1-beta (23 Nov 2026)
 - Correct: what was saved last stays in sight below the buttons ("Saved just now"), with a button to

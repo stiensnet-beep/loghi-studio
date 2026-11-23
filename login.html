@@ -54,7 +54,7 @@ button.plain { background: none; color: var(--ink); border: 1px solid var(--edge
   <form id="forgot" hidden>
     <p id="t-forgotText"></p>
     <label for="forgot-user" id="t-forgotUser"></label>
-    <input id="forgot-user" autocomplete="username" autocapitalize="none" spellcheck="false" required>
+    <input id="forgot-user" aria-describedby="t-forgotText" autocomplete="username" autocapitalize="none" spellcheck="false" required>
     <button type="submit" id="t-forgotSend"></button>
     <div id="forgot-done" role="status"></div>
   </form>
@@ -67,17 +67,17 @@ button.plain { background: none; color: var(--ink); border: 1px solid var(--edge
 const TEXT = {
   nl: { slogan: "Oude Friese handschriften, leesbaar en doorzoekbaar", user: "Naam", password: "Wachtwoord", submit: "Inloggen", lang: "Taal",
         wrong: "De naam of het wachtwoord klopt niet.", wait: "Te veel foute pogingen. Wacht 15 minuten en probeer het opnieuw.", slow: "Te veel foute pogingen voor deze naam. Wacht een paar seconden en probeer het opnieuw.", fail: "Inloggen is nu niet gelukt. Probeer het later opnieuw.",
-        forgot: "Wachtwoord vergeten?", forgotSend: "Nieuw wachtwoord aanvragen",
+        forgot: "Wachtwoord vergeten?", forgotUser: "Naam voor een nieuw wachtwoord", forgotSend: "Nieuw wachtwoord aanvragen",
         forgotText: "Vul je naam in. De beheerder ziet dan dat je een nieuw wachtwoord vraagt en geeft je dat zelf door. Er wordt geen e-mail verstuurd.",
         forgotDone: "Je vraag is doorgegeven, als deze naam bestaat. Je krijgt het nieuwe wachtwoord van de beheerder." },
   fy: { slogan: "Alde Fryske hânskriften, lêsber en trochsykber", user: "Namme", password: "Wachtwurd", submit: "Ynlogge", lang: "Taal",
         wrong: "De namme of it wachtwurd kloppet net.", wait: "Tefolle ferkearde besykjen. Wachtsje 15 minuten en besykje it opnij.", slow: "Tefolle ferkearde besykjen foar dizze namme. Wachtsje in pear sekonden en besykje it opnij.", fail: "Ynloggen is no net slagge. Besykje it letter opnij.",
-        forgot: "Wachtwurd fergetten?", forgotSend: "Nij wachtwurd oanfreegje",
+        forgot: "Wachtwurd fergetten?", forgotUser: "Namme foar in nij wachtwurd", forgotSend: "Nij wachtwurd oanfreegje",
         forgotText: "Folje jo namme yn. De behearder sjocht dan dat jo in nij wachtwurd freegje en jout jo dat sels troch. Der wurdt gjin e-mail ferstjoerd.",
         forgotDone: "Jo fraach is trochjûn, as dizze namme bestiet. Jo krije it nije wachtwurd fan de behearder." },
   en: { slogan: "Old Frisian handwriting, readable and searchable", user: "Name", password: "Password", submit: "Log in", lang: "Language",
         wrong: "The name or the password is not right.", wait: "Too many wrong attempts. Wait 15 minutes and try again.", slow: "Too many wrong attempts for this name. Wait a few seconds and try again.", fail: "Logging in did not work just now. Try again later.",
-        forgot: "Forgot your password?", forgotSend: "Ask for a new password",
+        forgot: "Forgot your password?", forgotUser: "Name for a new password", forgotSend: "Ask for a new password",
         forgotText: "Type your name. The administrator then sees that you ask for a new password and passes it on to you. No e-mail is sent.",
         forgotDone: "Your request was passed on, if this name exists. You will get the new password from the administrator." },
 };
@@ -86,8 +86,7 @@ let lang = /^fy/i.test(navigator.language || "") ? "fy" : /^nl/i.test(navigator.
 try { const v = JSON.parse(localStorage.getItem("ls.lang")); if (TEXT[v]) lang = v; } catch {}
 function show() {
   document.documentElement.lang = lang; $("lang").value = lang;
-  for (const k of ["slogan", "user", "password", "submit", "lang", "forgot", "forgotText", "forgotSend"]) $("t-" + k).textContent = TEXT[lang][k];
-  $("t-forgotUser").textContent = TEXT[lang].user;
+  for (const k of ["slogan", "user", "password", "submit", "lang", "forgot", "forgotText", "forgotUser", "forgotSend"]) $("t-" + k).textContent = TEXT[lang][k];
 }
 show();
 $("lang").onchange = () => { lang = $("lang").value; try { localStorage.setItem("ls.lang", JSON.stringify(lang)); } catch {} $("error").textContent = ""; show(); };

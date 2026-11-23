@@ -2707,6 +2707,18 @@
   "nl": "Er is al een account met deze naam.",
   "fy": "Der is al in akkount mei dizze namme."
  },
+ "There is an account with nearly the same name already: {0}.": {
+  "nl": "Er is al een account met bijna dezelfde naam: {0}.",
+  "fy": "Der is al in akkount mei hast deselde namme: {0}."
+ },
+ "Ignore the request": {
+  "nl": "Verzoek negeren",
+  "fy": "Fersyk negearje"
+ },
+ "The request of {0} was ignored.": {
+  "nl": "Het verzoek van {0} is genegeerd.",
+  "fy": "It fersyk fan {0} is negearre."
+ },
  "A name is 2 to 40 letters, digits, spaces, dots or dashes.": {
   "nl": "Een naam is 2 tot 40 letters, cijfers, spaties, punten of streepjes.",
   "fy": "In namme is 2 oant 40 letters, sifers, spaasjes, punten of streekjes."
