@@ -285,6 +285,8 @@ class Corrections:
             rec.update(orig=line["text"], conf=line["conf"], coords=line["poly"], base=line.get("base"))
             if state in ("checked", "partial"):
                 rec["text"] = clean_text(text)
+            if state == "partial" and rec["text"] == re.sub(r"\s+", " ", line["text"]).strip():
+                raise ValueError("Nothing was changed in this line, so it cannot be saved as partly corrected. Change the words you can read, or go to the next line without saving.")
         with self.lock:
             f.parent.mkdir(parents=True, exist_ok=True)
             with open(f, "a", encoding="utf-8", newline="\n") as out:

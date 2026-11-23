@@ -32,7 +32,7 @@ from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 from pathlib import Path
 from urllib.parse import urlparse, parse_qs, unquote
 
-VERSION = "0.6.0-beta"
+VERSION = "0.6.1-beta"
 HERE = Path(__file__).resolve().parent
 PROJECTS = HERE.parent
 SETTINGS_DIR = Path(os.environ.get("LOGHI_STUDIO_SETTINGS", HERE / "settings"))

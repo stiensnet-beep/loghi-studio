@@ -2031,9 +2031,9 @@
   "nl": "Onleesbaar",
   "fy": "Unlêsber"
  },
- "Skip, do not save": {
-  "nl": "Overslaan, niet opslaan",
-  "fy": "Oerslaan, net bewarje"
+ "Next line, without saving": {
+  "nl": "Volgende regel, zonder opslaan",
+  "fy": "Folgjende rigel, sûnder bewarjen"
  },
  "Line before": {
   "nl": "Regel ervoor",
@@ -2479,9 +2479,9 @@
   "nl": "Nagekeken in deze collectie: {0}, waarvan {1} verbeterd en {2} goed gelezen. Deels verbeterd: {3}. Onleesbaar: {4}.",
   "fy": "Neisjoen yn dizze kolleksje: {0}, wêrfan {1} ferbettere en {2} goed lêzen. Foar in part ferbettere: {3}. Unlêsber: {4}."
  },
- "Only some words corrected": {
-  "nl": "Alleen een paar woorden verbeterd",
-  "fy": "Allinnich in pear wurden ferbettere"
+ "Save, only some words corrected": {
+  "nl": "Opslaan, alleen een paar woorden verbeterd",
+  "fy": "Bewarje, allinnich in pear wurden ferbettere"
  },
  "partly corrected": {
   "nl": "deels verbeterd",
@@ -2499,9 +2499,9 @@
   "nl": "Regel {0}: opgeslagen, deels verbeterd. Hij wordt geen trainingsregel.",
   "fy": "Rigel {0}: bewarre, foar in part ferbettere. Hy wurdt gjin trainingsrigel."
  },
- "Did you correct only one or a few words, and can you not read the rest of the line with certainty? Choose Only some words corrected. Your correction is shown in View and Search, but the line does not become a training line.": {
-  "nl": "Heb je maar één of een paar woorden verbeterd, en kun je de rest van de regel niet met zekerheid lezen? Kies Alleen een paar woorden verbeterd. Je verbetering is te zien bij Bekijken en Zoeken, maar de regel wordt geen trainingsregel.",
-  "fy": "Hawwe jo mar ien of in pear wurden ferbettere, en kinne jo de rest fan de rigel net mei wissichheid lêze? Kies Allinnich in pear wurden ferbettere. Jo ferbettering is te sjen by Besjen en Sykje, mar de rigel wurdt gjin trainingsrigel."
+ "Did you correct only one or a few words, and can you not read the rest of the line with certainty? Choose Save, only some words corrected. Your correction is shown in View and Search, but the line does not become a training line.": {
+  "nl": "Heb je maar één of een paar woorden verbeterd, en kun je de rest van de regel niet met zekerheid lezen? Kies Opslaan, alleen een paar woorden verbeterd. Je verbetering is te zien bij Bekijken en Zoeken, maar de regel wordt geen trainingsregel.",
+  "fy": "Hawwe jo mar ien of in pear wurden ferbettere, en kinne jo de rest fan de rigel net mei wissichheid lêze? Kies Bewarje, allinnich in pear wurden ferbettere. Jo ferbettering is te sjen by Besjen en Sykje, mar de rigel wurdt gjin trainingsrigel."
  },
  "Lines that two readers read differently": {
   "nl": "Regels die twee lezers verschillend lazen",
@@ -2542,5 +2542,45 @@
  "(nothing)": {
   "nl": "(niets)",
   "fy": "(neat)"
+ },
+ "Saved just now:": {
+  "nl": "Zojuist opgeslagen:",
+  "fy": "Krekt bewarre:"
+ },
+ "Withdraw that save (Alt+Z)": {
+  "nl": "Dat opslaan terugdraaien (Alt+Z)",
+  "fy": "Dat bewarjen weromdraaie (Alt+Z)"
+ },
+ "Go back to that line": {
+  "nl": "Terug naar die regel",
+  "fy": "Werom nei dy rigel"
+ },
+ "Line {0} of scan {1}: marked as unreadable.": {
+  "nl": "Regel {0} van scan {1}: gemarkeerd als onleesbaar.",
+  "fy": "Rigel {0} fan scan {1}: markearre as ûnlêsber."
+ },
+ "Line {0} of scan {1}: partly corrected. It is not a training line.": {
+  "nl": "Regel {0} van scan {1}: deels verbeterd. Het is geen trainingsregel.",
+  "fy": "Rigel {0} fan scan {1}: foar in part ferbettere. It is gjin trainingsrigel."
+ },
+ "Line {0} of scan {1}: corrected.": {
+  "nl": "Regel {0} van scan {1}: verbeterd.",
+  "fy": "Rigel {0} fan scan {1}: ferbettere."
+ },
+ "Line {0} of scan {1}: right as read.": {
+  "nl": "Regel {0} van scan {1}: goed zoals gelezen.",
+  "fy": "Rigel {0} fan scan {1}: goed sa't it lêzen is."
+ },
+ "Nothing was changed in this line, so it cannot be saved as partly corrected. Change the words you can read, or go to the next line without saving.": {
+  "nl": "Er is niets veranderd in deze regel, dus hij kan niet als deels verbeterd worden opgeslagen. Verander de woorden die je kunt lezen, of ga zonder opslaan naar de volgende regel.",
+  "fy": "Der is neat feroare yn dizze rigel, dus hy kin net as foar in part ferbettere bewarre wurde. Feroarje de wurden dy't jo lêze kinne, of gean sûnder bewarjen nei de folgjende rigel."
+ },
+ "The save of line {0} was withdrawn. You are back on that line.": {
+  "nl": "Het opslaan van regel {0} is teruggedraaid. Je staat weer op die regel.",
+  "fy": "It bewarjen fan rigel {0} is weromdraaid. Jo steane wer op dy rigel."
+ },
+ "Back on line {0}.": {
+  "nl": "Terug op regel {0}.",
+  "fy": "Werom op rigel {0}."
  }
 }

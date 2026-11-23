@@ -4,6 +4,14 @@ Version numbers: 0.x is beta (trial version). 1.0 comes when adding, the queue a
 
 ## Unreleased
 
+## 0.6.1-beta (23 Nov 2026)
+- Correct: what was saved last stays in sight below the buttons ("Saved just now"), with a button to
+  withdraw that save (Alt+Z) and one to go back to that line. Saving always goes on to the next line; that
+  was easy to miss.
+- Correct: a line in which nothing was changed can no longer be saved as partly corrected (it happened by
+  pressing the button twice). The buttons are now called "Save, only some words corrected" and "Next line,
+  without saving".
+
 ## 0.6.0-beta (22 Nov 2026)
 - After a second look by the other model: an address from which a name logged in before is not slowed down
   when strangers guess at that name; a changed role counts at once, not after the next login; in server mode

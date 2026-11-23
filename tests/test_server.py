@@ -1120,6 +1120,7 @@ class ServerTest(unittest.TestCase):
             self.assertEqual((r["line"]["text"], r["line"]["orig"], r["line"]["checked"]),
                              ("ende Aeffke Clases", "ende Aeffke Claeses", "partial"))
             self.assertEqual(self.correct("l1", "  ", state="partial")[0], 400)
+            self.assertEqual(self.correct("l1", "Jan  Haijes tot Sexbierum", state="partial")[0], 400)   # nothing changed: a slip of the hand
             _, page = self.call("/api/page?c=proef&v=0001&s=000001")
             self.assertEqual([l.get("checked") for l in page["lines"]], [None, "partial", None])
             _, r = self.call("/api/search?c=proef&q=Clases&mode=exact")
