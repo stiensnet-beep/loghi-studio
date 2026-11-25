@@ -159,9 +159,29 @@ What we measured on our own books (enlarging scans, models, Transkribus, fine-tu
 ## Licence and credits
 - Loghi-studio: MIT, see [LICENSE](LICENSE). Idea, design and testing: Johan Dijkstra. The code was written
   by Claude Fable 5.2 (Anthropic), working with him.
-- [Loghi](https://github.com/knaw-huc/loghi) is made by the KNAW Humanities Cluster and has its own licence;
-  so have the reading models (see the folder of each model). Loghi-studio calls Loghi's Docker images and
-  holds no code of Loghi.
+- [Loghi](https://github.com/knaw-huc/loghi) is made by the KNAW Humanities Cluster. Loghi-studio holds no
+  code of Loghi and no reading models; it calls the official Docker images (`loghi/docker.laypa`,
+  `loghi/docker.htr`, `loghi/docker.loghi-tooling`, version 2.3.2) as they are. Their licences:
+  - [laypa](https://github.com/knaw-huc/laypa): MIT, copyright (c) 2022 Stefan Klut;
+  - [loghi-htr](https://github.com/knaw-huc/loghi-htr) and [loghi-tooling](https://github.com/knaw-huc/loghi-tooling):
+    MIT, copyright (c) 2022 Rutger van Koert; loghi-tooling uses
+    [prima-core-libs](https://github.com/knaw-huc/prima-core-libs) (Apache-2.0).
+  - The laypa image also holds third-party libraries with their own licences, among them
+    [ultralytics](https://github.com/ultralytics/ultralytics) (AGPL-3.0) and detectron2 (Apache-2.0).
+    Loghi-studio does not change or pass on these images. Whoever builds and shares a changed image, or
+    offers one as a service to others, must follow those licences.
+- Reading models are fetched separately; each comes with its own licence:
+  - the Laypa model `baseline2` (Stefan Klut) and the HTR models `republic-recommended-batch-8-2024-06-16`,
+    `generic_new_17_2023_05_25_4channel` and `float32-generic-2023-02-15` (Rutger van Koert): MIT, see the
+    `LICENSE` file in the folder of each model. Keep that file with the model, also with a model fine-tuned
+    from it.
+  - the GLOBALISE model of August 2023 (`globalise-2023-08`): R. van Koert, S. Klut and M. Maas, KNAW
+    Humanities Cluster, *GLOBALISE Loghi Handwritten Text Recognition Model - August 2023*,
+    doi:[10.34894/HHM4TE](https://doi.org/10.34894/HHM4TE), licence
+    [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/). Whoever shares this model, or a model
+    fine-tuned from it, must name these makers and this source, link the licence and say what was changed.
+  - Public training sets have their own terms, for example the GLOBALISE ground truth (doi:10.34894/IQ0YMT,
+    CC-BY-SA-4.0). Name the sets a shared model was trained on, with their licences.
 - `reading_errors.json` was learned from the index of names of AlleFriezen, fetched through Open Archives.
 - The scan in the pictures is from the archive of the VOC at the Nationaal Archief (The Hague, 1.04.02);
   its text is from the GLOBALISE ground truth (doi:10.34894/IQ0YMT, CC-BY-SA-4.0). Because of that text
